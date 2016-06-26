@@ -1,0 +1,13 @@
+C:\Projects\KSP\WildBlueIndustries\NuclearEngines\NuclearEngines\obj\Release\NuclearEngines.csprojResolveAssemblyReference.cache
+C:\Projects\KSP\WildBlueIndustries\NuclearEngines\NuclearEngines\bin\Release\NuclearEngines.dll
+C:\Projects\KSP\WildBlueIndustries\NuclearEngines\NuclearEngines\bin\Release\NuclearEngines.pdb
+C:\Projects\KSP\WildBlueIndustries\NuclearEngines\NuclearEngines\bin\Release\Assembly-CSharp-firstpass.dll
+C:\Projects\KSP\WildBlueIndustries\NuclearEngines\NuclearEngines\bin\Release\Assembly-CSharp.dll
+C:\Projects\KSP\WildBlueIndustries\NuclearEngines\NuclearEngines\bin\Release\UnityEngine.dll
+C:\Projects\KSP\WildBlueIndustries\NuclearEngines\NuclearEngines\bin\Release\WildBlueTools.dll
+C:\Projects\KSP\WildBlueIndustries\NuclearEngines\NuclearEngines\bin\Release\Mono.Cecil.dll
+C:\Projects\KSP\WildBlueIndustries\NuclearEngines\NuclearEngines\bin\Release\TDx.TDxInput.dll
+C:\Projects\KSP\WildBlueIndustries\NuclearEngines\NuclearEngines\bin\Release\Mono.Security.dll
+C:\Projects\KSP\WildBlueIndustries\NuclearEngines\NuclearEngines\bin\Release\WildBlueTools.pdb
+C:\Projects\KSP\WildBlueIndustries\NuclearEngines\NuclearEngines\obj\Release\NuclearEngines.dll
+C:\Projects\KSP\WildBlueIndustries\NuclearEngines\NuclearEngines\obj\Release\NuclearEngines.pdb

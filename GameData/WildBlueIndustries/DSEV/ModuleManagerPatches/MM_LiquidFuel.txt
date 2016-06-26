@@ -1,0 +1,58 @@
+@PART[WB8Supernova]
+{
+  @MODULE[ModuleEnginesFXWBI]
+  {
+     @PROPELLANT[LqdHydrogen] 
+     {
+        @name = LiquidFuel
+        @ratio = 1.0  
+     }
+
+     @atmosphereCurve
+     {
+         @key = 0 1500
+     }
+  }
+}
+
+@PART[WBI_ArcJetRCS]
+{
+    @MODULE[ModuleRCSArcJet]
+    {
+        @resourceName = LiquidFuel
+    }
+
+     @atmosphereCurve
+     {
+         @key = 0 250
+     }
+}
+
+@PART[WBI_ArcJetRCS5]
+{
+    @MODULE[ModuleRCSArcJet]
+    {
+        @resourceName = LiquidFuel
+    }
+
+     @atmosphereCurve
+     {
+         @key = 0 250
+     }
+}
+
+@PART[AJ5ArcJetEngine]
+{
+    @MODULE[ModuleEnginesFX]
+    {
+        @PROPELLANT
+        {
+            @name = LiquidFuel
+        }
+    }
+
+     @atmosphereCurve
+     {
+         @key = 0 500
+     }
+}
