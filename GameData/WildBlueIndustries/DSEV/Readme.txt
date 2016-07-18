@@ -18,6 +18,9 @@ Copy the WildBlueIndustries directory into your GameData folder.
 
 ---REVISION HISTORY---
 
+1.1.9
+- Recompiled for latest WBT.
+
 1.1.8
 - Fixed radial attachment distances so that tanks will be flush with the part they're attached to.
 
