@@ -57,7 +57,8 @@ namespace WildBlueIndustries
         string[] rackNames = null;
         string[] bodyNames = null;
         string centerVestibuleName = null;
-        WBIResourceSwitcher switcher;
+        WBIConvertibleStorage switcher = null;
+        PartModule resourceDistributor = null;
 
         #region GUI
         [KSPEvent(guiActiveEditor = true, guiActive = false, guiName = "Toggle center vestibule")]
@@ -180,7 +181,17 @@ namespace WildBlueIndustries
             int nextIndex = -1;
 
             //Find the switch if any.
-            switcher = this.part.FindModuleImplementing<WBIResourceSwitcher>();
+            switcher = this.part.FindModuleImplementing<WBIConvertibleStorage>();
+
+            //Find the resource distributor if any
+            int totalCount = this.part.Modules.Count;
+            PartModule module;
+            for (int index = 0; index < totalCount; index++)
+            {
+                module = this.part.Modules[index];
+                if (module.moduleName == "WBIResourceDistributor")
+                    resourceDistributor = module;
+            }
 
             //Hide base GUI
             Events["NextMesh"].guiActive = false;
@@ -295,13 +306,29 @@ namespace WildBlueIndustries
             {
                 if (fuelTankTransform.Contains(bodyNames[bodyIndex]))
                 {
+                    switcher.isEnabled = true;
+                    switcher.enabled = true;
                     switcher.SetGUIVisible(true);
+                    if (resourceDistributor != null)
+                    {
+                        resourceDistributor.isEnabled = true;
+                        resourceDistributor.enabled = true;
+                        resourceDistributor.Events["ToggleDistributionMode"].guiActive = true;
+                        resourceDistributor.Events["ToggleDistributionMode"].guiActiveEditor = true;
+                    }
                 }
                 else
                 {
                     switcher.SetGUIVisible(false);
                     switcher.isEnabled = false;
                     switcher.enabled = false;
+                    if (resourceDistributor != null)
+                    {
+                        resourceDistributor.isEnabled = false;
+                        resourceDistributor.enabled = false;
+                        resourceDistributor.Events["ToggleDistributionMode"].guiActive = false;
+                        resourceDistributor.Events["ToggleDistributionMode"].guiActiveEditor = false;
+                    }
                 }
             }
 

@@ -18,6 +18,12 @@ Copy the WildBlueIndustries directory into your GameData folder.
 
 ---REVISION HISTORY---
 
+1.2.0
+- Fixed an issue where the Hex Trusses weren't providing the hollow truss configuration.
+- Fixed an issue where the Hex Trusses weren't allowing you to reconfigure the fuel tanks in their fuel tank configuration.
+- Hex Trusses now use the standard dialog for configuring resources.
+- All fuel tanks and trusses can now participate in Pathfinder's resource distribution system.
+
 1.1.9
 - Recompiled for latest WBT.
 
