@@ -18,6 +18,9 @@ Copy the WildBlueIndustries directory into your GameData folder.
 
 ---REVISION HISTORY---
 
+1.2.1
+- If fuel tanks are arrayed symmetrically, you'll no longer be able to reconfigure them. It's either that or let the game explode (ie nothing I can do about it except prevent players from changing symmetrical tanks).
+
 1.2.0
 - Fixed an issue where the Hex Trusses weren't providing the hollow truss configuration.
 - Fixed an issue where the Hex Trusses weren't allowing you to reconfigure the fuel tanks in their fuel tank configuration.
