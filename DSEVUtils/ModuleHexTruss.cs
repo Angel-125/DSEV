@@ -173,6 +173,7 @@ namespace WildBlueIndustries
 
             if (protoNode.HasValue("centerVestibuleName"))
                 centerVestibuleName = protoNode.GetValue("centerVestibuleName");
+
         }
 
         public override void OnStart(StartState state)
@@ -200,18 +201,12 @@ namespace WildBlueIndustries
             Events["PrevMesh"].guiActive = false;
 
             //Set initial values
-            Log("rack configuration: " + rackConfiguration);
             if (rackConfiguration == RackConfigurations.Unknown)
                 rackConfiguration = kDefaultRacks;
             Log("rack configuration: " + rackConfiguration);
 
             if (endCapIndex == -1)
                 endCapIndex = kDefaultEndCapIndex;
-
-            //Set the visible objects
-            SetVisibleObjects();
-            if (HighLogic.LoadedSceneIsEditor)
-                UpdateResources();
 
             //Setup the GUI
             if (endCapNames != null)
@@ -258,6 +253,11 @@ namespace WildBlueIndustries
                     Events["NextRackConfiguration"].guiName = kNoRacks;
                     break;
             }
+
+            //Set the visible objects
+            SetVisibleObjects();
+            if (HighLogic.LoadedSceneIsEditor)
+                UpdateResources();
 
         }
         #endregion
@@ -313,8 +313,8 @@ namespace WildBlueIndustries
                     {
                         resourceDistributor.isEnabled = true;
                         resourceDistributor.enabled = true;
-                        resourceDistributor.Events["ToggleDistributionMode"].guiActive = true;
-                        resourceDistributor.Events["ToggleDistributionMode"].guiActiveEditor = true;
+                        resourceDistributor.Events["SetupDistribution"].guiActive = true;
+                        resourceDistributor.Events["SetupDistribution"].guiActiveEditor = true;
                     }
                 }
                 else
@@ -326,8 +326,8 @@ namespace WildBlueIndustries
                     {
                         resourceDistributor.isEnabled = false;
                         resourceDistributor.enabled = false;
-                        resourceDistributor.Events["ToggleDistributionMode"].guiActive = false;
-                        resourceDistributor.Events["ToggleDistributionMode"].guiActiveEditor = false;
+                        resourceDistributor.Events["SetupDistribution"].guiActive = false;
+                        resourceDistributor.Events["SetupDistribution"].guiActiveEditor = false;
                     }
                 }
             }
