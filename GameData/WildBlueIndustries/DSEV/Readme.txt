@@ -18,10 +18,11 @@ Copy the WildBlueIndustries directory into your GameData folder.
 
 ---REVISION HISTORY---
 
-1.2.3
+1.2.4
 - Updated to latest WBT.
 
-1.2.2
+1.2.3
+- Updated to latest WBT.
 - You can now change the configration on tanks with symmetrical parts. In the SPH/VAB it will happen automatically when you select a new configuration. After launch, you'll have the option to change symmetrical tanks.
 
 1.2.1
