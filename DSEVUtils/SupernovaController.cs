@@ -86,6 +86,12 @@ namespace WildBlueIndustries
         [KSPField]
         public float ecNeededToStart = 0f;
 
+        [KSPField]
+        public string upgradeSkill = "RepairSkill";
+
+        [KSPField]
+        public int upgradeExperienceLevel = 5;
+
         public string primaryEngineID;
         public float ecChargePerSec = 0f;
         public bool showDebugButton = true;
@@ -104,12 +110,12 @@ namespace WildBlueIndustries
             double resourceAmount;
 
             //Make sure we have an experienced engineer.
-            if (FlightGlobals.ActiveVessel.isEVA)
+            if (FlightGlobals.ActiveVessel.isEVA && Utils.IsExperienceEnabled())
             {
                 Vessel vessel = FlightGlobals.ActiveVessel;
-                Experience.ExperienceTrait experience = vessel.GetVesselCrew()[0].experienceTrait;
+                ProtoCrewMember astronaut = vessel.GetVesselCrew()[0];
 
-                if (experience.TypeName != "Engineer" || experience.CrewMemberExperienceLevel() < 5)
+                if (astronaut.HasEffect(upgradeSkill) == false || astronaut.experienceTrait.CrewMemberExperienceLevel() < upgradeExperienceLevel)
                 {
                     ScreenMessages.PostScreenMessage(kEngineerNeeded, 5.0f, ScreenMessageStyle.UPPER_CENTER);
                     return;

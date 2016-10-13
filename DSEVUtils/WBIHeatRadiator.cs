@@ -160,7 +160,7 @@ namespace WildBlueIndustries
         public void UpdateState()
         {
             //Do we have enough electricity to run the radiator?
-            if (ecRequired > 0.001 && panelState == panelStates.EXTENDED)
+            if (ecRequired > 0.001 && deployState == DeployState.EXTENDED)
             {
                 double ecPerTimeTick = ecRequired * TimeWarp.fixedDeltaTime;
                 double ecObtained = this.part.RequestResource("ElectricCharge", ecPerTimeTick, ResourceFlowMode.ALL_VESSEL);
@@ -247,7 +247,7 @@ namespace WildBlueIndustries
                 return;
 
             //Really, *really* want to use the stock glow shader. I don't know how yet though.
-            Renderer[] renderers = this.part.FindModelComponents<Renderer>();
+            Renderer[] renderers = this.part.FindModelComponents<Renderer>().ToArray();
 
             //Account for Draper Point
             float ratio = (float)(this.part.temperature - kGlowTempOffset) / (float)(this.part.maxTemp - kGlowTempOffset);
@@ -346,12 +346,12 @@ namespace WildBlueIndustries
 
             GUILayout.Label("<color=white>Status: " + status + "</color>");
 
-            if (panelState == panelStates.RETRACTED)
+            if (deployState == DeployState.RETRACTED)
             {
                 if (GUILayout.Button(Events["Extend"].guiName))
                     Extend();
             }
-            else if (panelState == panelStates.EXTENDED)
+            else if (deployState ==  DeployState.EXTENDED)
             {
                 if (GUILayout.Button(Events["Retract"].guiName))
                     Retract();

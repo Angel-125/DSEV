@@ -18,6 +18,28 @@ Copy the WildBlueIndustries directory into your GameData folder.
 
 ---REVISION HISTORY---
 
+1.4.0
+New Parts
+- Added the WB-1 Camaro liquid fuel engine. Based on the KR-1 "Boar" from Porkjet's revamp engine's design sheet, the Camaro supports Standard (2.5m), Boat Tail (2.5m), Narrow (1.875m) and Compact (1.25m) engine mount sizes. It also supports engine thrust and ISP upgrades. The Camaro was a fun art study of how Squad creates its art assets and well worth the detour. If you want to see the rocket part revamp in game, tell Squad!
+
+1.3.0
+- Updated to KSP 1.2. Expect additional patches as KSP is fixed and mods are updated.
+
+New Parts
+- Added the T-Intersection Hex Truss. This 3-way hex truss is similar to the Hex Node, but it only has 3 attachment nodes.
+- Added the Radial Hex Mount. This radially attached part provides a stack mount for your hex trusses.
+
+Supernova
+- Any class with the RepairSkill can now upgrade the Supernova.
+
+Docking ports
+- To fix a long standing problem with wobbly spacecraft, you can now weld HexPorts and 3.75m docking rings together. Your docked vessels become one craft. Combine with autostrut to make a solid craft. Once welded together, you can no longer undock the ports.
+The Wild Blue tab under the Game Difficulty screen has the following options for docking port welding:
+* Require an EVA to weld the ports (default: true): If false, you can weld the ports without requiring an EVA.
+* Require the repair skill to weld ports (default: true): if false, anybody can perform the weld.
+* Keep docking ports after the weld (default: false): If false, then after welding, the docking ports vanish and the parts are moved together to close the gap. If true, then the docking ports remain in place but will become unusable.
+Thanks for showing me how its done, Shadowmage! :)
+
 1.2.4
 - Updated to latest WBT.
 

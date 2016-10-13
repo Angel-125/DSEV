@@ -21,7 +21,6 @@ namespace WildBlueIndustries
 {
     class DSEVSettings : Window<DSEVSettings>
     {
-        static public float arcJetRCSVolume;
         static public float radiatorVolume;
         static public float radiatorSoundVolume = -1.0f;
         static public float arcJetVolume = -1.0f;
@@ -39,13 +38,11 @@ namespace WildBlueIndustries
         protected override void DrawWindowContents(int windowId)
         {
             GUILayout.BeginVertical();
-            GUILayout.Label("ArcJet RCS Volume");
-            arcJetRCSVolume = GUILayout.HorizontalSlider(arcJetRCSVolume, 0, 1);
+            GUILayout.Label("ArcJet Volume");
             GUILayout.Label("Coolant Dump Volume");
             radiatorVolume = GUILayout.HorizontalSlider(radiatorVolume, 0, 1);
             GUILayout.EndVertical();
 
-            ModuleRCSArcJet.soundEffectVolume = GameSettings.SHIP_VOLUME * arcJetRCSVolume;
             WBIHeatRadiator.soundEffectVolume = GameSettings.SHIP_VOLUME * radiatorVolume;
         }
 
@@ -62,8 +59,6 @@ namespace WildBlueIndustries
             else
             {
                 nodeSettings.name = "SETTINGS";
-                nodeSettings.AddValue("arcJetVolume", ModuleRCSArcJet.soundEffectVolume.ToString());
-                nodeSettings.AddValue("arcJetRCSVolume", arcJetRCSVolume.ToString());
                 nodeSettings.AddValue("radiatorVolume", radiatorVolume.ToString());
                 nodeSettings.AddValue("radiatorSoundVolume", WBIHeatRadiator.soundEffectVolume.ToString());
                 nodeSettings.Save(settingsPath);
@@ -79,12 +74,6 @@ namespace WildBlueIndustries
             nodeSettings = ConfigNode.Load(settingsPath);
             if (nodeSettings != null)
             {
-                value = nodeSettings.GetValue("arcJetRCSVolume");
-                if (string.IsNullOrEmpty(value) == false)
-                    arcJetRCSVolume = float.Parse(value);
-                else
-                    arcJetRCSVolume = 1.0f;
-
                 value = nodeSettings.GetValue("radiatorVolume");
                 if (string.IsNullOrEmpty(value) == false)
                     radiatorVolume = float.Parse(value);
@@ -93,7 +82,6 @@ namespace WildBlueIndustries
             }
             else
             {
-                arcJetRCSVolume = 1.0f;
                 radiatorVolume = 1.0f;
             }
         }
