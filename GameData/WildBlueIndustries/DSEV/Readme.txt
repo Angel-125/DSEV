@@ -22,6 +22,10 @@ Copy the WildBlueIndustries directory into your GameData folder.
 New Parts
 - Added the WB-1 Camaro liquid fuel engine. Based on the KR-1 "Boar" from Porkjet's revamp engine's design sheet, the Camaro supports Standard (2.5m), Boat Tail (2.5m), Narrow (1.875m) and Compact (1.25m) engine mount sizes. It also supports engine thrust and ISP upgrades. The Camaro was a fun art study of how Squad creates its art assets and well worth the detour. If you want to see the rocket part revamp in game, tell Squad!
 
+1.3.1
+- Updated WBT
+- Fixed relative paths for tech nodes.
+
 1.3.0
 - Updated to KSP 1.2. Expect additional patches as KSP is fixed and mods are updated.
 
