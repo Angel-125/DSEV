@@ -18,6 +18,10 @@ Copy the WildBlueIndustries directory into your GameData folder.
 
 ---REVISION HISTORY---
 
+1.3.3
+- Updated to KSP 1.2.1
+- Cleaned up some logging issues related to missing part modules and textures when supported mods aren't installed.
+
 1.3.2
 - Fixed versioning conflicts
 
