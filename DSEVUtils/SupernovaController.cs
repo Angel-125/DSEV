@@ -69,9 +69,6 @@ namespace WildBlueIndustries
         string engineTemperature;
 
         [KSPField(isPersistant = true)]
-        public bool engineUpgraded;
-
-        [KSPField(isPersistant = true)]
         public string upgradeResources;
 
         [KSPField]
@@ -86,12 +83,6 @@ namespace WildBlueIndustries
         [KSPField]
         public float ecNeededToStart = 0f;
 
-        [KSPField]
-        public string upgradeSkill = "RepairSkill";
-
-        [KSPField]
-        public int upgradeExperienceLevel = 5;
-
         public string primaryEngineID;
         public float ecChargePerSec = 0f;
         public bool showDebugButton = true;
@@ -100,97 +91,6 @@ namespace WildBlueIndustries
         protected bool wasRunningPrimary;
 
         #region Events And Actions
-        [KSPEvent(guiActive = true, guiActiveEditor =  false, guiName = "Upgrade Engine", active = true, externalToEVAOnly = true, unfocusedRange = 3.0f, guiActiveUnfocused = true)]
-        public void UpgradeEngine()
-        {
-            string[] resourcesRequired = upgradeResources.Split(new char[] { ';' });
-            string[] resourceInfo;
-            PartResourceDefinitionList definitions = PartResourceLibrary.Instance.resourceDefinitions;
-            PartResourceDefinition resourceDef;
-            double resourceAmount;
-
-            //Make sure we have an experienced engineer.
-            if (FlightGlobals.ActiveVessel.isEVA && Utils.IsExperienceEnabled())
-            {
-                Vessel vessel = FlightGlobals.ActiveVessel;
-                ProtoCrewMember astronaut = vessel.GetVesselCrew()[0];
-
-                if (astronaut.HasEffect(upgradeSkill) == false || astronaut.experienceTrait.CrewMemberExperienceLevel() < upgradeExperienceLevel)
-                {
-                    ScreenMessages.PostScreenMessage(kEngineerNeeded, 5.0f, ScreenMessageStyle.UPPER_CENTER);
-                    return;
-                }
-            } 
-            
-            //Ok, we have an experienced engineer. Now does the vessel have sufficient resources?
-            foreach (string resourceRequired in resourcesRequired)
-            {
-                //Get the resource info
-                resourceInfo = resourceRequired.Split(new char[] { ',' });
-                resourceAmount = double.Parse(resourceInfo[1]);
-
-                //Is this a science "resource" ?
-                if (HighLogic.CurrentGame.Mode != Game.Modes.SANDBOX)
-                {
-                    if (resourceInfo[0] == "Science" && ResearchAndDevelopment.Instance != null)
-                    {
-                        if (ResearchAndDevelopment.CanAfford((float)resourceAmount) == false)
-                        {
-                            ScreenMessages.PostScreenMessage(kInsufficientScience, 5.0f, ScreenMessageStyle.UPPER_CENTER);
-                            return;
-                        }
-
-                        //Pay the science cost.
-                        ResearchAndDevelopment.Instance.CheatAddScience(-(float)resourceAmount);
-                        continue;
-                    }
-                }
-
-                //Skip this sciency stuff since we're in Sandbox.
-                else if (resourceInfo[0] == "Science")
-                {
-                    continue;
-                }
-
-                //Find definition
-                resourceDef = definitions[resourceInfo[0]];
-                if (resourceDef == null)
-                {
-                    ScreenMessages.PostScreenMessage(insufficientResourcesMsg, 5.0f, ScreenMessageStyle.UPPER_CENTER);
-                    return;
-                }
-
-                //See if the vessel has the required amount of resources
-                double totalResources = ResourceHelper.GetTotalResourceAmount(resourceInfo[0], this.part.vessel);
-                if ((totalResources / resourceAmount) < 1.0f)
-                {
-                    ScreenMessages.PostScreenMessage(insufficientResourcesMsg, 5.0f, ScreenMessageStyle.UPPER_CENTER);
-                    return;
-                }
-
-                //Take the resource
-                double resourceObtained = this.part.RequestResource(resourceDef.id, resourceAmount, ResourceFlowMode.ALL_VESSEL);
-            }
-
-            //If we got this far then I guess we should just go ahead and upgrade the engine *sigh...* ;)
-            multiModeEngine.Events["ModeEvent"].guiActive = true;
-            this.Events["UpgradeEngine"].guiActiveUnfocused = false;
-            this.Events["UpgradeEngine"].guiActive = false;
-            engineUpgraded = true;
-            ScreenMessages.PostScreenMessage(kEngineUpgraded, 5.0f, ScreenMessageStyle.UPPER_CENTER);
-        }
-
-        [KSPEvent(guiActiveEditor = true, guiName = "Toggle Mode", active = true)]
-        public void ToggleModeEditor()
-        {
-            //Toggle the mode.
-            multiModeEngine.Events["ModeEvent"].Invoke();
-
-            //In the editor, remind the player that the engine must be upgraded in flight before pulsed plasma mode can be used.
-            if (multiModeEngine.mode == multiModeEngine.secondaryEngineID)
-                ScreenMessages.PostScreenMessage(kPulsedPlasmaEditorNote, 5.0f, ScreenMessageStyle.UPPER_CENTER);
-        }
-
         [KSPEvent(guiActive = false, guiName = "Charge Capacitor")]
         public void ChargeCapacitor()
         {
@@ -407,29 +307,12 @@ namespace WildBlueIndustries
         public void HideGUI()
         {
             List<ModuleEnginesFXWBI> engineList = this.part.FindModulesImplementing<ModuleEnginesFXWBI>();
-
-            //Hide multimode switcher gui
             multiModeEngine = this.part.FindModuleImplementing<MultiModeEngine>();
             multiModeEngine.autoSwitch = false;
             multiModeEngine.Events["DisableAutoSwitch"].guiActive = false;
             multiModeEngine.Events["DisableAutoSwitch"].guiActiveEditor = false;
             multiModeEngine.Events["EnableAutoSwitch"].guiActive = false;
             multiModeEngine.Events["EnableAutoSwitch"].guiActiveEditor = false;
-            multiModeEngine.Events["ModeEvent"].guiActiveEditor = false;
-
-            //Allow mode switching if the engine has been upgraded, or show the upgrade button.
-            if (engineUpgraded == false)
-            {
-                multiModeEngine.Events["ModeEvent"].guiActive = false;
-
-                //Make sure we're not in pulsed plasma mode
-                if (multiModeEngine.runningPrimary == false)
-                    multiModeEngine.Events["ModeEvent"].Invoke();
-            }
-            else
-            {
-                this.Events["UpgradEngine"].guiActiveUnfocused = false;
-            }
 
             //Hide engine gui
             foreach (ModuleEnginesFXWBI engine in engineList)
