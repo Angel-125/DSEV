@@ -18,20 +18,6 @@ Copy the WildBlueIndustries directory into your GameData folder.
 
 ---REVISION HISTORY---
 
-X These Are The Voyages...
-New Parts
-- Added the D2 "Clydesdale" Orbital Command Pod. Designed for in-space operations, the D2 OCP seats 7, but requires a crew of 2 to operate. Part upgrades will give it advanced probe core functionality, eliminating the need for a flight crew. It has integrated support for kOS and Kerbal Engineer. Want a custom name to show up on the pod? You can! Using the stock flag selection window, you can select a "flag" to use as the name tag. You have one name tag on the nose, and another on the sides, and you can show/hide the tags as desired. These name tags are independent of the pod's mission flag and of each other, so you can have a flag, a tag with the name of the ship, and a tag with the ship's registry number, for example.
-
-- Added the D2 Centrifuge. It holds 12 kerbals, and can become a habitat (with life support for Snacks, TAC-LS, and USI-LS), a combined Experiment Lab and Mobile Processing Lab, or a workshop capable of making Equipment and small parts (with OSE Workshop installed). With Pathfinder installed, it can use Pathfinder's Habitation and Science templates normally found in the Casa and Doc Science Lab, respectively. A unique feature lets the centrifuge fold up for launch, but kerbals can inhabit the module when folded as well.
-
-- Added the D2 Habitat Module. This 3.75m part provides additional habitation space for up to 6 crew (with life support for Snacks, TAC-LS, and USI-LS). With Pathfinder installed, it can use Pathfinder's Habitation templates at 50% efficiency. 
-
-- Added the D2 Instrument Unit. It has ArcJet RCS thrusters, SAS, and a probe core.
-
-- Added the HexTruss Solar Array. Designed to fit DSEV's HexTruss system, the solar array has batteries and tracks the sun in two dimensions.
-
-- Added a 3.75m to 1.25m adapter, and a 3.75m to 2.5m adapter.
-
 1.4.0
 
 Bug Fixes & Enhancements
