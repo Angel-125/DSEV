@@ -18,6 +18,9 @@ Copy the WildBlueIndustries directory into your GameData folder.
 
 ---REVISION HISTORY---
 
+1.4.1
+- WBT update and KSP 1.2.2 update
+
 1.4.0
 
 Bug Fixes & Enhancements
