@@ -1,6 +1,6 @@
 {
     "NAME":"Deep Space Exploration Vessels",
-    "URL":"https://raw.githubusercontent.com/Angel-125/DSEV/master/GameData/WildBlueIndustries/DSEV.version",
+    "URL":"https://raw.githubusercontent.com/Angel-125/DSEV/master/GameData/WildBlueIndustries/DSEV/DSEV.version",
     "DOWNLOAD":"https://github.com/Angel-125/DSEV/releases",
     "GITHUB":
     {
@@ -12,7 +12,7 @@
     {
 	"MAJOR":1,
 	"MINOR":4,
-	"PATCH":1
+	"PATCH":2
 	"BUILD":0
     },
     "KSP_VERSION":
