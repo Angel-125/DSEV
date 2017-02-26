@@ -56,25 +56,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ModuleHexAdapter.cs" />
-    <Compile Include="DSEVSettings.cs" />
-    <Compile Include="MassconWindow.cs" />
-    <Compile Include="ModuleArcJetEngine.cs" />
-    <Compile Include="ModuleEnginesFXWBI.cs" />
-    <Compile Include="ModuleFusionReactor.cs" />
-    <Compile Include="ModuleHexNode.cs" />
-    <Compile Include="ModuleHexPort.cs" />
-    <Compile Include="ModuleHexTruss.cs" />
-    <Compile Include="ModuleMasscon.cs" />
-    <Compile Include="ModuleMultiStorageTank.cs" />
-    <Compile Include="ModuleRCSArcJet.cs" />
+    <Compile Include="Parts\ModuleHexAdapter.cs" />
+    <Compile Include="Settings\DSEVSettings.cs" />
+    <Compile Include="GUI\MassconWindow.cs" />
+    <Compile Include="Parts\ModuleEnginesFXWBI.cs" />
+    <Compile Include="Parts\ModuleFusionReactor.cs" />
+    <Compile Include="Parts\ModuleHexNode.cs" />
+    <Compile Include="Parts\ModuleHexPort.cs" />
+    <Compile Include="Parts\ModuleHexTruss.cs" />
+    <Compile Include="Parts\ModuleMasscon.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SupernovaController.cs" />
-    <Compile Include="SupernovaDebug.cs" />
-    <Compile Include="WBIDSEVGameSettings.cs" />
-    <Compile Include="WBIHeatRadiator.cs" />
-    <Compile Include="WBIHexTruss.cs" />
-    <Compile Include="WBIModuleLgServiceBay.cs" />
+    <Compile Include="Parts\SupernovaController.cs" />
+    <Compile Include="GUI\SupernovaDebug.cs" />
+    <Compile Include="Settings\WBIDSEVGameSettings.cs" />
+    <Compile Include="Parts\WBIHeatRadiator.cs" />
+    <Compile Include="Centrifuge\WBICentrifuge.cs" />
+    <Compile Include="Centrifuge\WBIIVARotationHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\WildBlueTools\WildBlueTools.csproj">
@@ -82,6 +79,7 @@
       <Name>WildBlueTools</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

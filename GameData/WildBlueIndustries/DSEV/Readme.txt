@@ -18,7 +18,78 @@ Copy the WildBlueIndustries directory into your GameData folder.
 
 ---REVISION HISTORY---
 
-1.4.2
+Version 2.0.0.1: Realizing A Space Odyssey
+https://www.youtube.com/watch?v=ETveS23djXM
+At long last, this release provides all of the "kerbalized" parts needed to create the Discovery II from NASA's Realizing "2001: A Space Odyssey": Piloted Spherical Torus Nuclear Fusion Propulsion! http://naca.larc.nasa.gov/search.jsp?R=20050160960 Now you can fly a mission to Jool like NASA's mission to Jupiter using the reference designs provided, or build your own Deep Space Exploration Vessels.
+
+New Parts
+- D2 "Clydesdale" Orbital Command Pod: Designed for in-space operations, the D2 OCP seats 9, but requires a crew of 2 to operate. Part upgrades will give it advanced probe core functionality, eliminating the need for a flight crew. It has integrated support for kOS and Kerbal Engineer. Want a custom name to show up on the pod? You can! Using the stock flag selection window, you can select a "flag" to use as the name tag. You have one name tag on the nose, and another on the sides, and you can show/hide the tags as desired. These name tags are independent of the pod's mission flag and of each other, so you can have a flag, a tag with the name of the ship, and a tag with the ship's registry number, for example. It has both stock and ASET IVAs.
+NOTE: For ASET support, download ASET Props 1.4: https://spacedock.info/mod/1204/ASET%20Props
+TIP: Here is a tutorial for creating custom flags: (http://wiki.kerbalspaceprogram.com/wiki/Tutorial:Create_custom_flags!)
+
+- D2-I "Danube Delta" Orbital Command Pod: This is an inline version of the Clydesdale, except that both ends of the command pod are 3.75m in diameter as opposed to the Clyde's 1.25m tapered nose. It has both stock and ASET IVAs. Thanks for the suggestion, Kuzzter! :)
+
+- D2 Centrifuge: It holds 12 kerbals, and has life support for mods like Snacks, TAC-LS, and USI-LS. It has a number of configurations to choose from. With Pathfinder installed, it can use Pathfinder's Habitation and Science templates normally found in the Casa and Doc Science Lab, respectively. A unique feature lets the centrifuge fold up to provide artificial gravity while the vessel is under thrust.
+Known Limitation: While the IVA rotates along with the external model, it doesn't follow the external model's arms when folded up. This feature is still being worked on.
+NOTE: You do NOT need Infernal Robotics to rotate the centrifuge.
+
+- D2 Habitat Module: This 3.75m part provides additional habitation space for up to 4 crew (with life support for Snacks, TAC-LS, and USI-LS). With Pathfinder installed, it can use Pathfinder's Habitation templates at 50% efficiency.
+
+- D2 Science Module: This 3.75m part has space for 4 crew and a few configurations. With Pathfinder installed, it can use Pathfinder's Science templates at 50% efficiency.
+
+- D2 Greenhouse Module: This 3.75m advanced greenhouse has space for 4 and produces food for up to 12 crew.
+
+- D2 Cryo Shelter: This is 3.75m cylindrical bay seats 12. With DeepFreeze installed, your kerbals can be frozen for your long-duration trips. Thanks for showing me how to create cryopods, JPLRepo! :)
+
+- D2 Instrument Unit: It has a probe core equal to the stock RC-L01 Remote Guidance Unit, reaction wheels, and both 3.75m and Mk3 body style options.
+
+- D2 Truss: These are super-sized versions of the Hex Truss, Half Hex Truss, and Double Hex Truss. They're designed for 3.75m parts and can fit 2.5m parts inside if needed.
+TIP: Auto-strut is your friend.
+
+- K2 Saddle Truss: Inspired by NASA's Copernicus, these 3.75m diameter trusses come in short, medium, and long sizes. They are open on one end, making them great for creating frames that transport and drop off cargo.
+
+- K2 Landing Frame: An inline engine mount for the K2 saddle truss, with space for parachutes and such. Your engines won't stick out of the areo shell. It can be configured as an Engine Frame or Landing Leg Frame, the latter of which can hold a pair of stock LT-2 landing legs attached to K2 Cargo Boxes.
+
+- K2 Cargo Box: Fitted to the landing frame in place of engines, the cargo box makes a great attachment point for landing legs. It holds a variety of different resources.
+
+- K2 Storage Wedge: Fitted to a saddle truss, the Storage Wedge holds a variety of resources. It also has attachment points for engines, cargo boxes, and the like.
+
+- K2 Saddle Tank: Designed to fit inside the saddle truss, this tank gives you extra resources for your trip. Use the K2 Mini Decoupler to get rid of it.
+
+- K2 Mini Decoupler: Attached to the inner nodes of a saddle truss, this decoupler gives you a way to dispose of your saddle tanks.
+
+- D2 Adapter: This adapter can be switched from 3.75m diameter to Mk3, 2.5m, 1.25m, and D2 Truss form factors.
+
+- Hex Truss - D2 Truss Adapter: Use this as a bridge between the D2 Truss Segments and the Hex Truss system.
+
+- AE-35 Communications Array: This is a combined RA-100 communications relay, M-700 resource scanner, and M4435 Narrow-Band Scanner. With SCANSat installed, the AE-35 can scan planets and moons as well.
+
+- Mobile Emitter: This is a fun part/modlet that requires Kerbal Inventory System. It lets you simulate a hologram in the form of a kerbal (actually, a kerbal carries the part), and lets you change the skill trait of the kerbal while out in the field. With Snacks installed, the "hologram" kerbal won't require Snacks or suffer from starvation effects. The Mobile Emitter modlet is also available separately!
+
+Reference Designs (found in DSEV/ReferenceDesigns)
+These design reference mission craft files are provided so that you can perform your own Discovery II missions based upon NASA's research paper. Joolian refueling infrastructure not included. Craft files include:
+- Discovery II-Assembled: The complete reference design. You could cheat the craft into LKO if desired, it's ready to go. It has a small amount of LiquidFuel/Oxidizer and Monopropellant to top off the lander.
+- Discovery II Lander: It can reach all the moons of Jool if flown carefully.
+- Discovery II Fuel Tank: Just like in the NASA mission, this tank flies down to a Joolian moon to refuel before returning to the ship.
+- Discovery II Command Section: Discovery II's command pod and centrifuge, in launch-ready configuration.
+- Discovery II Upper Truss: The ship's upper truss, in launch-ready configuration.
+- Discovery II Lower Truss: The ship's lower truss, complete with fusion reactor, FusionPellet storage, and LFO mission tank, in launch-ready configuration.
+- Discovery II Engine Section: The ship's "Supernova" spherical torus fusion engine, central LH2 tank, and docking assemblies, in launch-ready configuration.
+
+Bug Fixes & Enhancements
+- Re-tuned the Supernova delta-v so that the Discovery II reference design has just enough delta-v to reach Jool and a moon or two. Existing craft are unaffected.
+- Retextured the Supernova, LDR-375 and the HexPort to be more pork-alike.
+- The DR-375 has a new hex-shaped option for docking the D2 trusses together.
+- Lightened the mass on the LDR-375 and HexPort; auto-strut is your friend.
+- Reduced power consumption needs for the WB-6 "Tesla" engine and ArcJet RCS thrusters, and retooled them to use the latest stock PartModules.
+- ArcJet RCS motors require ElectricCharge again, along with LqdHydrogen. Their flame effects work again as well.
+- The fusion reactors generate ChargedParticles in addition to ElectricCharge; generating Thermals has been removed.
+- The fusion reactors now need more FusionPellets per second to run; existing craft are unaffected.
+- Fixed angle snap issues with docking ports.
+- Fixed node issues with the service compartment and service bay.
+- The WB-7 Viper is now tri-modal; its nuclear reactor generates ElectricCharge.
+
+1.4.1
 - WBT update
 
 1.4.0

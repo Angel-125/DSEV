@@ -1,0 +1,132 @@
+INTERNAL
+{
+	name = WBI_ClydeSpace
+	MODEL
+	{
+		model = WildBlueIndustries/DSEV/Assets/ClydeSpace
+		texture = MoleSpace2, WildBlueIndustries/000WildBlueTools/Textures/MoleSpace2
+		texture = MoleSpace3, WildBlueIndustries/000WildBlueTools/Textures/MoleSpace3
+		texture = MoleSpace4, WildBlueIndustries/000WildBlueTools/Textures/MoleSpace4
+	}
+	MODEL
+	{
+		model = WildBlueIndustries/DSEV/Assets/ClydeSpaceOverlay
+	}
+	MODULE
+	{
+		name = InternalSeat
+		seatTransformName = seat1
+		allowCrewHelmet = false
+	}
+	MODULE
+	{
+		name = InternalSeat
+		seatTransformName = seat2
+		allowCrewHelmet = false
+	}
+	MODULE
+	{
+		name = InternalSeat
+		seatTransformName = seat3
+		allowCrewHelmet = false
+	}
+	MODULE
+	{
+		name = InternalSeat
+		seatTransformName = seat4
+		allowCrewHelmet = false
+	}
+	MODULE
+	{
+		name = InternalSeat
+		seatTransformName = seat5
+		allowCrewHelmet = false
+	}
+	MODULE
+	{
+		name = InternalSeat
+		seatTransformName = seat6
+		allowCrewHelmet = false
+	}
+	MODULE
+	{
+		name = InternalSeat
+		seatTransformName = seat7
+		allowCrewHelmet = false
+	}
+	MODULE
+	{
+		name = InternalSeat
+		seatTransformName = seat8
+		allowCrewHelmet = false
+	}
+	MODULE
+	{
+		name = InternalSeat
+		seatTransformName = seat9
+		allowCrewHelmet = false
+	}
+	PROP
+	{
+		name = WBI_PilotSeat
+		position = -0.778,0.617,0.226
+		rotation = 0,0,0,1
+		scale = 1,1,1
+	}
+	PROP
+	{
+		name = WBI_PilotSeat
+		position = 0.778,0.617,0.226
+		rotation = 0,0,0,1
+		scale = 1,1,1
+	}
+	PROP
+	{
+		name = WBI_PassengerSeat
+		position = 0,0.92,0.575
+		rotation = 0,0,0,1
+		scale = 1,1,1
+	}
+	PROP
+	{
+		name = WBI_PassengerSeat
+		position = -0.775,0.92,0.988
+		rotation = 0,0.7071068,0,0.7071067
+		scale = 1,1,1
+	}
+	PROP
+	{
+		name = WBI_PassengerSeat
+		position = 0.775,0.92,0.988
+		rotation = 0,-0.7071068,0,0.7071067
+		scale = 1,1,1
+	}
+	PROP
+	{
+		name = WBI_PassengerSeat
+		position = 0.933,0.004,0
+		rotation = 0,0,-0.7071068,0.7071067
+		scale = 1,1,1
+	}
+	PROP
+	{
+		name = WBI_PassengerSeat
+		position = -0.933,-0.003,0.438
+		rotation = 0,0,0.7071068,0.7071067
+		scale = 1,1,1
+	}
+	PROP
+	{
+		name = WBI_PassengerSeat
+		position = 0.6,-0.92,-0.224
+		rotation = 0.7071068,-1.152023E-07,0.7071067,-1.152023E-07
+		scale = 1,1,1
+	}
+	PROP
+	{
+		name = WBI_PassengerSeat
+		position = -0.6,-0.92,-0.224
+		rotation = 0.7071068,1.152023E-07,-0.7071067,-1.152023E-07
+		scale = 1,1,1
+	}
+}
