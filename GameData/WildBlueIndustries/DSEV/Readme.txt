@@ -18,6 +18,11 @@ Copy the WildBlueIndustries directory into your GameData folder.
 
 ---REVISION HISTORY---
 
+2.0.0.4
+- WBT Update
+- Added MM patch for Extraplanetary Launchpads.
+- Duct-taped seats to the Clydesdale.
+
 Version 2.0.0.1: Realizing A Space Odyssey
 https://www.youtube.com/watch?v=ETveS23djXM
 At long last, this release provides all of the "kerbalized" parts needed to create the Discovery II from NASA's Realizing "2001: A Space Odyssey": Piloted Spherical Torus Nuclear Fusion Propulsion! http://naca.larc.nasa.gov/search.jsp?R=20050160960 Now you can fly a mission to Jool like NASA's mission to Jupiter using the reference designs provided, or build your own Deep Space Exploration Vessels.

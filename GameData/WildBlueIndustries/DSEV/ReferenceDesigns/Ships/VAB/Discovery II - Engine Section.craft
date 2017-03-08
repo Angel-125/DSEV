@@ -1,4 +1,4 @@
-ship = Discovery II Engine Section
+ship = Discovery II - Engine Section
 version = 1.2.2
 description = Last of the core components, the Engine Section contains the core LH2 tank and the Supernova spherical torus engine.
 type = VAB
@@ -169,7 +169,7 @@ PART
 	link = WBI.HexPort_4293753010
 	link = WBI.LargeDockingRing_4293646530
 	attN = top,WBI.LargeDockingRing_4293646530
-	attN = bottom,WB8Supernova2_4293482512
+	attN = bottom,WB8Supernova_4293482512
 	EVENTS
 	{
 	}
@@ -278,7 +278,7 @@ PART
 }
 PART
 {
-	part = WB8Supernova2_4293482512
+	part = WB8Supernova_4293482512
 	partName = Part
 	pos = -0.140167996,38.805027,0.333926857
 	attPos = 0,0,0
@@ -1179,8 +1179,8 @@ PART
 	link = strutCube_4289818122
 	link = strutCube_4289818090
 	link = strutCube_4289818058
-	link = WB8Supernova2_4293482512
-	attN = top,WB8Supernova2_4293482512
+	link = WB8Supernova_4293482512
+	attN = top,WB8Supernova_4293482512
 	attN = bottom,fairingSize3_4290101798
 	EVENTS
 	{
