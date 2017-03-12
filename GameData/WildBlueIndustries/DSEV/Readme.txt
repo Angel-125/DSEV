@@ -18,6 +18,9 @@ Copy the WildBlueIndustries directory into your GameData folder.
 
 ---REVISION HISTORY---
 
+2.0.0.5
+- WBT Update
+
 2.0.0.4
 - WBT Update
 - Added MM patch for Extraplanetary Launchpads.
