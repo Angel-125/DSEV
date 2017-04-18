@@ -18,6 +18,16 @@ Copy the WildBlueIndustries directory into your GameData folder.
 
 ---REVISION HISTORY---
 
+2.0.0.6
+New Part
+- S.A.F.E.R. : The Safe Affordable Fission Engine with Radiators generates ElectricCharge for your spacecraft needs. It is based upon the real-world SAFE - 400 reactor created by NASA.
+
+Bug Fixes & Enhancements
+- Updated TAC-LS greenhouse to support continual production.
+- When Far Future Technologies is installed, FusionPellets are made from LqdHe3 and LqdDeuterium.
+- The Tesla, Viper, and Supernova all support TweakScale.
+NOTE: This is my first pass at introducing TweakScale into DSEV. I need an experienced person who can help tune the system.
+
 2.0.0.5
 - WBT Update
 
