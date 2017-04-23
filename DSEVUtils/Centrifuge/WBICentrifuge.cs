@@ -20,12 +20,13 @@ namespace WildBlueIndustries
 {
     public enum CentrifugeStates
     {
+        Idle,
         Stopped,
         SpinningUp,
         Spinning,
         SpinningDown,
         Moving,
-        MovingArms
+        MovingArms,
     }
 
     public class WBICentrifuge : PartModule
@@ -73,7 +74,7 @@ namespace WildBlueIndustries
         public float inputAmount = 0.0f;
 
         [KSPField(isPersistant = true)]
-        public bool isRotating = false;
+        public int rotationState = 0;
 
         [KSPField(isPersistant = true)]
         public float currentDegPerSec = 0.0f;
@@ -89,19 +90,14 @@ namespace WildBlueIndustries
         protected float maxDegPerSecCounter;
         protected ModuleAnimateGenericSFX animation;
         protected WBIIVARotationHelper[] rotationHelpers;
-        protected Quaternion orginalExternalRotation;
-        protected Quaternion originalInternalRotation;
 
         [KSPEvent(guiActive = true)]
         public void ToggleArms()
         {
-            centrifugeTransform.rotation = orginalExternalRotation;
-            this.part.internalModel.transform.rotation = originalInternalRotation;
-
             if (animation != null)
                 animation.Toggle();
             centrifugeState = CentrifugeStates.MovingArms;
-            isRotating = true;
+            rotationState = (int)centrifugeState;
             Events["ToggleArms"].guiName = animation.Events["Toggle"].guiName;
             Events["ToggleArms"].guiActive = false;
             Events["ToggleCentrifuge"].guiActive = false;
@@ -115,11 +111,12 @@ namespace WildBlueIndustries
             switch (centrifugeState)
             {
                 case CentrifugeStates.Stopped:
+                case CentrifugeStates.Idle:
                     if (animation != null && animation.Events["Toggle"].guiName == animation.startEventGUIName)
                     {
                         animation.Toggle();
                         centrifugeState = CentrifugeStates.Moving;
-                        isRotating = true;
+                        rotationState = (int)centrifugeState;
                         Events["ToggleArms"].guiActive = false;
                         Events["ToggleArms"].guiName = animation.Events["Toggle"].guiName;
                         Events["ToggleCentrifuge"].guiActive = false;
@@ -130,7 +127,7 @@ namespace WildBlueIndustries
                     centrifugeState = CentrifugeStates.SpinningUp;
                     currentDegPerSec = 0.0f;
                     currentDegPerSecCounter = 0.0f;
-                    isRotating = true;
+                    rotationState = (int)centrifugeState;
                     Events["ToggleCentrifuge"].guiName = stopCentrifugeName;
                     Events["ToggleArms"].guiActive = false;
                     Events["ToggleArms"].guiName = animation.Events["Toggle"].guiName;
@@ -139,10 +136,12 @@ namespace WildBlueIndustries
                 case CentrifugeStates.SpinningUp:
                 case CentrifugeStates.Spinning:
                     centrifugeState = CentrifugeStates.SpinningDown;
+                    rotationState = (int)centrifugeState;
                     break;
 
                 default:
                     centrifugeState = CentrifugeStates.SpinningDown;
+                    rotationState = (int)centrifugeState;
                     break;
             }
         }
@@ -186,24 +185,11 @@ namespace WildBlueIndustries
         {
             if (HighLogic.LoadedSceneIsFlight == false)
                 return;
-            if (isRotating == false)
+            if (centrifugeState == CentrifugeStates.Idle)
                 return;
 
             //Update the current state
-            if (updateState() == false)
-                return;
-
-            //Get rotations per frame
-            float rotationsPerFrame = currentDegPerSec * TimeWarp.fixedDeltaTime;
-            float counterRotationsPerFrame = currentDegPerSecCounter * TimeWarp.fixedDeltaTime * -1.0f;
-
-            //Rotate centrifuge & counter-torque
-            centrifugeTransform.Rotate(rotationAxisVec, rotationsPerFrame);
-            if (counterTorqueTransform != null)
-                counterTorqueTransform.Rotate(rotationAxisVec, counterRotationsPerFrame);
-
-            //Rotate the IVA
-            this.part.internalModel.transform.Rotate(rotationAxisVec, -rotationsPerFrame);
+            updateState();
 
             //Calculate G
             calculateGravity();
@@ -219,6 +205,8 @@ namespace WildBlueIndustries
             animation = this.part.FindModuleImplementing<ModuleAnimateGenericSFX>();
             if (animation != null)
             {
+                animation.Events["Toggle"].guiActive = false;
+                animation.Events["Toggle"].guiActiveEditor = false;
             }
 
             //Get the rotation transforms
@@ -226,8 +214,6 @@ namespace WildBlueIndustries
                 return;
             centrifugeTransform = this.part.FindModelTransform(centrifugeName);
             counterTorqueTransform = this.part.FindModelTransform(counterTorqueName);
-            orginalExternalRotation = centrifugeTransform.rotation;
-            originalInternalRotation = this.part.internalModel.transform.rotation;
 
             //Get the rotation vector
             if (string.IsNullOrEmpty(rotationAxis) == false)
@@ -258,17 +244,18 @@ namespace WildBlueIndustries
             maxDegPerSecCounter = maxDegPerSec * counterTorqueSpeedMultiplier;
             
             //Set state
-            if (isRotating)
-                centrifugeState = CentrifugeStates.Spinning;
+            centrifugeState = (CentrifugeStates)rotationState;
 
             //Update GUI
-            if (isRotating)
+            if (centrifugeState == CentrifugeStates.Spinning)
                 Events["ToggleCentrifuge"].guiName = stopCentrifugeName;
             else
                 Events["ToggleCentrifuge"].guiName = startCentrifugeName;
             Events["ToggleArms"].guiName = animation.Events["Toggle"].guiName;
             if (centrifugeState == CentrifugeStates.Stopped)
                 Events["ToggleArms"].guiActive = true;
+            else
+                Events["ToggleArms"].guiActive = false;
         }
 
         protected void calculateGravity()
@@ -294,27 +281,37 @@ namespace WildBlueIndustries
 
         protected bool updateState()
         {
-            //If we are spinning up or spinning down, slerp to max degrees per second
             float accelerationPerFrame = centrifugeAcceleration * TimeWarp.fixedDeltaTime;
+            bool isRotating = false;
+
             switch (centrifugeState)
             {
                 case CentrifugeStates.SpinningUp:
+                    isRotating = true;
                     currentDegPerSec = Mathf.Lerp(currentDegPerSec, maxDegPerSec, accelerationPerFrame);
                     currentDegPerSecCounter = Mathf.Lerp(currentDegPerSecCounter, maxDegPerSecCounter, accelerationPerFrame * counterTorqueSpeedMultiplier);
                     if ((currentDegPerSec / maxDegPerSec) >= 0.99f)
+                    {
                         centrifugeState = CentrifugeStates.Spinning;
+                        rotationState = (int)centrifugeState;
+                    }
                     Events["ToggleCentrifuge"].guiActive = true;
                     break;
 
                 case CentrifugeStates.SpinningDown:
+                    isRotating = true;
                     currentDegPerSec = Mathf.Lerp(currentDegPerSec, 0f, accelerationPerFrame);
                     currentDegPerSecCounter = Mathf.Lerp(currentDegPerSecCounter, 0f, accelerationPerFrame * counterTorqueSpeedMultiplier);
                     if ((currentDegPerSec / maxDegPerSec) <= 0.01f)
+                    {
                         centrifugeState = CentrifugeStates.Stopped;
+                        rotationState = (int)centrifugeState;
+                    }
                     Events["ToggleCentrifuge"].guiActive = true;
                     break;
 
                 case CentrifugeStates.Spinning:
+                    isRotating = true;
                     currentDegPerSec = maxDegPerSec;
                     currentDegPerSecCounter = maxDegPerSecCounter;
                     break;
@@ -323,6 +320,7 @@ namespace WildBlueIndustries
                     if (animation.aniState == ModuleAnimateGeneric.animationStates.LOCKED || animation.aniState == ModuleAnimateGeneric.animationStates.CLAMPED)
                     {
                         centrifugeState = CentrifugeStates.SpinningUp;
+                        rotationState = (int)centrifugeState;
                         currentDegPerSec = 0.0f;
                         currentDegPerSecCounter = 0.0f;
                         Events["ToggleCentrifuge"].guiName = stopCentrifugeName;
@@ -338,19 +336,25 @@ namespace WildBlueIndustries
                     if (animation.aniState == ModuleAnimateGeneric.animationStates.LOCKED || animation.aniState == ModuleAnimateGeneric.animationStates.CLAMPED)
                     {
                         centrifugeState = CentrifugeStates.Stopped;
+                        rotationState = (int)centrifugeState;
                         updateRotationHelpers(false);
                     }
                     break;
 
                 case CentrifugeStates.Stopped:
-                    isRotating = false;
+                    centrifugeState = CentrifugeStates.Idle;
+                    rotationState = (int)centrifugeState;
+//                    centrifugeTransform.localEulerAngles = Vector3.zero;
+//                    this.part.internalModel.transform.localEulerAngles = new Vector3(-90, 0, 0);
+                    rotationState = (int)centrifugeState;
                     Events["ToggleCentrifuge"].guiActive = true;
                     Events["ToggleCentrifuge"].guiName = startCentrifugeName;
                     Events["ToggleArms"].guiActive = true;
                     return false;
             }
 
-            if (isRotating && string.IsNullOrEmpty(inputResource) == false && (centrifugeState != CentrifugeStates.SpinningDown && centrifugeState != CentrifugeStates.Stopped))
+            //Consume the input resource
+            if (centrifugeState == CentrifugeStates.Spinning && string.IsNullOrEmpty(inputResource) == false)
             {
                 double resourcePerTimeTick = inputAmount * TimeWarp.fixedDeltaTime;
                 double amountObtained = this.part.RequestResource(inputResource, resourcePerTimeTick, ResourceFlowMode.ALL_VESSEL);
@@ -359,9 +363,26 @@ namespace WildBlueIndustries
                 {
                     this.part.RequestResource(inputResource, -amountObtained);
                     centrifugeState = CentrifugeStates.SpinningDown;
+                    rotationState = (int)centrifugeState;
                     ScreenMessages.PostScreenMessage("Insufficient " + inputResource + " to power the centrifuge. Shutting down.", 5.0f, ScreenMessageStyle.UPPER_CENTER);
                     Events["ToggleCentrifuge"].guiActive = false;
                 }
+            }
+
+            //Spin the centrifuge
+            if (isRotating)
+            {
+                //Get rotations per frame
+                float rotationsPerFrame = currentDegPerSec * TimeWarp.fixedDeltaTime;
+                float counterRotationsPerFrame = currentDegPerSecCounter * TimeWarp.fixedDeltaTime * -1.0f;
+
+                //Rotate centrifuge & counter-torque
+                centrifugeTransform.Rotate(rotationAxisVec, rotationsPerFrame);
+                if (counterTorqueTransform != null)
+                    counterTorqueTransform.Rotate(rotationAxisVec, counterRotationsPerFrame);
+
+                //Rotate the IVA
+                this.part.internalModel.transform.Rotate(rotationAxisVec, -rotationsPerFrame);
             }
             return true;
         }

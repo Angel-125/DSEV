@@ -18,6 +18,15 @@ Copy the WildBlueIndustries directory into your GameData folder.
 
 ---REVISION HISTORY---
 
+2.0.0.7
+New Parts
+- Personal Airlock Module: This surface-attached and stack-mounted airlock holds a single kerbal. It is styled to fit with the upcoming Nautilus.
+- D2 Briefing Room: This alternate habitat configuration seats 10 kerbals. You can click on the conference phone to change the internal lighting color from white, blue, and off.
+
+Bug Fixes & Enhancements
+- Fixed rotation issues with the D2 Centrifuge.
+- WBT update.
+
 2.0.0.6
 New Part
 - S.A.F.E.R. : The Safe Affordable Fission Engine with Radiators generates ElectricCharge for your spacecraft needs. It is based upon the real-world SAFE - 400 reactor created by NASA.
