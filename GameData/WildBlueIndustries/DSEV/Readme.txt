@@ -18,6 +18,10 @@ Copy the WildBlueIndustries directory into your GameData folder.
 
 ---REVISION HISTORY---
 
+2.0.0.8
+- Minor udpate to consolidate ASET/RPM ModuleManager parts into one file.
+- Fix for IVA screens not remembering what image they were displaying.
+
 2.0.0.7
 New Parts
 - Personal Airlock Module: This surface-attached and stack-mounted airlock holds a single kerbal. It is styled to fit with the upcoming Nautilus.
