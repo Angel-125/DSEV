@@ -1,5 +1,5 @@
 {
-    "NAME":"Mobile Emitter",
+    "NAME":"Kerbal KIS Items",
     "URL":"https://raw.githubusercontent.com/Angel-125/SuperKerbal/master/GameData/WildBlueIndustries/SuperKerbal.version",
     "DOWNLOAD":"https://github.com/Angel-125/SuperKerbal/releases",
     "GITHUB":
@@ -11,14 +11,14 @@
     "VERSION":
     {
 	"MAJOR":2,
-	"MINOR":0,
-	"PATCH":1,
+	"MINOR":1,
+	"PATCH":0,
 	"BUILD":0
     },
     "KSP_VERSION":
     {
         "MAJOR":1,
-        "MINOR":2,
-        "PATCH":2
+        "MINOR":3,
+        "PATCH":0
     },
 }

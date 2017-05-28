@@ -18,6 +18,15 @@ Copy the WildBlueIndustries directory into your GameData folder.
 
 ---REVISION HISTORY---
 
+2.1.0.0
+- Recompiled plugin for KSP 1.3.
+- You can convert Equipment into MaterialKits in the Workshop.
+- Updated Snacks support.
+
+2.0.0.9
+New Part
+- Personal Flotation Device: This KIS item increases your kerbal's buoyancy after being equipped. Great for capsule recovery operations.
+
 2.0.0.8
 - Minor udpate to consolidate ASET/RPM ModuleManager parts into one file.
 - Fix for IVA screens not remembering what image they were displaying.
