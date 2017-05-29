@@ -18,6 +18,9 @@ Copy the WildBlueIndustries directory into your GameData folder.
 
 ---REVISION HISTORY---
 
+2.1.1
+- DR-375 docking fix (thanks Gumby 1973! :))
+
 2.1.0.0
 - Recompiled plugin for KSP 1.3.
 - You can convert Equipment into MaterialKits in the Workshop.
