@@ -18,6 +18,10 @@ Copy the WildBlueIndustries directory into your GameData folder.
 
 ---REVISION HISTORY---
 
+2.1.2
+- WBT Update
+- Recompiled KerbalKISItems plugin.
+
 2.1.1
 - DR-375 docking fix (thanks Gumby 1973! :))
 
