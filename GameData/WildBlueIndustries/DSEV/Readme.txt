@@ -18,6 +18,9 @@ Copy the WildBlueIndustries directory into your GameData folder.
 
 ---REVISION HISTORY---
 
+2.1.3
+- WBT Update
+
 2.1.2
 - WBT Update
 - Recompiled KerbalKISItems plugin.
