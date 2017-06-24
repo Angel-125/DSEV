@@ -18,6 +18,11 @@ Copy the WildBlueIndustries directory into your GameData folder.
 
 ---REVISION HISTORY---
 
+2.1.4
+
+- The CryoShelter works with DeepFreeze again - thanks JPLRepo! :)
+- CTT update - thanks Krakatoa! :)
+
 2.1.3
 - WBT Update
 

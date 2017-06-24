@@ -15,3 +15,5 @@ C:\Projects\KSP\WildBlueIndustries\DSEV\DSEVUtils\bin\Debug\UnityEngine.xml
 C:\Projects\KSP\WildBlueIndustries\DSEV\DSEVUtils\obj\Debug\DSEVUtils.csprojResolveAssemblyReference.cache
 C:\Projects\KSP\WildBlueIndustries\DSEV\DSEVUtils\obj\Debug\DSEVUtils.dll
 C:\Projects\KSP\WildBlueIndustries\DSEV\DSEVUtils\obj\Debug\DSEVUtils.pdb
+C:\Projects\KSP\WildBlueIndustries\DSEV\DSEVUtils\bin\Debug\BARIS.dll
+C:\Projects\KSP\WildBlueIndustries\DSEV\DSEVUtils\bin\Debug\BARIS.pdb
