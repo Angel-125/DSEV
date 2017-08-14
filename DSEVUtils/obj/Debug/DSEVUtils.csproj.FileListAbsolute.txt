@@ -12,8 +12,13 @@ C:\Projects\KSP\WildBlueIndustries\DSEV\DSEVUtils\bin\Debug\TDx.TDxInput.dll
 C:\Projects\KSP\WildBlueIndustries\DSEV\DSEVUtils\bin\Debug\Mono.Security.dll
 C:\Projects\KSP\WildBlueIndustries\DSEV\DSEVUtils\bin\Debug\WildBlueTools.pdb
 C:\Projects\KSP\WildBlueIndustries\DSEV\DSEVUtils\bin\Debug\UnityEngine.xml
-C:\Projects\KSP\WildBlueIndustries\DSEV\DSEVUtils\obj\Debug\DSEVUtils.csprojResolveAssemblyReference.cache
 C:\Projects\KSP\WildBlueIndustries\DSEV\DSEVUtils\obj\Debug\DSEVUtils.dll
 C:\Projects\KSP\WildBlueIndustries\DSEV\DSEVUtils\obj\Debug\DSEVUtils.pdb
 C:\Projects\KSP\WildBlueIndustries\DSEV\DSEVUtils\bin\Debug\BARIS.dll
 C:\Projects\KSP\WildBlueIndustries\DSEV\DSEVUtils\bin\Debug\BARIS.pdb
+C:\Projects\KSP\WildBlueIndustries\DSEV\DSEVUtils\bin\Debug\MarkdownSeparator.exe
+C:\Projects\KSP\WildBlueIndustries\DSEV\DSEVUtils\bin\Debug\RunPowershell.bat
+C:\Projects\KSP\WildBlueIndustries\DSEV\DSEVUtils\bin\Debug\xmldoc2md.ps1
+C:\Projects\KSP\WildBlueIndustries\DSEV\DSEVUtils\bin\Debug\xmldoc2md.xsl
+C:\Projects\KSP\WildBlueIndustries\DSEV\DSEVUtils\bin\Debug\RunMDSeparator.bat
+C:\Projects\KSP\WildBlueIndustries\DSEV\DSEVUtils\obj\Debug\DSEVUtils.csprojResolveAssemblyReference.cache
