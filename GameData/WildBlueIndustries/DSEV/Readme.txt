@@ -18,6 +18,13 @@ Copy the WildBlueIndustries directory into your GameData folder.
 
 ---REVISION HISTORY---
 
+2.2.5
+- BARIS is now an optional download as originally intended- just took awhile for me to figure out how to make that work. DO NOT DELETE the 000ABARISBridgeDoNotDelete FOLDER! That plugin is the bridge between this mod and BARIS.
+- Fixed some issues with Cryo Engines support.
+- Added KIS storage option to the Size 2 and Size 3 fuel tanks.
+- Transfered Quad Engine Coupler from MOLE to DSEV; retexturing not done yet.
+- Added Hyperion T.A.V. to ReferenceDesigns.
+
 2.2 BARIS
 This release introduces BARIS, a new game mechanic that replaces the stock heat mechanic on the mod's converters. You can think of BARIS (the name is a nod to Buzz Aldrin's Race Into Space) as a highly customizable Dangit-lite. Don't want your drills or converters to break? Don't want the hassle of parts wearing out? Do you prefer not to send Equipment up to repair your parts, or to requrire specific skills to repair them? No problem! All that and more are options. As always, It's Your Game, Your Choice.
 
