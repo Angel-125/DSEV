@@ -21,6 +21,7 @@ Copy the WildBlueIndustries directory into your GameData folder.
 2.2.5
 - BARIS is now an optional download as originally intended- just took awhile for me to figure out how to make that work. DO NOT DELETE the 000ABARISBridgeDoNotDelete FOLDER! That plugin is the bridge between this mod and BARIS.
 - Fixed some issues with Cryo Engines support.
+- D2 Greenhouse should work properly for TAC-LS and Snacks.
 - Added KIS storage option to the Size 2 and Size 3 fuel tanks.
 - Transfered Quad Engine Coupler from MOLE to DSEV; retexturing not done yet.
 - Added Hyperion T.A.V. to ReferenceDesigns.

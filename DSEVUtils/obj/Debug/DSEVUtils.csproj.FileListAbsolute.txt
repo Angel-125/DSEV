@@ -22,3 +22,5 @@ C:\Projects\KSP\WildBlueIndustries\DSEV\DSEVUtils\bin\Debug\xmldoc2md.ps1
 C:\Projects\KSP\WildBlueIndustries\DSEV\DSEVUtils\bin\Debug\xmldoc2md.xsl
 C:\Projects\KSP\WildBlueIndustries\DSEV\DSEVUtils\bin\Debug\RunMDSeparator.bat
 C:\Projects\KSP\WildBlueIndustries\DSEV\DSEVUtils\obj\Debug\DSEVUtils.csprojResolveAssemblyReference.cache
+C:\Projects\KSP\WildBlueIndustries\DSEV\DSEVUtils\bin\Debug\BARISBridge.dll
+C:\Projects\KSP\WildBlueIndustries\DSEV\DSEVUtils\bin\Debug\BARISBridge.pdb
