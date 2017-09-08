@@ -1,8 +1,8 @@
 ship = Discovery II Lander
-version = 1.2.2
+version = 1.3.0
 description = 
 type = VAB
-size = 4.13170576,7.8569603,8.31096268
+size = 4.13170528,7.8569622,8.31096458
 PART
 {
 	part = mk2LanderCabin_4288818024
@@ -222,10 +222,110 @@ PART
 	}
 	MODULE
 	{
-		name = RasterPropMonitorComputer
+		name = WBIPartScrapper
 		isEnabled = True
-		vesselDescription = 
-		RPMCid = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableSAS
+		isEnabled = True
+		IsActive = False
+		isBroken = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableTransmitter
+		isEnabled = True
+		isBroken = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableFuelTank
+		isEnabled = True
+		leakedUnitsPerSec = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleResourceLocksAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		quality = 5
+		qualityCap = -1
+		mtbfCap = -1
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		mtbfBonus = 150
+		currentQuality = 5
+		mtbf = 600
+		currentMTBF = 750
+		mtbfRepairMultiplier = 0.699999988
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		isFixedOnStart = False
+		breakableModuleCount = 3
+		recordedFlightLog = False
+		isActivated = True
+		mtbfHibernationFactor = 0.100000001
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleRobonautExperimentManager
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -242,34 +342,6 @@ PART
 		name = SnacksControlSource
 		isEnabled = True
 		partialControlEnabled = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = TrajectoriesVesselSettings
-		isEnabled = True
-		EntryAngle = 0
-		EntryHorizon = False
-		HighAngle = 0
-		HighHorizon = False
-		LowAngle = 0
-		LowHorizon = False
-		GroundAngle = 0
-		GroundHorizon = False
-		ProgradeEntry = False
-		RetrogradeEntry = False
-		hasTarget = False
-		targetLocation = (0, 0, 0)
-		targetReferenceBody = 
 		stagingEnabled = True
 		EVENTS
 		{
@@ -349,6 +421,10 @@ PART
 				actionGroup = None
 			}
 			OnTranslatronToggleHSAction
+			{
+				actionGroup = None
+			}
+			OnAscentAPToggleAction
 			{
 				actionGroup = None
 			}
@@ -921,6 +997,72 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableSAS
+		isEnabled = True
+		IsActive = False
+		isBroken = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		quality = 5
+		qualityCap = -1
+		mtbfCap = -1
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		mtbfBonus = 3
+		currentQuality = 5
+		mtbf = 12
+		currentMTBF = 15
+		mtbfRepairMultiplier = 0.699999988
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		isFixedOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = False
+		mtbfHibernationFactor = 0.00999999978
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
@@ -968,12 +1110,27 @@ PART
 	}
 	MODULE
 	{
-		name = WBIMeshHelper
+		name = ModuleKISInventory
 		isEnabled = True
-		selectedObject = 1
+		invName = 
+		helmetEquipped = True
 		stagingEnabled = True
-		selectedObject = 1
-		showGui = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBITextureSwitcher
+		isEnabled = True
+		selectedIndex = 1
+		stagingEnabled = True
 		EVENTS
 		{
 		}
@@ -1062,6 +1219,91 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableFuelTank
+		isEnabled = True
+		leakedUnitsPerSec = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleResourceLocksAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		quality = 5
+		qualityCap = -1
+		mtbfCap = -1
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		mtbfBonus = 150
+		currentQuality = 5
+		mtbf = 600
+		currentMTBF = 750
+		mtbfRepairMultiplier = 0.699999988
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		isFixedOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = True
+		mtbfHibernationFactor = 0.100000001
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = OseModuleInventoryPreference
+		isEnabled = True
+		IsFavored = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 	RESOURCE
 	{
 		name = LiquidFuel
@@ -1089,7 +1331,7 @@ PART
 {
 	part = trussPiece1x_4288621750
 	partName = Part
-	pos = 0.00161130726,13.3245354,-1.12485135
+	pos = 0.00161130726,13.3245354,-1.12485158
 	attPos = 0.617086291,-1.18980122,4.85549805E-08
 	attPos0 = -1.7871995,0.582983971,1.89863542E-07
 	rot = -5.96046448E-08,0.707106829,-0.707106829,-5.96046448E-08
@@ -1121,12 +1363,27 @@ PART
 	PARTDATA
 	{
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = trussPiece1x_4288621098
 	partName = Part
-	pos = 0.00161142647,13.3245354,1.21539485
+	pos = 0.00161142647,13.3245354,1.21539509
 	attPos = -0.61708653,-1.18980122,2.26896219E-07
 	attPos0 = 1.7871995,0.582983971,-3.4610548E-07
 	rot = 0.707106829,5.96046448E-08,-5.96046448E-08,0.707106829
@@ -1158,12 +1415,27 @@ PART
 	PARTDATA
 	{
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = WBI.FLM200_4287975930
 	partName = Part
-	pos = -0.020177424,13.346324,-2.09530258
+	pos = -0.0201774035,13.346324,-2.09530306
 	attPos = 1.11758709E-08,-0.144560814,-3.7252903E-09
 	attPos0 = 0.0217887554,1.11500025,-0.0217885952
 	rot = 4.21468513E-08,0.70710665,0,-0.707107008
@@ -1203,6 +1475,23 @@ PART
 	}
 	MODULE
 	{
+		name = ModuleKISInventory
+		isEnabled = True
+		invName = 
+		helmetEquipped = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = WBIConvertibleStorage
 		isEnabled = True
 		currentVolume = 0
@@ -1279,6 +1568,91 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableFuelTank
+		isEnabled = True
+		leakedUnitsPerSec = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleResourceLocksAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		quality = 5
+		qualityCap = -1
+		mtbfCap = -1
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		mtbfBonus = 150
+		currentQuality = 5
+		mtbf = 600
+		currentMTBF = 750
+		mtbfRepairMultiplier = 0.699999988
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		isFixedOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = True
+		mtbfHibernationFactor = 0.100000001
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = OseModuleInventoryPreference
+		isEnabled = True
+		IsFavored = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 	RESOURCE
 	{
 		name = LiquidFuel
@@ -1306,7 +1680,7 @@ PART
 {
 	part = WBI.FLM200_4287974600
 	partName = Part
-	pos = 0.023400275,13.346324,2.18584633
+	pos = 0.0234002545,13.346324,2.18584681
 	attPos = -3.7252903E-09,-0.144560814,-3.7252903E-09
 	attPos0 = 0.0217888188,1.11500025,-0.0217885654
 	rot = 0,0.707106888,8.42937027E-08,0.707106769
@@ -1346,6 +1720,23 @@ PART
 	}
 	MODULE
 	{
+		name = ModuleKISInventory
+		isEnabled = True
+		invName = 
+		helmetEquipped = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = WBIConvertibleStorage
 		isEnabled = True
 		currentVolume = 0
@@ -1422,6 +1813,91 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableFuelTank
+		isEnabled = True
+		leakedUnitsPerSec = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleResourceLocksAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		quality = 5
+		qualityCap = -1
+		mtbfCap = -1
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		mtbfBonus = 150
+		currentQuality = 5
+		mtbf = 600
+		currentMTBF = 750
+		mtbfRepairMultiplier = 0.699999988
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		isFixedOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = True
+		mtbfHibernationFactor = 0.100000001
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = OseModuleInventoryPreference
+		isEnabled = True
+		IsFavored = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 	RESOURCE
 	{
 		name = LiquidFuel
@@ -1449,7 +1925,7 @@ PART
 {
 	part = NuclearAerospike_4288643258
 	partName = Part
-	pos = -0.0201777946,11.5290117,-2.09530354
+	pos = -0.0201777741,11.5290117,-2.09530425
 	attPos = 0,0,0
 	attPos0 = -5.41599015E-08,-1.81730461,0
 	rot = 7.37569934E-08,0.70710665,3.16101385E-08,-0.707107008
@@ -1586,6 +2062,21 @@ PART
 	}
 	MODULE
 	{
+		name = ModuleAnimateHeat
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = ModuleGimbal
 		isEnabled = True
 		gimbalLock = False
@@ -1624,6 +2115,38 @@ PART
 			ToggleRollAction
 			{
 				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGenerator
+		isEnabled = True
+		generatorIsActive = False
+		throttle = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+				active = False
+			}
+			ActivateAction
+			{
+				actionGroup = None
+				active = False
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+				active = False
 			}
 		}
 		UPGRADESAPPLIED
@@ -1675,12 +2198,80 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableEngine
+		isEnabled = True
+		failureThrustPercent = 0
+		isStuckOn = False
+		failureModeID = 0
+		wasRunning = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		quality = 5
+		qualityCap = -1
+		mtbfCap = -1
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		mtbfBonus = 4.5
+		currentQuality = 5
+		mtbf = 18
+		currentMTBF = 22.5
+		mtbfRepairMultiplier = 0.699999988
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		isFixedOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = False
+		mtbfHibernationFactor = 0.00999999978
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = NuclearAerospike_4287972952
 	partName = Part
-	pos = 0.0233998131,11.5290136,2.18584633
+	pos = 0.0233997926,11.5290136,2.18584681
 	attPos = 0,0,0
 	attPos0 = 1.08894795E-08,-1.81730461,-1.1920929E-07
 	rot = 4.21468513E-08,0.707106769,-8.42937027E-08,0.707106769
@@ -1817,6 +2408,21 @@ PART
 	}
 	MODULE
 	{
+		name = ModuleAnimateHeat
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = ModuleGimbal
 		isEnabled = True
 		gimbalLock = False
@@ -1855,6 +2461,38 @@ PART
 			ToggleRollAction
 			{
 				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGenerator
+		isEnabled = True
+		generatorIsActive = False
+		throttle = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+				active = False
+			}
+			ActivateAction
+			{
+				actionGroup = None
+				active = False
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+				active = False
 			}
 		}
 		UPGRADESAPPLIED
@@ -1906,12 +2544,80 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableEngine
+		isEnabled = True
+		failureThrustPercent = 0
+		isStuckOn = False
+		failureModeID = 0
+		wasRunning = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		quality = 5
+		qualityCap = -1
+		mtbfCap = -1
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		mtbfBonus = 4.5
+		currentQuality = 5
+		mtbf = 18
+		currentMTBF = 22.5
+		mtbfRepairMultiplier = 0.699999988
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		isFixedOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = False
+		mtbfHibernationFactor = 0.00999999978
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = WBI.FLM200_4287511744
 	partName = Part
-	pos = -0.0201776754,14.3463268,-2.09530258
+	pos = -0.0201776549,14.3463268,-2.09530282
 	attPos = 0,0,0
 	attPos0 = 8.94069672E-08,1,1.1920929E-07
 	rot = 7.37569934E-08,0.70710665,3.16101385E-08,-0.707107008
@@ -1947,6 +2653,23 @@ PART
 	}
 	MODULE
 	{
+		name = ModuleKISInventory
+		isEnabled = True
+		invName = 
+		helmetEquipped = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = WBIConvertibleStorage
 		isEnabled = True
 		currentVolume = 0
@@ -2018,6 +2741,91 @@ PART
 		{
 			resourceName = Oxidizer
 			mode = 0
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableFuelTank
+		isEnabled = True
+		leakedUnitsPerSec = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleResourceLocksAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		quality = 5
+		qualityCap = -1
+		mtbfCap = -1
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		mtbfBonus = 150
+		currentQuality = 5
+		mtbf = 600
+		currentMTBF = 750
+		mtbfRepairMultiplier = 0.699999988
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		isFixedOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = True
+		mtbfHibernationFactor = 0.100000001
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = OseModuleInventoryPreference
+		isEnabled = True
+		IsFavored = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
 		}
 		UPGRADESAPPLIED
 		{
@@ -2050,10 +2858,10 @@ PART
 {
 	part = WBI.FLM200_4287510604
 	partName = Part
-	pos = 0.0234007668,14.3463268,2.18584633
+	pos = 0.0234007463,14.3463268,2.18584681
 	attPos = 0,0,0
 	attPos0 = -1.4210853E-14,1,2.38418551E-07
-	rot = -3.16101385E-08,0.707106829,-1.05367128E-08,0.707106829
+	rot = -4.21468513E-08,0.707106829,0,0.707106829
 	attRot = 0,0,0,1
 	attRot0 = 2.98023224E-08,-1.04308128E-07,-1.49011612E-08,1
 	mir = 1,1,1
@@ -2083,6 +2891,23 @@ PART
 	}
 	PARTDATA
 	{
+	}
+	MODULE
+	{
+		name = ModuleKISInventory
+		isEnabled = True
+		invName = 
+		helmetEquipped = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
 	}
 	MODULE
 	{
@@ -2162,6 +2987,91 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableFuelTank
+		isEnabled = True
+		leakedUnitsPerSec = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleResourceLocksAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		quality = 5
+		qualityCap = -1
+		mtbfCap = -1
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		mtbfBonus = 150
+		currentQuality = 5
+		mtbf = 600
+		currentMTBF = 750
+		mtbfRepairMultiplier = 0.699999988
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		isFixedOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = True
+		mtbfHibernationFactor = 0.100000001
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = OseModuleInventoryPreference
+		isEnabled = True
+		IsFavored = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 	RESOURCE
 	{
 		name = LiquidFuel
@@ -2189,7 +3099,7 @@ PART
 {
 	part = telescopicLadderBay_4287598082
 	partName = Part
-	pos = 1.21273685,15.1388168,0.0452713519
+	pos = 1.21273708,15.1388168,0.0452713519
 	attPos = 0,0,0
 	attPos0 = 1.31045937E-07,0.0344600677,-1.211115
 	rot = 2.38418579E-07,1.00000012,2.13162821E-14,0
@@ -2247,12 +3157,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = linearRcs_4287288550
 	partName = Part
-	pos = -0.0201779138,14.5902557,-2.7160666
+	pos = -0.0201778933,14.5902557,-2.71606708
 	attPos = 0,0,0
 	attPos0 = -0.620757997,0.24392873,-1.26205407E-07
 	rot = 1.78813934E-07,-0.70710665,0.707107008,1.78813934E-07
@@ -2313,15 +3238,81 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableRCS
+		isEnabled = True
+		IsActive = False
+		isBroken = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		quality = 5
+		qualityCap = -1
+		mtbfCap = -1
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		mtbfBonus = 3
+		currentQuality = 5
+		mtbf = 12
+		currentMTBF = 15
+		mtbfRepairMultiplier = 0.699999988
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		isFixedOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = False
+		mtbfHibernationFactor = 0.00999999978
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = linearRcs_4287287366
 	partName = Part
-	pos = 0.0234002899,14.5902557,2.8066113
+	pos = 0.0234002694,14.5902557,2.80661178
 	attPos = 0,0,0
 	attPos0 = -0.620758891,0.243928447,-2.39067589E-07
-	rot = -0.707107008,0,0,-0.70710665
+	rot = -0.707107067,0,-2.98023224E-08,-0.70710665
 	attRot = 0,0,0,1
 	attRot0 = -0.50000006,0.49999994,-0.500000179,-0.499999881
 	mir = 1,1,1
@@ -2379,12 +3370,78 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableRCS
+		isEnabled = True
+		IsActive = False
+		isBroken = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		quality = 5
+		qualityCap = -1
+		mtbfCap = -1
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		mtbfBonus = 3
+		currentQuality = 5
+		mtbf = 12
+		currentMTBF = 15
+		mtbfRepairMultiplier = 0.699999988
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		isFixedOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = False
+		mtbfHibernationFactor = 0.00999999978
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = linearRcs_4287285574
 	partName = Part
-	pos = 1.22947252,13.1671629,0.0452711135
+	pos = 1.22947276,13.1671629,0.0452711135
 	attPos = 0,0,0
 	attPos0 = -8.01801363E-08,-0.76418972,-1.22784901
 	rot = 0.500000179,0.49999994,-0.500000179,0.49999994
@@ -2445,12 +3502,78 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableRCS
+		isEnabled = True
+		IsActive = False
+		isBroken = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		quality = 5
+		qualityCap = -1
+		mtbfCap = -1
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		mtbfBonus = 3
+		currentQuality = 5
+		mtbf = 12
+		currentMTBF = 15
+		mtbfRepairMultiplier = 0.699999988
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		isFixedOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = False
+		mtbfHibernationFactor = 0.00999999978
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = linearRcs_4287275470
 	partName = Part
-	pos = -1.22624958,13.1671629,0.0452726632
+	pos = -1.22624981,13.1671629,0.0452726632
 	attPos = 0,0,0
 	attPos0 = 1.87522076E-07,-0.76418972,1.22784901
 	rot = -0.500000179,0.499999911,-0.500000179,-0.49999997
@@ -2511,12 +3634,78 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableRCS
+		isEnabled = True
+		IsActive = False
+		isBroken = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		quality = 5
+		qualityCap = -1
+		mtbfCap = -1
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		mtbfBonus = 3
+		currentQuality = 5
+		mtbf = 12
+		currentMTBF = 15
+		mtbfRepairMultiplier = 0.699999988
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		isFixedOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = False
+		mtbfHibernationFactor = 0.00999999978
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = linearRcs_4287264816
 	partName = Part
-	pos = 1.14127111,16.3785343,0.0452711135
+	pos = 1.14127135,16.3785343,0.0452711135
 	attPos = 0,0,0
 	attPos0 = -8.29837461E-08,0.620601654,-1.13965166
 	rot = 0.500394225,0.499605656,-0.500394106,0.499605715
@@ -2577,12 +3766,78 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableRCS
+		isEnabled = True
+		IsActive = False
+		isBroken = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		quality = 5
+		qualityCap = -1
+		mtbfCap = -1
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		mtbfBonus = 3
+		currentQuality = 5
+		mtbf = 12
+		currentMTBF = 15
+		mtbfRepairMultiplier = 0.699999988
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		isFixedOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = False
+		mtbfHibernationFactor = 0.00999999978
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = linearRcs_4287263572
 	partName = Part
-	pos = -1.13804817,16.3785343,0.0452726632
+	pos = -1.13804841,16.3785343,0.0452726632
 	attPos = 0,0,0
 	attPos0 = 1.82615253E-07,0.620601654,1.13965166
 	rot = -0.500394046,0.499605685,-0.500394166,-0.499605685
@@ -2643,12 +3898,78 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableRCS
+		isEnabled = True
+		IsActive = False
+		isBroken = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		quality = 5
+		qualityCap = -1
+		mtbfCap = -1
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		mtbfBonus = 3
+		currentQuality = 5
+		mtbf = 12
+		currentMTBF = 15
+		mtbfRepairMultiplier = 0.699999988
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		isFixedOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = False
+		mtbfHibernationFactor = 0.00999999978
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = RCSBlock_4287275990
 	partName = Part
-	pos = 1.29715586,13.5843592,0.0445289165
+	pos = 1.2971561,13.5843592,0.0445289165
 	attPos = 0.0167006701,-0.143014669,4.48198989E-08
 	attPos0 = -0.00074235443,-0.346993446,-1.29553187
 	rot = 1.91727651E-07,1.00000012,0,0
@@ -2709,12 +4030,78 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableRCS
+		isEnabled = True
+		IsActive = False
+		isBroken = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		quality = 5
+		qualityCap = -1
+		mtbfCap = -1
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		mtbfBonus = 3
+		currentQuality = 5
+		mtbf = 12
+		currentMTBF = 15
+		mtbfRepairMultiplier = 0.699999988
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		isFixedOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = False
+		mtbfHibernationFactor = 0.00999999978
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = RCSBlock_4287263440
 	partName = Part
-	pos = -1.29393291,13.5843592,0.0460148603
+	pos = -1.29393315,13.5843592,0.0460148603
 	attPos = 0.0167006701,-0.143014669,4.48198989E-08
 	attPos0 = 0.000742467702,-0.346993446,1.29553187
 	rot = 0,-1.1920929E-07,-1.91727651E-07,-1.00000012
@@ -2775,12 +4162,78 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableRCS
+		isEnabled = True
+		IsActive = False
+		isBroken = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		quality = 5
+		qualityCap = -1
+		mtbfCap = -1
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		mtbfBonus = 3
+		currentQuality = 5
+		mtbf = 12
+		currentMTBF = 15
+		mtbfRepairMultiplier = 0.699999988
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		isFixedOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = False
+		mtbfHibernationFactor = 0.00999999978
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = strutConnector_4286697102
 	partName = CompoundPart
-	pos = -0.880398393,15.2172794,0.927282333
+	pos = -0.880398631,15.2172794,0.927282572
 	attPos = 0,0,0
 	attPos0 = 0.882001936,0.112922668,0.882001698
 	rot = -9.50039691E-08,0.382683456,-2.29359813E-07,0.923879564
@@ -2845,12 +4298,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = strutConnector_4286696880
 	partName = CompoundPart
-	pos = 0.883621275,15.2172794,-0.836738765
+	pos = 0.883621514,15.2172794,-0.836739004
 	attPos = 0,0,0
 	attPos0 = -0.882001996,0.112922668,-0.882001758
 	rot = -2.29359813E-07,0.923879623,9.50039336E-08,-0.382683486
@@ -2915,12 +4383,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = strutConnector_4286696166
 	partName = CompoundPart
-	pos = -0.87325561,15.2245817,-0.829594851
+	pos = -0.873255849,15.2245817,-0.829595089
 	attPos = 0,0,0
 	attPos0 = -0.874859452,0.120224953,0.874859273
 	rot = 3.76512022E-09,0.382683516,-9.08980624E-09,-0.923879623
@@ -2985,12 +4468,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = strutConnector_4286695956
 	partName = CompoundPart
-	pos = 0.876478553,15.2245817,0.920138478
+	pos = 0.876478791,15.2245817,0.920138717
 	attPos = 0,0,0
 	attPos0 = 0.874859393,0.120224953,-0.874859393
 	rot = -9.08980624E-09,-0.923879623,-3.76512022E-09,-0.382683516
@@ -3055,6 +4553,21 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
@@ -3093,12 +4606,27 @@ PART
 	PARTDATA
 	{
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = fuelLine_4288492232
 	partName = CompoundPart
-	pos = 0.00161154568,14.7411919,-1.19399643
+	pos = 0.00161154568,14.7411919,-1.19399667
 	attPos = 0,0,0
 	attPos0 = -1.23925853,0.809837341,0
 	rot = 5.81431223E-08,0.707106888,-5.81431152E-08,-0.707106769
@@ -3163,12 +4691,81 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableFuelTank
+		isEnabled = True
+		leakedUnitsPerSec = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleResourceLocksAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		quality = 5
+		qualityCap = -1
+		mtbfCap = -1
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		mtbfBonus = 150
+		currentQuality = 5
+		mtbf = 600
+		currentMTBF = 750
+		mtbfRepairMultiplier = 0.699999988
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		isFixedOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = False
+		mtbfHibernationFactor = 0.100000001
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = fuelLine_4286259190
 	partName = CompoundPart
-	pos = 0.00161142647,14.7411919,1.28454018
+	pos = 0.00161142647,14.7411919,1.28454041
 	attPos = 0,0,0
 	attPos0 = 1.23925853,0.809837341,-1.19209261E-07
 	rot = -5.81431188E-08,-0.707106829,-5.81431188E-08,-0.707106829
@@ -3233,12 +4830,81 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableFuelTank
+		isEnabled = True
+		leakedUnitsPerSec = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleResourceLocksAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		quality = 5
+		qualityCap = -1
+		mtbfCap = -1
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		mtbfBonus = 150
+		currentQuality = 5
+		mtbf = 600
+		currentMTBF = 750
+		mtbfRepairMultiplier = 0.699999988
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		isFixedOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = False
+		mtbfHibernationFactor = 0.100000001
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = radialDrogue_4286172472
 	partName = Part
-	pos = 1.03035402,16.6326714,0.045269087
+	pos = 1.0303545,16.6326714,0.0452688485
 	attPos = 0,0,0
 	attPos0 = 1.02873611,0.0664032996,3.57627471E-07
 	rot = -0.599525034,-0.37492618,0.59952563,-0.374925822
@@ -3342,12 +5008,42 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleRobonautPackChute
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = radialDecoupler_4285535584
 	partName = Part
-	pos = 0.0234003048,13.5596466,2.80908036
+	pos = 0.0234002843,13.5596466,2.80908084
 	attPos = 0,0,0
 	attPos0 = -0.62322855,0.213322684,1.49011555E-07
 	rot = -1.26440554E-07,0.707107008,4.21468513E-08,0.707106531
@@ -3443,12 +5139,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = radialDecoupler_4285535102
 	partName = Part
-	pos = -0.0201784801,13.5596466,-2.71853685
+	pos = -0.020178698,13.5596466,-2.71853733
 	attPos = 0,0,0
 	attPos0 = -0.623229027,0.213322714,2.38418664E-07
 	rot = -6.32202699E-08,0.707106471,3.16101364E-07,-0.707107186
@@ -3544,12 +5255,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = miniFuelTank_4285511628
 	partName = Part
-	pos = 0.0233964603,13.5250683,3.2881403
+	pos = 0.0233964548,13.5250683,3.28814125
 	attPos = -9.23871994E-07,-0.157142639,-2.89510069E-08
 	attPos0 = -0.479055315,0.122564279,2.68647142E-07
 	rot = -2.52881108E-07,0.707106888,-8.42937027E-08,0.707106769
@@ -3586,6 +5312,75 @@ PART
 	PARTDATA
 	{
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableFuelTank
+		isEnabled = True
+		leakedUnitsPerSec = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleResourceLocksAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		quality = 5
+		qualityCap = -1
+		mtbfCap = -1
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		mtbfBonus = 150
+		currentQuality = 5
+		mtbf = 600
+		currentMTBF = 750
+		mtbfRepairMultiplier = 0.699999988
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		isFixedOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = True
+		mtbfHibernationFactor = 0.100000001
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 	RESOURCE
 	{
 		name = LiquidFuel
@@ -3613,7 +5408,7 @@ PART
 {
 	part = miniFuelTank_4285510382
 	partName = Part
-	pos = -0.020175321,13.5250683,-3.19759989
+	pos = -0.0201753154,13.5250683,-3.19760084
 	attPos = -1.87754631E-06,-0.157142639,-1.49019854E-08
 	attPos0 = -0.479056269,0.122564189,2.62682477E-07
 	rot = -2.42344385E-07,0.70710665,3.68784953E-07,-0.707107008
@@ -3650,6 +5445,75 @@ PART
 	PARTDATA
 	{
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableFuelTank
+		isEnabled = True
+		leakedUnitsPerSec = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleResourceLocksAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		quality = 5
+		qualityCap = -1
+		mtbfCap = -1
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		mtbfBonus = 150
+		currentQuality = 5
+		mtbf = 600
+		currentMTBF = 750
+		mtbfRepairMultiplier = 0.699999988
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		isFixedOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = True
+		mtbfHibernationFactor = 0.100000001
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 	RESOURCE
 	{
 		name = LiquidFuel
@@ -3677,10 +5541,10 @@ PART
 {
 	part = R8winglet_4285507900
 	partName = Part
-	pos = -0.706206441,13.3269835,3.70938087
+	pos = -0.706206322,13.3269835,3.70938182
 	attPos = 0,0.039598465,0
 	attPos0 = -0.421235174,-0.198084876,-0.729597449
-	rot = -2.58149441E-07,0.258819342,-4.58347017E-07,0.965925813
+	rot = -2.05465909E-07,0.258819282,-4.26736875E-07,0.965925872
 	attRot = 0,0,0,1
 	attRot0 = 4.53950264E-07,-0.499999434,-7.44274644E-07,0.866025746
 	mir = 1,1,1
@@ -3744,15 +5608,30 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = R8winglet_4285507856
 	partName = Part
-	pos = 0.709426284,13.3269825,-3.61884475
+	pos = 0.709426165,13.3269825,-3.61884594
 	attPos = 0,0.039598465,0
 	attPos0 = -0.421235859,-0.198084846,-0.72959733
-	rot = -1.31182071E-06,0.965925813,9.3249912E-07,-0.258819342
+	rot = -1.33289416E-06,0.965925872,9.53572567E-07,-0.258819282
 	attRot = 0,0,0,1
 	attRot0 = 4.76837016E-07,-0.499999434,-8.1532238E-07,0.866025805
 	mir = 1,1,1
@@ -3816,15 +5695,30 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = R8winglet_4285507734
 	partName = Part
-	pos = 0.754530311,13.3254528,3.71026134
+	pos = 0.754530609,13.3254528,3.7102623
 	attPos = -9.23871994E-07,-0.0425510406,2.38418579E-07
 	attPos0 = -0.422114968,-0.15706487,0.731125653
-	rot = 6.42739451E-07,0.96592629,3.05564669E-07,0.258817792
+	rot = 6.32202728E-07,0.96592629,3.37174782E-07,0.258817822
 	attRot = 0,0,0,1
 	attRot0 = 3.64543098E-07,0.500000954,7.01137594E-07,0.866024852
 	mir = 1,1,1
@@ -3888,12 +5782,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = R8winglet_4285507504
 	partName = Part
-	pos = -0.751314104,13.3254528,-3.61971998
+	pos = -0.75131458,13.3254528,-3.61972094
 	attPos = -1.87754631E-06,-0.0425509363,4.76837158E-07
 	attPos0 = -0.422115743,-0.157064795,0.73112607
 	rot = -6.00592671E-07,0.258817494,-4.32005237E-07,-0.965926349
@@ -3960,12 +5869,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = miniFuelTank_4285501546
 	partName = Part
-	pos = 0.0233964752,13.1765213,3.28814173
+	pos = 0.0233964697,13.1765213,3.28814268
 	attPos = 0,0,0
 	attPos0 = -7.18842216E-07,-0.348546982,-7.32149985E-08
 	rot = -5.02429621E-15,-1.1920929E-07,5.02429621E-15,1.00000012
@@ -3998,6 +5922,75 @@ PART
 	PARTDATA
 	{
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableFuelTank
+		isEnabled = True
+		leakedUnitsPerSec = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleResourceLocksAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		quality = 5
+		qualityCap = -1
+		mtbfCap = -1
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		mtbfBonus = 150
+		currentQuality = 5
+		mtbf = 600
+		currentMTBF = 750
+		mtbfRepairMultiplier = 0.699999988
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		isFixedOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = True
+		mtbfHibernationFactor = 0.100000001
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 	RESOURCE
 	{
 		name = LiquidFuel
@@ -4025,7 +6018,7 @@ PART
 {
 	part = miniFuelTank_4285500382
 	partName = Part
-	pos = -0.0201753061,13.1765213,-3.19760084
+	pos = -0.0201753005,13.1765213,-3.1976018
 	attPos = 0,0,0
 	attPos0 = -7.09814913E-07,-0.348546982,-2.60772133E-08
 	rot = -5.26835606E-08,1.00000012,1.05367093E-08,-2.68220901E-07
@@ -4058,6 +6051,75 @@ PART
 	PARTDATA
 	{
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableFuelTank
+		isEnabled = True
+		leakedUnitsPerSec = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleResourceLocksAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		quality = 5
+		qualityCap = -1
+		mtbfCap = -1
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		mtbfBonus = 150
+		currentQuality = 5
+		mtbf = 600
+		currentMTBF = 750
+		mtbfRepairMultiplier = 0.699999988
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		isFixedOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = True
+		mtbfHibernationFactor = 0.100000001
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 	RESOURCE
 	{
 		name = LiquidFuel
@@ -4085,7 +6147,7 @@ PART
 {
 	part = miniFuelTank_4285497924
 	partName = Part
-	pos = 0.0233964752,13.8736153,3.28814077
+	pos = 0.0233964548,13.8736153,3.28814173
 	attPos = 0,0,0
 	attPos0 = -1.06929713E-06,0.348546952,7.13523676E-08
 	rot = -5.02429621E-15,-1.1920929E-07,5.02429621E-15,1.00000012
@@ -4118,6 +6180,75 @@ PART
 	PARTDATA
 	{
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableFuelTank
+		isEnabled = True
+		leakedUnitsPerSec = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleResourceLocksAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		quality = 5
+		qualityCap = -1
+		mtbfCap = -1
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		mtbfBonus = 150
+		currentQuality = 5
+		mtbf = 600
+		currentMTBF = 750
+		mtbfRepairMultiplier = 0.699999988
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		isFixedOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = True
+		mtbfHibernationFactor = 0.100000001
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 	RESOURCE
 	{
 		name = LiquidFuel
@@ -4145,7 +6276,7 @@ PART
 {
 	part = miniFuelTank_4285497192
 	partName = Part
-	pos = -0.0201752912,13.8736153,-3.19760036
+	pos = -0.0201752707,13.8736153,-3.19760132
 	attPos = 0,0,0
 	attPos0 = -1.10812675E-06,0.348546982,5.96045098E-08
 	rot = -5.26835606E-08,1.00000012,1.05367093E-08,-2.68220901E-07
@@ -4178,6 +6309,75 @@ PART
 	PARTDATA
 	{
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableFuelTank
+		isEnabled = True
+		leakedUnitsPerSec = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleResourceLocksAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		quality = 5
+		qualityCap = -1
+		mtbfCap = -1
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		mtbfBonus = 150
+		currentQuality = 5
+		mtbf = 600
+		currentMTBF = 750
+		mtbfRepairMultiplier = 0.699999988
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		isFixedOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = True
+		mtbfHibernationFactor = 0.100000001
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 	RESOURCE
 	{
 		name = LiquidFuel
@@ -4205,7 +6405,7 @@ PART
 {
 	part = standardNoseCone_4285493852
 	partName = Part
-	pos = 0.0233964752,14.2978916,3.28814268
+	pos = 0.0233964548,14.2978916,3.28814363
 	attPos = 0,0,0
 	attPos0 = 2.38413858E-08,0.424273521,9.77690206E-07
 	rot = -5.02429621E-15,-1.1920929E-07,5.02429621E-15,1.00000012
@@ -4251,12 +6451,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = standardNoseCone_4285493380
 	partName = Part
-	pos = -0.0201753508,14.2978916,-3.19760132
+	pos = -0.0201753303,14.2978916,-3.19760227
 	attPos = 0,0,0
 	attPos0 = -2.08632542E-08,0.424273491,9.95658638E-07
 	rot = -5.26835606E-08,1.00000012,1.05367093E-08,-2.68220901E-07
@@ -4302,12 +6517,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = sasModule_4285444844
 	partName = Part
-	pos = 0.0233967435,12.9111366,3.28814173
+	pos = 0.023396723,12.9111366,3.28814268
 	attPos = 0,0,0
 	attPos0 = -2.04702282E-08,-0.265384674,9.3497232E-07
 	rot = -5.02429621E-15,-1.1920929E-07,5.02429621E-15,1.00000012
@@ -4375,12 +6605,78 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableSAS
+		isEnabled = True
+		IsActive = False
+		isBroken = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		quality = 5
+		qualityCap = -1
+		mtbfCap = -1
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		mtbfBonus = 3
+		currentQuality = 5
+		mtbf = 12
+		currentMTBF = 15
+		mtbfRepairMultiplier = 0.699999988
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		isFixedOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = False
+		mtbfHibernationFactor = 0.00999999978
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = sasModule_4285444110
 	partName = Part
-	pos = -0.020175321,12.9111366,-3.1976018
+	pos = -0.0201753005,12.9111366,-3.19760275
 	attPos = 0,0,0
 	attPos0 = 7.50909592E-08,-0.265384734,9.0141134E-07
 	rot = -5.26835606E-08,1.00000012,1.05367093E-08,-2.68220901E-07
@@ -4448,12 +6744,78 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableSAS
+		isEnabled = True
+		IsActive = False
+		isBroken = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		quality = 5
+		qualityCap = -1
+		mtbfCap = -1
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		mtbfBonus = 3
+		currentQuality = 5
+		mtbf = 12
+		currentMTBF = 15
+		mtbfRepairMultiplier = 0.699999988
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		isFixedOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = False
+		mtbfHibernationFactor = 0.00999999978
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = sasModule_4285441882
 	partName = Part
-	pos = 0.0233964752,12.7289104,3.28814316
+	pos = 0.0233964548,12.7289104,3.28814411
 	attPos = 0,0,0
 	attPos0 = 1.53605093E-08,-0.182222366,1.04136438E-06
 	rot = -5.02429621E-15,-1.1920929E-07,5.02429621E-15,1.00000012
@@ -4519,12 +6881,78 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableSAS
+		isEnabled = True
+		IsActive = False
+		isBroken = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		quality = 5
+		qualityCap = -1
+		mtbfCap = -1
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		mtbfBonus = 3
+		currentQuality = 5
+		mtbf = 12
+		currentMTBF = 15
+		mtbfRepairMultiplier = 0.699999988
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		isFixedOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = False
+		mtbfHibernationFactor = 0.00999999978
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = sasModule_4285441148
 	partName = Part
-	pos = -0.0201752912,12.7289104,-3.19760275
+	pos = -0.0201752707,12.7289104,-3.1976037
 	attPos = 0,0,0
 	attPos0 = 8.3562945E-08,-0.182222307,1.05540687E-06
 	rot = -5.26835606E-08,1.00000012,1.05367093E-08,-2.68220901E-07
@@ -4590,12 +7018,78 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableSAS
+		isEnabled = True
+		IsActive = False
+		isBroken = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		quality = 5
+		qualityCap = -1
+		mtbfCap = -1
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		mtbfBonus = 3
+		currentQuality = 5
+		mtbf = 12
+		currentMTBF = 15
+		mtbfRepairMultiplier = 0.699999988
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		isFixedOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = False
+		mtbfHibernationFactor = 0.00999999978
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = radialDecoupler_4286242544
 	partName = Part
-	pos = -0.809848607,15.9383125,0.856732547
+	pos = -0.809848845,15.9383125,0.856732786
 	attPos = 0.0354036093,0.13753891,0
 	attPos0 = 0.811455548,0.180381775,0.811455309
 	rot = 0.000301488268,0.382683426,0.000727857521,0.923879266
@@ -4694,12 +7188,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = parachuteRadial_4286178630
 	partName = Part
-	pos = -0.924238622,16.1829777,0.971121728
+	pos = -0.924238861,16.1829777,0.971121967
 	attPos = -4.17232513E-07,0.0639258325,1.92556282E-08
 	attPos0 = -0.161385298,0.18099311,-1.92556282E-08
 	rot = -0.000301474356,0.923879385,0.000727823237,0.382683277
@@ -4806,15 +7315,45 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleRobonautPackChute
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = parachuteRadial_4286175380
 	partName = Part
-	pos = -0.92433387,15.7014475,0.971216857
+	pos = -0.924334109,15.7014475,0.971217096
 	attPos = 0,0,0
 	attPos0 = -0.162279114,-0.236609489,-1.93229361E-08
-	rot = -0.000301474764,0.923879266,0.000727823761,0.382683426
+	rot = -0.000301474764,0.923879325,0.000727823761,0.382683456
 	attRot = 0,0,0,1
 	attRot0 = 2.61934439E-08,0.707106829,-2.61934439E-08,0.707106769
 	mir = 1,1,1
@@ -4918,15 +7457,45 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleRobonautPackChute
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = radialDecoupler_4293004654
 	partName = Part
-	pos = 0.81307137,15.9383125,0.856731176
+	pos = 0.813071609,15.9383125,0.856731415
 	attPos = 0.0354036093,0.13753891,0
 	attPos0 = 0.811455369,0.180381775,-0.811455488
-	rot = 0.000727858394,0.923879266,0.000301488908,0.382683307
+	rot = 0.000727858511,0.923879266,0.000301488908,0.382683307
 	attRot = 0,0,0,1
 	attRot0 = 0.00072785723,0.923879206,-0.000301488239,-0.382683277
 	mir = 1,1,1
@@ -5022,12 +7591,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = parachuteRadial_4293004594
 	partName = Part
-	pos = 0.927459598,16.1829777,0.97112
+	pos = 0.927459776,16.1829777,0.971120179
 	attPos = -4.17232513E-07,0.0639258325,1.92556282E-08
 	attPos0 = -0.161385298,0.18099311,-1.92556282E-08
 	rot = 0.000301474036,0.923879266,0.000727823703,-0.382683426
@@ -5134,15 +7718,45 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleRobonautPackChute
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = parachuteRadial_4293004538
 	partName = Part
-	pos = 0.927554846,15.7014475,0.97121501
+	pos = 0.927555025,15.7014475,0.971215248
 	attPos = 0,0,0
 	attPos0 = -0.162279114,-0.236609489,-1.93229361E-08
-	rot = 0.000301474007,0.923879325,0.00072782347,-0.382683337
+	rot = 0.000301473978,0.923879325,0.000727823353,-0.382683337
 	attRot = 0,0,0,1
 	attRot0 = 2.61934439E-08,0.707106829,-2.61934439E-08,0.707106769
 	mir = 1,1,1
@@ -5246,12 +7860,42 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleRobonautPackChute
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = radialDecoupler_4293004482
 	partName = Part
-	pos = 0.813071489,15.9383125,-0.766188979
+	pos = 0.813071728,15.9383125,-0.766189218
 	attPos = 0.0354036093,0.13753891,0
 	attPos0 = -0.811455607,0.180381775,-0.811455369
 	rot = 0.000727857288,0.923879266,-0.000301488268,-0.382683426
@@ -5350,12 +7994,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = parachuteRadial_4293004422
 	partName = Part
-	pos = 0.927461803,16.1829777,-0.880578697
+	pos = 0.927462041,16.1829777,-0.880578935
 	attPos = -4.17232513E-07,0.0639258325,1.92556282E-08
 	attPos0 = -0.161385298,0.18099311,-1.92556282E-08
 	rot = 0.000727823121,0.382683158,0.000301474473,-0.923879385
@@ -5462,15 +8121,45 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleRobonautPackChute
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = parachuteRadial_4293004366
 	partName = Part
-	pos = 0.927557051,15.7014475,-0.880673707
+	pos = 0.92755729,15.7014475,-0.880673945
 	attPos = 0,0,0
 	attPos0 = -0.162279114,-0.236609489,-1.93229361E-08
-	rot = 0.000727823761,0.382683277,0.000301474414,-0.923879385
+	rot = 0.000727823819,0.382683277,0.000301474385,-0.923879385
 	attRot = 0,0,0,1
 	attRot0 = 2.61934439E-08,0.707106829,-2.61934439E-08,0.707106769
 	mir = 1,1,1
@@ -5574,15 +8263,45 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleRobonautPackChute
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = radialDecoupler_4293004310
 	partName = Part
-	pos = -0.809848547,15.9383125,-0.766187429
+	pos = -0.809848785,15.9383125,-0.766187668
 	attPos = 0.0354036093,0.13753891,0
 	attPos0 = -0.81145525,0.180381775,0.811455488
-	rot = 0.000301488908,0.382683307,-0.000727858394,-0.923879266
+	rot = 0.000301488908,0.382683307,-0.000727858511,-0.923879266
 	attRot = 0,0,0,1
 	attRot0 = -0.000301488239,-0.382683277,-0.00072785723,-0.923879206
 	mir = 1,1,1
@@ -5678,15 +8397,30 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = parachuteRadial_4293004250
 	partName = Part
-	pos = -0.924236774,16.1829777,-0.880576491
+	pos = -0.924237013,16.1829777,-0.88057673
 	attPos = -4.17232513E-07,0.0639258325,1.92556282E-08
 	attPos0 = -0.161385298,0.18099311,-1.92556282E-08
-	rot = 0.000727823237,-0.382683337,-0.000301474385,-0.923879325
+	rot = 0.000727823179,-0.382683337,-0.000301474414,-0.923879325
 	attRot = 0,0,0,1
 	attRot0 = 2.61934439E-08,0.707106829,-2.61934439E-08,0.707106769
 	mir = 1,1,1
@@ -5790,15 +8524,45 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleRobonautPackChute
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = parachuteRadial_4293004194
 	partName = Part
-	pos = -0.924332023,15.7014475,-0.88067174
+	pos = -0.924332261,15.7014475,-0.880671978
 	attPos = 0,0,0
 	attPos0 = -0.162279114,-0.236609489,-1.93229361E-08
-	rot = 0.000727823935,-0.382683247,-0.000301474851,-0.923879266
+	rot = 0.000727823935,-0.382683247,-0.000301474822,-0.923879266
 	attRot = 0,0,0,1
 	attRot0 = 2.61934439E-08,0.707106829,-2.61934439E-08,0.707106769
 	mir = 1,1,1
@@ -5902,12 +8666,42 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleRobonautPackChute
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = noseCone_4287193410
 	partName = Part
-	pos = -0.0201789867,14.8463278,-2.09530258
+	pos = -0.0201792046,14.8463278,-2.09530282
 	attPos = 0,0,0
 	attPos0 = -5.96045425E-07,0.500000417,1.84403973E-07
 	rot = 0,-1.78813934E-07,0,1.00000024
@@ -5938,12 +8732,27 @@ PART
 	PARTDATA
 	{
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = noseCone_4292979350
 	partName = Part
-	pos = 0.0234007668,14.8463278,2.18584681
+	pos = 0.0234007463,14.8463278,2.18584728
 	attPos = 0,0,0
 	attPos0 = -5.06638742E-07,0.500000179,-4.65658019E-08
 	rot = -8.42937027E-08,-1.00000012,3.55271368E-15,-2.08616257E-07
@@ -5974,12 +8783,27 @@ PART
 	PARTDATA
 	{
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = radialDecoupler_4293635330
 	partName = Part
-	pos = -0.651380599,13.7719088,-2.09530258
+	pos = -0.651380718,13.7719088,-2.09530306
 	attPos = 0,0,0
 	attPos0 = -5.70679617E-07,0.425584704,0.631199718
 	rot = -2.1073447E-08,2.08616257E-07,-3.58248258E-07,1.00000012
@@ -6075,12 +8899,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = fuelTank_4293635270
 	partName = Part
-	pos = -1.43923974,13.756567,-2.09529829
+	pos = -1.43923998,13.756567,-2.09529877
 	attPos = 0,0,0
 	attPos0 = -0.787859023,-0.0153424563,4.76837329E-07
 	rot = -2.1073447E-08,0,-3.58248258E-07,1.00000012
@@ -6113,6 +8952,75 @@ PART
 	PARTDATA
 	{
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableFuelTank
+		isEnabled = True
+		leakedUnitsPerSec = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleResourceLocksAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		quality = 5
+		qualityCap = -1
+		mtbfCap = -1
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		mtbfBonus = 150
+		currentQuality = 5
+		mtbf = 600
+		currentMTBF = 750
+		mtbfRepairMultiplier = 0.699999988
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		isFixedOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = True
+		mtbfHibernationFactor = 0.100000001
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 	RESOURCE
 	{
 		name = LiquidFuel
@@ -6140,7 +9048,7 @@ PART
 {
 	part = radialDecoupler_4293633650
 	partName = Part
-	pos = 0.654603302,13.7719088,2.18584776
+	pos = 0.654603541,13.7719088,2.18584824
 	attPos = 0,0,0
 	attPos0 = -1.26056852E-06,0.425584704,0.631199956
 	rot = 4.21468485E-07,-1.00000012,-4.26325641E-14,0
@@ -6236,12 +9144,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = fuelTank_4293633584
 	partName = Part
-	pos = 1.4424634,13.756567,2.18584347
+	pos = 1.44246387,13.756567,2.18584394
 	attPos = 0,0,0
 	attPos0 = -0.787859023,-0.0153424563,4.76837329E-07
 	rot = 4.21468485E-07,-1,-4.26325641E-14,-5.96046448E-08
@@ -6274,6 +9197,75 @@ PART
 	PARTDATA
 	{
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableFuelTank
+		isEnabled = True
+		leakedUnitsPerSec = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleResourceLocksAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		quality = 5
+		qualityCap = -1
+		mtbfCap = -1
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		mtbfBonus = 150
+		currentQuality = 5
+		mtbf = 600
+		currentMTBF = 750
+		mtbfRepairMultiplier = 0.699999988
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		isFixedOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = True
+		mtbfHibernationFactor = 0.100000001
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 	RESOURCE
 	{
 		name = LiquidFuel
@@ -6301,7 +9293,7 @@ PART
 {
 	part = radialDecoupler_4293653008
 	partName = Part
-	pos = -0.597704232,13.7796707,2.18584704
+	pos = -0.597704351,13.7796707,2.18584728
 	attPos = 0,0,0
 	attPos0 = -5.4438749E-07,0.433346808,-0.62110126
 	rot = 8.42937169E-08,2.38418579E-07,1.68587391E-07,1.00000012
@@ -6397,12 +9389,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = fuelTank_4293635852
 	partName = Part
-	pos = -1.38556695,13.764328,2.18584561
+	pos = -1.38556755,13.764328,2.18584585
 	attPos = 0,0,0
 	attPos0 = -0.787859023,-0.0153424563,4.76837329E-07
 	rot = 1.6858742E-07,2.38418579E-07,1.68587391E-07,1.00000012
@@ -6435,6 +9442,75 @@ PART
 	PARTDATA
 	{
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableFuelTank
+		isEnabled = True
+		leakedUnitsPerSec = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleResourceLocksAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		quality = 5
+		qualityCap = -1
+		mtbfCap = -1
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		mtbfBonus = 150
+		currentQuality = 5
+		mtbf = 600
+		currentMTBF = 750
+		mtbfRepairMultiplier = 0.699999988
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		isFixedOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = True
+		mtbfHibernationFactor = 0.100000001
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 	RESOURCE
 	{
 		name = LiquidFuel
@@ -6462,10 +9538,10 @@ PART
 {
 	part = radialDecoupler_4293630350
 	partName = Part
-	pos = 0.600927472,13.7796707,-2.09530377
+	pos = 0.600927591,13.7796707,-2.09530425
 	attPos = 0,0,0
 	attPos0 = -1.04705418E-06,0.433346778,-0.621101499
-	rot = 1.15903852E-07,1.00000012,1.05367022E-08,-4.76837158E-07
+	rot = 1.26440568E-07,1.00000012,-4.21468727E-08,-4.47034836E-07
 	attRot = 0,0,0,1
 	attRot0 = -8.94069601E-08,-0.70710665,4.47034658E-08,0.707106948
 	mir = 1,1,1
@@ -6558,15 +9634,30 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = fuelTank_4293630290
 	partName = Part
-	pos = 1.38879013,13.764328,-2.09530354
+	pos = 1.38879073,13.764328,-2.09530401
 	attPos = 0,0,0
 	attPos0 = -0.787859023,-0.0153424563,4.76837329E-07
-	rot = 2.2127098E-07,1.00000012,-1.05367235E-08,-2.08616257E-07
+	rot = 2.10734271E-07,1.00000012,-7.10542736E-15,-1.49011612E-07
 	attRot = 0,0,0,1
 	attRot0 = -1.05367137E-08,-5.96046377E-08,3.16101314E-08,1
 	mir = 1,1,1
@@ -6596,6 +9687,75 @@ PART
 	PARTDATA
 	{
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableFuelTank
+		isEnabled = True
+		leakedUnitsPerSec = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleResourceLocksAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		quality = 5
+		qualityCap = -1
+		mtbfCap = -1
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		mtbfBonus = 150
+		currentQuality = 5
+		mtbf = 600
+		currentMTBF = 750
+		mtbfRepairMultiplier = 0.699999988
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		isFixedOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = True
+		mtbfHibernationFactor = 0.100000001
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 	RESOURCE
 	{
 		name = LiquidFuel
@@ -6623,7 +9783,7 @@ PART
 {
 	part = pointyNoseConeA_4293604822
 	partName = Part
-	pos = -1.38556755,15.3550215,2.18584728
+	pos = -1.38556814,15.3550215,2.18584776
 	attPos = 0,0,0
 	attPos0 = -2.57063959E-07,1.5906899,6.89172396E-07
 	rot = -5.02429621E-15,-1.1920929E-07,5.02429621E-15,1.00000012
@@ -6669,15 +9829,30 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = pointyNoseConeA_4293604060
 	partName = Part
-	pos = 1.38879073,15.3550215,-2.09530401
+	pos = 1.38879085,15.3550215,-2.09530473
 	attPos = 0,0,0
 	attPos0 = -7.82500322E-08,1.59068954,8.08381856E-07
-	rot = 0,1.00000012,0,-1.1920929E-07
+	rot = 1.05367119E-08,1.00000024,-1.05367119E-08,-5.96046448E-08
 	attRot = 0,0,0,1
 	attRot0 = -7.37569863E-08,-2.68220873E-07,-2.00197519E-07,1
 	mir = 1,1,1
@@ -6720,12 +9895,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = pointyNoseConeA_4293601988
 	partName = Part
-	pos = 1.44246233,15.3472605,2.18584299
+	pos = 1.4424628,15.3472605,2.18584347
 	attPos = 0,0,0
 	attPos0 = -1.03192451E-06,1.59068966,-2.04897205E-07
 	rot = -5.02429621E-15,-1.1920929E-07,5.02429621E-15,1.00000012
@@ -6771,12 +9961,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = pointyNoseConeA_4293601246
 	partName = Part
-	pos = -1.43923962,15.3472605,-2.09529638
+	pos = -1.43923998,15.3472605,-2.09529638
 	attPos = 0,0,0
 	attPos0 = -9.12715166E-07,1.5906899,-8.56878017E-08
 	rot = -5.26835606E-08,1.00000012,1.05367093E-08,-2.68220901E-07
@@ -6810,6 +10015,21 @@ PART
 	MODULE
 	{
 		name = ModuleAnimateHeat
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
@@ -6925,12 +10145,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = strutCube_4287555772
 	partName = Part
-	pos = 0.736523747,12.8670607,0.0452714711
+	pos = 0.736523867,12.8670607,0.0452714711
 	attPos = 0,0,0
 	attPos0 = -5.29930233E-08,-0.0762405396,-0.734903932
 	rot = 0.500000179,0.49999994,-0.500000179,0.49999994
@@ -6963,12 +10198,27 @@ PART
 	PARTDATA
 	{
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = strutCube_4287551130
 	partName = Part
-	pos = 0.993998826,12.8670607,0.0452714711
+	pos = 0.993999124,12.8670607,0.0452714711
 	attPos = 0,0,0
 	attPos0 = 0,0.25746873,-2.980231E-08
 	rot = -0.5,-0.500000119,-0.5,0.500000119
@@ -7000,12 +10250,27 @@ PART
 	PARTDATA
 	{
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = strutCube_4287548854
 	partName = Part
-	pos = 1.14528847,12.8670597,0.0452717096
+	pos = 1.14528883,12.8670597,0.0452717096
 	attPos = 0,-0.106180936,-1.08157021E-08
 	attPos0 = 0,0.257468939,-1.62367026E-08
 	rot = -0.5,-0.500000119,-0.5,0.500000119
@@ -7036,12 +10301,27 @@ PART
 	PARTDATA
 	{
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = telescopicLadderBay_4287547854
 	partName = Part
-	pos = 1.2552917,12.7737541,0.0681851655
+	pos = 1.25529206,12.7737541,0.0681851655
 	attPos = 9.31322575E-09,1.63912773E-07,-0.178819627
 	attPos0 = 0.0229133312,0.110000141,0.0855140388
 	rot = 2.52881108E-07,1.00000012,0,0
@@ -7099,12 +10379,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = strutCube_4287554800
 	partName = Part
-	pos = -0.733300686,12.8670607,0.045272246
+	pos = -0.733300805,12.8670607,0.045272246
 	attPos = 0,0,0
 	attPos0 = 1.17240369E-07,-0.0762405396,0.734903932
 	rot = -0.500000179,0.499999911,-0.500000179,-0.49999997
@@ -7134,6 +10429,21 @@ PART
 	}
 	PARTDATA
 	{
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
 	}
 }
 PART
@@ -7171,6 +10481,21 @@ PART
 	}
 	PARTDATA
 	{
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
 	}
 }
 PART
@@ -7298,6 +10623,21 @@ PART
 		name = ModuleKISItem
 		isEnabled = True
 		staticAttached = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -7546,12 +10886,91 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleResourceConverter
+		isEnabled = True
+		EfficiencyBonus = 1
+		IsActivated = False
+		stagingEnabled = True
+		lastUpdateTime = 0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			StopResourceConverterAction
+			{
+				actionGroup = None
+			}
+			StartResourceConverterAction
+			{
+				actionGroup = None
+			}
+			ToggleResourceConverterAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		quality = 5
+		qualityCap = -1
+		mtbfCap = -1
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		mtbfBonus = 45
+		currentQuality = 5
+		mtbf = 180
+		currentMTBF = 225
+		mtbfRepairMultiplier = 0.699999988
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		isFixedOnStart = False
+		breakableModuleCount = 0
+		recordedFlightLog = False
+		isActivated = False
+		mtbfHibernationFactor = 0.100000001
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = landingLeg1-2_4288402082
 	partName = Part
-	pos = -0.58297354,11.2038403,-0.53931284
+	pos = -0.582973659,11.2038403,-0.539312959
 	attPos = -1.16915226,-0.175543785,1.16915178
 	attPos0 = 0.58457619,0.256590843,-0.584576011
 	rot = -0.115075022,-0.881119728,-0.277815849,0.364971608
@@ -7631,6 +11050,7 @@ PART
 		name = ModuleWheelDeployment
 		isEnabled = True
 		shieldedCanDeploy = False
+		stateDisplayString = Deployed
 		stateString = Deployed
 		stagingEnabled = True
 		position = 1
@@ -7694,15 +11114,45 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleRobonautWheelRepair
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = landingLeg1-2_4288001960
 	partName = Part
-	pos = 0.586196303,11.2038403,-0.539311349
+	pos = 0.586196423,11.2038403,-0.539311469
 	attPos = 5.96046448E-08,-0.175543785,5.96046448E-08
 	attPos0 = -0.584575951,0.256590843,-0.58457619
-	rot = 0.115075082,-0.881119728,-0.27781564,-0.364971876
+	rot = 0.115075096,-0.881119728,-0.27781564,-0.364971876
 	attRot = -2.51077026E-08,-3.3701987E-08,6.45494325E-08,-0.999999821
 	attRot0 = -0.115075,-0.881119609,-0.277815819,0.364971668
 	mir = 1,1,1
@@ -7779,6 +11229,7 @@ PART
 		name = ModuleWheelDeployment
 		isEnabled = True
 		shieldedCanDeploy = False
+		stateDisplayString = Deployed
 		stateString = Deployed
 		stagingEnabled = True
 		position = 1
@@ -7842,12 +11293,42 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleRobonautWheelRepair
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = landingLeg1-2_4288001842
 	partName = Part
-	pos = -0.582973421,11.2038403,0.629855037
+	pos = -0.58297354,11.2038403,0.629855156
 	attPos = 1.16915202,-0.175543785,0
 	attPos0 = -0.58457613,0.256590843,0.58457607
 	rot = -0.277815789,-0.364971608,-0.115075149,0.881119728
@@ -7927,6 +11408,7 @@ PART
 		name = ModuleWheelDeployment
 		isEnabled = True
 		shieldedCanDeploy = False
+		stateDisplayString = Deployed
 		stateString = Deployed
 		stagingEnabled = True
 		position = 1
@@ -7990,12 +11472,42 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleRobonautWheelRepair
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = landingLeg1-2_4288001724
 	partName = Part
-	pos = 0.586196959,11.2038403,0.629856348
+	pos = 0.586197078,11.2038403,0.629856467
 	attPos = 5.96046448E-08,-0.175543785,-1.16915202
 	attPos0 = 0.584576011,0.256590843,0.58457613
 	rot = -0.277815849,0.364971608,0.115075022,0.881119728
@@ -8075,6 +11587,7 @@ PART
 		name = ModuleWheelDeployment
 		isEnabled = True
 		shieldedCanDeploy = False
+		stateDisplayString = Deployed
 		stateString = Deployed
 		stagingEnabled = True
 		position = 1
@@ -8138,12 +11651,42 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleRobonautWheelRepair
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = MiniDrill_4288083658
 	partName = Part
-	pos = 0.00161077082,10.8975296,-0.731429219
+	pos = 0.00161077082,10.8975296,-0.731429458
 	attPos = 0,0.37200737,0
 	attPos0 = -0.776688397,-0.597270966,3.43733113E-08
 	rot = 0,-0.707106829,0,0.707106829
@@ -8176,7 +11719,270 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleOverheatDisplay
+		name = ModuleBreakableHarvester
+		isEnabled = True
+		isBroken = False
+		EfficiencyBonus = 1
+		IsActivated = False
+		stagingEnabled = True
+		lastUpdateTime = 0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			StartConverterAction
+			{
+				actionGroup = None
+			}
+			StopResourceConverterAction
+			{
+				actionGroup = None
+			}
+			StartResourceConverterAction
+			{
+				actionGroup = None
+				active = False
+			}
+			ToggleResourceConverterAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableAsteroidDrill
+		isEnabled = True
+		isBroken = False
+		DirectAttach = False
+		EfficiencyBonus = 1
+		IsActivated = False
+		stagingEnabled = True
+		lastUpdateTime = 0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			StartConverterAction
+			{
+				actionGroup = None
+			}
+			StopResourceConverterAction
+			{
+				actionGroup = None
+			}
+			StartResourceConverterAction
+			{
+				actionGroup = None
+				active = False
+			}
+			ToggleResourceConverterAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAnimationGroup
+		isEnabled = True
+		_isActive = False
+		isDeployed = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			DeployModuleAction
+			{
+				actionGroup = None
+				active = False
+			}
+			RetractModuleAction
+			{
+				actionGroup = None
+				active = False
+			}
+			ToggleModuleAction
+			{
+				actionGroup = Custom09
+				active = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleKISItem
+		isEnabled = True
+		staticAttached = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableHarvester
+		isEnabled = True
+		isBroken = False
+		EfficiencyBonus = 1
+		IsActivated = False
+		stagingEnabled = True
+		lastUpdateTime = 0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			StartConverterAction
+			{
+				actionGroup = None
+			}
+			StopResourceConverterAction
+			{
+				actionGroup = None
+			}
+			StartResourceConverterAction
+			{
+				actionGroup = None
+				active = False
+			}
+			ToggleResourceConverterAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableHarvester
+		isEnabled = True
+		isBroken = False
+		EfficiencyBonus = 1
+		IsActivated = False
+		stagingEnabled = True
+		lastUpdateTime = 0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			StartConverterAction
+			{
+				actionGroup = None
+			}
+			StopResourceConverterAction
+			{
+				actionGroup = None
+			}
+			StartResourceConverterAction
+			{
+				actionGroup = None
+				active = False
+			}
+			ToggleResourceConverterAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		quality = 100
+		qualityCap = -1
+		mtbfCap = -1
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		mtbfBonus = 100
+		currentQuality = 80
+		mtbf = 400
+		currentMTBF = 500
+		mtbfRepairMultiplier = 0.699999988
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		isFixedOnStart = False
+		breakableModuleCount = 4
+		recordedFlightLog = False
+		isActivated = False
+		mtbfHibernationFactor = 0.100000001
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIDrillSwitcher
+		isEnabled = True
+		stagingEnabled = True
+		drillResource = Ore
+		drillResource = Minerals
+		drillResource = Water
+		drillResource = Dirt
+		drillResource = ExoticMinerals
+		drillResource = RareMetals
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIExtractionMonitor
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
@@ -8221,9 +12027,8 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleAsteroidDrill
+		name = ModuleResourceHarvester
 		isEnabled = True
-		DirectAttach = False
 		EfficiencyBonus = 1
 		IsActivated = False
 		stagingEnabled = True
@@ -8252,70 +12057,7 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleAnimationGroup
-		isEnabled = True
-		_isActive = False
-		isDeployed = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			DeployModuleAction
-			{
-				actionGroup = None
-			}
-			RetractModuleAction
-			{
-				actionGroup = None
-			}
-			ToggleModuleAction
-			{
-				actionGroup = Custom09
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleCoreHeat
-		isEnabled = True
-		CoreTempGoalAdjustment = 0
-		CoreThermalEnergy = 0
-		stagingEnabled = True
-		lastUpdateTime = 0
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleKISItem
-		isEnabled = True
-		staticAttached = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = WBIGoldStrikeConverter
+		name = ModuleResourceHarvester
 		isEnabled = True
 		EfficiencyBonus = 1
 		IsActivated = False
@@ -8348,7 +12090,7 @@ PART
 {
 	part = MiniDrill_4287596848
 	partName = Part
-	pos = 0.00161214173,10.8975296,0.821972966
+	pos = 0.00161214173,10.8975296,0.821973205
 	attPos = 0,0.37200737,0
 	attPos0 = 0.776688397,-0.597270966,-1.02273567E-07
 	rot = 0,0.707106888,0,0.707106769
@@ -8381,7 +12123,270 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleOverheatDisplay
+		name = ModuleBreakableHarvester
+		isEnabled = True
+		isBroken = False
+		EfficiencyBonus = 1
+		IsActivated = False
+		stagingEnabled = True
+		lastUpdateTime = 0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			StartConverterAction
+			{
+				actionGroup = None
+			}
+			StopResourceConverterAction
+			{
+				actionGroup = None
+			}
+			StartResourceConverterAction
+			{
+				actionGroup = None
+				active = False
+			}
+			ToggleResourceConverterAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableAsteroidDrill
+		isEnabled = True
+		isBroken = False
+		DirectAttach = False
+		EfficiencyBonus = 1
+		IsActivated = False
+		stagingEnabled = True
+		lastUpdateTime = 0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			StartConverterAction
+			{
+				actionGroup = None
+			}
+			StopResourceConverterAction
+			{
+				actionGroup = None
+			}
+			StartResourceConverterAction
+			{
+				actionGroup = None
+				active = False
+			}
+			ToggleResourceConverterAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAnimationGroup
+		isEnabled = True
+		_isActive = False
+		isDeployed = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			DeployModuleAction
+			{
+				actionGroup = None
+				active = False
+			}
+			RetractModuleAction
+			{
+				actionGroup = None
+				active = False
+			}
+			ToggleModuleAction
+			{
+				actionGroup = Custom09
+				active = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleKISItem
+		isEnabled = True
+		staticAttached = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableHarvester
+		isEnabled = True
+		isBroken = False
+		EfficiencyBonus = 1
+		IsActivated = False
+		stagingEnabled = True
+		lastUpdateTime = 0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			StartConverterAction
+			{
+				actionGroup = None
+			}
+			StopResourceConverterAction
+			{
+				actionGroup = None
+			}
+			StartResourceConverterAction
+			{
+				actionGroup = None
+				active = False
+			}
+			ToggleResourceConverterAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableHarvester
+		isEnabled = True
+		isBroken = False
+		EfficiencyBonus = 1
+		IsActivated = False
+		stagingEnabled = True
+		lastUpdateTime = 0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			StartConverterAction
+			{
+				actionGroup = None
+			}
+			StopResourceConverterAction
+			{
+				actionGroup = None
+			}
+			StartResourceConverterAction
+			{
+				actionGroup = None
+				active = False
+			}
+			ToggleResourceConverterAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		quality = 100
+		qualityCap = -1
+		mtbfCap = -1
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		mtbfBonus = 100
+		currentQuality = 80
+		mtbf = 400
+		currentMTBF = 500
+		mtbfRepairMultiplier = 0.699999988
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		isFixedOnStart = False
+		breakableModuleCount = 4
+		recordedFlightLog = False
+		isActivated = False
+		mtbfHibernationFactor = 0.100000001
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIDrillSwitcher
+		isEnabled = True
+		stagingEnabled = True
+		drillResource = Ore
+		drillResource = Minerals
+		drillResource = Water
+		drillResource = Dirt
+		drillResource = ExoticMinerals
+		drillResource = RareMetals
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIExtractionMonitor
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
@@ -8426,9 +12431,8 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleAsteroidDrill
+		name = ModuleResourceHarvester
 		isEnabled = True
-		DirectAttach = False
 		EfficiencyBonus = 1
 		IsActivated = False
 		stagingEnabled = True
@@ -8457,70 +12461,7 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleAnimationGroup
-		isEnabled = True
-		_isActive = False
-		isDeployed = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			DeployModuleAction
-			{
-				actionGroup = None
-			}
-			RetractModuleAction
-			{
-				actionGroup = None
-			}
-			ToggleModuleAction
-			{
-				actionGroup = Custom09
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleCoreHeat
-		isEnabled = True
-		CoreTempGoalAdjustment = 0
-		CoreThermalEnergy = 0
-		stagingEnabled = True
-		lastUpdateTime = 0
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleKISItem
-		isEnabled = True
-		staticAttached = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = WBIGoldStrikeConverter
+		name = ModuleResourceHarvester
 		isEnabled = True
 		EfficiencyBonus = 1
 		IsActivated = False
@@ -8553,7 +12494,7 @@ PART
 {
 	part = sensorAccelerometer_4287472038
 	partName = Part
-	pos = 0.00161106884,11.429656,-0.532070041
+	pos = 0.00161106884,11.429656,-0.53207016
 	attPos = 0,0,0
 	attPos0 = -0.577333987,0.306860924,3.44117908E-08
 	rot = 0,0,0,1.00000012
@@ -8629,12 +12570,42 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleRobonautExperimentManager
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = sensorBarometer_4287470884
 	partName = Part
-	pos = 0.00161166489,11.4439116,0.594613671
+	pos = 0.00161166489,11.4439116,0.594613791
 	attPos = 0,0,0
 	attPos0 = 0.549334228,0.321116447,3.27428751E-08
 	rot = 0,1.00000012,0,0
@@ -8705,6 +12676,36 @@ PART
 			{
 				actionGroup = None
 			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleRobonautExperimentManager
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
 		}
 		UPGRADESAPPLIED
 		{
@@ -8854,6 +12855,21 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 	RESOURCE
 	{
 		name = Ablator
@@ -8870,7 +12886,7 @@ PART
 {
 	part = GooExperiment_4287469814
 	partName = Part
-	pos = 0.539828658,11.574626,0.0452724248
+	pos = 0.539828777,11.574626,0.0452724248
 	attPos = 0,0,0
 	attPos0 = 5.96046732E-08,0.451829314,-0.538214147
 	rot = 2.92001829E-07,0.707106888,2.92001886E-07,-0.707106769
@@ -8952,12 +12968,42 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleRobonautExperimentManager
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = GooExperiment_4292396164
 	partName = Part
-	pos = -0.536605835,11.574626,0.0452712923
+	pos = -0.536605954,11.574626,0.0452712923
 	attPos = 0,0,0
 	attPos0 = -4.61853015E-14,0.451829314,0.538214147
 	rot = 2.92001857E-07,-0.707106829,-2.92001857E-07,-0.707106829
@@ -9039,12 +13085,42 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleRobonautExperimentManager
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = strutConnector_4292390802
 	partName = CompoundPart
-	pos = -0.384452105,12.0005264,-0.340791225
+	pos = -0.384452224,12.0005264,-0.340791345
 	attPos = 0,0,0
 	attPos0 = -0.386060774,0.877727985,0.386060834
 	rot = 0,5.96046448E-08,-0.707107067,0.707106531
@@ -9111,12 +13187,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = strutConnector_4292389190
 	partName = CompoundPart
-	pos = -0.38445127,12.0005264,0.431333601
+	pos = -0.384451389,12.0005264,0.431333721
 	attPos = 0,0,0
 	attPos0 = 0.386060655,0.877727985,0.386060655
 	rot = -0.500000298,0.499999821,-0.500000298,0.499999821
@@ -9183,12 +13274,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = strutConnector_4292389124
 	partName = CompoundPart
-	pos = 0.387675047,12.0005264,0.431334734
+	pos = 0.387675166,12.0005264,0.431334853
 	attPos = 0,0,0
 	attPos0 = 0.386060745,0.877727985,-0.386060864
 	rot = -0.707107186,0.707106471,0,-2.98023224E-08
@@ -9255,12 +13361,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = strutConnector_4292389058
 	partName = CompoundPart
-	pos = 0.387674153,12.0005264,-0.340790093
+	pos = 0.387674272,12.0005264,-0.340790212
 	attPos = 0,0,0
 	attPos0 = -0.386060715,0.877727985,-0.386060596
 	rot = -0.500000298,0.499999821,0.500000298,-0.499999821
@@ -9327,12 +13448,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = foldingRadSmall_4292347452
 	partName = Part
-	pos = -0.35913974,12.3196335,0.0452718288
+	pos = -0.3591398,12.3196335,0.0452718288
 	attPos = 0,0,0
 	attPos0 = -1.49011719E-08,-0.00316691538,0.360750288
 	rot = 1.9380289E-07,0.707106769,-1.93802862E-07,0.707106888
@@ -9425,12 +13561,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = foldingRadSmall_4292114244
 	partName = Part
-	pos = 0.362362623,12.3196335,0.045271799
+	pos = 0.362362683,12.3196335,0.045271799
 	attPos = 0,0,0
 	attPos0 = -1.4901163E-08,-0.00316691538,-0.360750318
 	rot = -1.93802862E-07,0.707106829,-1.93802862E-07,-0.707106829
@@ -9518,6 +13669,21 @@ PART
 				actionGroup = None
 				active = False
 			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
 		}
 		UPGRADESAPPLIED
 		{
@@ -9617,6 +13783,21 @@ PART
 			{
 				actionGroup = None
 			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
 		}
 		UPGRADESAPPLIED
 		{

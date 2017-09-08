@@ -1,0 +1,7998 @@
+ship = Delta Heavy
+version = 1.3.0
+description = This monster rocket can easily place 36 metric ton payloads into orbit.
+type = VAB
+size = 7.84934235,28.3691444,3.03267384
+PART
+{
+	part = deltaGuidanceUnit_4293863704
+	partName = Part
+	pos = 0.0464086533,29.838253,-0.0261836648
+	attPos = 0,0,0
+	attPos0 = 0.0464086533,29.838253,-0.0261836648
+	rot = 0,0,0,1
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = WBI.FLM3200_4293962050
+	link = fairingSize2_4293789214
+	attN = top,fairingSize2_4293789214
+	attN = bottom,WBI.FLM3200_4293962050
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = WBITextureSwitcher
+		isEnabled = True
+		selectedIndex = 1
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleCommand
+		isEnabled = True
+		hibernation = False
+		hibernateOnWarp = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			HibernateToggle
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FlightEngineerModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleReactionWheel
+		isEnabled = True
+		actuatorModeCycle = 0
+		authorityLimiter = 100
+		stateString = Active
+		stagingEnabled = True
+		WheelState = Active
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			CycleAction
+			{
+				actionGroup = None
+			}
+			Activate
+			{
+				actionGroup = None
+			}
+			Deactivate
+			{
+				actionGroup = None
+			}
+			Toggle
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleSAS
+		isEnabled = True
+		standaloneToggle = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleDataTransmitter
+		isEnabled = True
+		xmitIncomplete = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			StartTransmissionAction
+			{
+				actionGroup = None
+				active = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleKerbNetAccess
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			OpenKerbNetAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableSAS
+		isEnabled = True
+		IsActive = False
+		isBroken = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableTransmitter
+		isEnabled = True
+		isBroken = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		quality = 5
+		qualityCap = -1
+		mtbfCap = -1
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		mtbfBonus = 150
+		currentQuality = 5
+		mtbf = 600
+		currentMTBF = 750
+		mtbfRepairMultiplier = 0.699999988
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		isFixedOnStart = False
+		breakableModuleCount = 2
+		recordedFlightLog = False
+		isActivated = False
+		mtbfHibernationFactor = 0.100000001
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTripLogger
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		Log
+		{
+			flight = 0
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 200
+		maxAmount = 200
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = WBI.FLM3200_4293962050
+	partName = Part
+	pos = 0.0464086533,27.8167534,-0.0261836648
+	attPos = 0,0,0
+	attPos0 = 0,-2.02149963,0
+	rot = 0,0,0,1
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Heaviest
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 0
+	modCost = 1468.79858
+	modMass = 0
+	modSize = 0,0,0
+	link = engineLargeSkipper_4293918740
+	attN = top,deltaGuidanceUnit_4293863704
+	attN = bottom,engineLargeSkipper_4293918740
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleKISInventory
+		isEnabled = True
+		invName = 
+		helmetEquipped = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBITextureSwitcher
+		isEnabled = True
+		selectedIndex = 1
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIConvertibleStorage
+		isEnabled = True
+		currentVolume = 0
+		templateNodes = STORAGE_TEMPLATE
+		baseStorage = 0.00100000005
+		maxStorage = 18200
+		decalsVisible = False
+		fillToMaxInEditor = True
+		capacityFactor = 1.777776
+		partMass = 0
+		templateName = LFO
+		shortName = 
+		isDeployed = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			DumpResourcesAction
+			{
+				actionGroup = None
+			}
+		}
+		RESOURCE
+		{
+			name = LiquidFuel
+			amount = 1439.998562335968
+			maxAmount = 1439.998562335968
+			flowState = True
+			isTweakable = True
+			hideFlow = False
+			isVisible = True
+			flowMode = Both
+		}
+		RESOURCE
+		{
+			name = Oxidizer
+			amount = 1759.998242855072
+			maxAmount = 1759.998242855072
+			flowState = True
+			isTweakable = True
+			hideFlow = False
+			isVisible = True
+			flowMode = Both
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIResourceDistributor
+		isEnabled = True
+		isParticipating = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		DISTRIBUTION
+		{
+			resourceName = LiquidFuel
+			mode = 0
+		}
+		DISTRIBUTION
+		{
+			resourceName = Oxidizer
+			mode = 0
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableFuelTank
+		isEnabled = True
+		leakedUnitsPerSec = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleResourceLocksAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		quality = 5
+		qualityCap = -1
+		mtbfCap = -1
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		mtbfBonus = 150
+		currentQuality = 5
+		mtbf = 600
+		currentMTBF = 750
+		mtbfRepairMultiplier = 0.699999988
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		isFixedOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = False
+		mtbfHibernationFactor = 0.100000001
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = LiquidFuel
+		amount = 1439.998562335968
+		maxAmount = 1439.998562335968
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = Oxidizer
+		amount = 1759.998242855072
+		maxAmount = 1759.998242855072
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = engineLargeSkipper_4293918740
+	partName = Part
+	pos = 0.0464086533,25.9402542,-0.0261836648
+	attPos = 0,0,0
+	attPos0 = 0,2.82585716,0
+	rot = 0,0,0,1
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 0
+	resPri = 0
+	dstg = 0
+	sidx = 0
+	sqor = 0
+	sepI = -1
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = DeltaDecoupler_4293870544
+	attN = top,WBI.FLM3200_4293962050
+	attN = bottom,DeltaDecoupler_4293870544
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleJettison
+		isEnabled = True
+		isJettisoned = False
+		shroudHideOverride = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			JettisonAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGimbal
+		isEnabled = True
+		gimbalLock = False
+		gimbalLimiter = 100
+		currentShowToggles = False
+		enableYaw = True
+		enablePitch = True
+		enableRoll = True
+		gimbalActive = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+			LockAction
+			{
+				actionGroup = None
+			}
+			FreeAction
+			{
+				actionGroup = None
+			}
+			TogglePitchAction
+			{
+				actionGroup = None
+			}
+			ToggleYawAction
+			{
+				actionGroup = None
+			}
+			ToggleRollAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FXModuleAnimateThrottle
+		isEnabled = True
+		animState = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAlternator
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleSurfaceFX
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableEngine
+		isEnabled = True
+		failureThrustPercent = 0
+		isStuckOn = False
+		failureModeID = 0
+		wasRunning = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		quality = 5
+		qualityCap = -1
+		mtbfCap = -1
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		mtbfBonus = 4.5
+		currentQuality = 5
+		mtbf = 18
+		currentMTBF = 22.5
+		mtbfRepairMultiplier = 0.699999988
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		isFixedOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = False
+		mtbfHibernationFactor = 0.00999999978
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = DeltaDecoupler_4293870544
+	partName = Part
+	pos = 0.0464086533,23.4792538,-0.0261836648
+	attPos = 0,0,0
+	attPos0 = 0,-2.46100044,0
+	rot = 0,0,0,1
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 1
+	resPri = 0
+	dstg = 1
+	sidx = 5
+	sqor = 1
+	sepI = 1
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = WBI.FLM1600_4293841756
+	attN = top,engineLargeSkipper_4293918740
+	attN = bottom,WBI.FLM1600_4293841756
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = WBITextureSwitcher
+		isEnabled = True
+		selectedIndex = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleDecouple
+		isEnabled = True
+		ejectionForcePercent = 100
+		isDecoupled = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			DecoupleAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBISelfDestruct
+		isEnabled = True
+		isArmed = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ActionDetonate
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleToggleCrossfeed
+		isEnabled = True
+		crossfeedStatus = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+			EnableAction
+			{
+				actionGroup = None
+			}
+			DisableAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = WBI.FLM1600_4293841756
+	partName = Part
+	pos = 0.0464086533,22.4556179,-0.0261836648
+	attPos = 0,0,0
+	attPos0 = 0,-1.02363586,0
+	rot = 0,0,0,1
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Heaviest
+	rigidAttachment = False
+	istg = 1
+	resPri = 0
+	dstg = 2
+	sidx = -1
+	sqor = -1
+	sepI = 1
+	attm = 0
+	modCost = 734.399292
+	modMass = 0
+	modSize = 0,0,0
+	link = WBI.FLM1600_4293842942
+	attN = top,DeltaDecoupler_4293870544
+	attN = bottom,WBI.FLM1600_4293842942
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleKISInventory
+		isEnabled = True
+		invName = 
+		helmetEquipped = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBITextureSwitcher
+		isEnabled = True
+		selectedIndex = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIConvertibleStorage
+		isEnabled = True
+		currentVolume = 0
+		templateNodes = STORAGE_TEMPLATE
+		baseStorage = 0.00100000005
+		maxStorage = 9100
+		decalsVisible = False
+		fillToMaxInEditor = True
+		capacityFactor = 0.888888001
+		partMass = 0
+		templateName = LFO
+		shortName = 
+		isDeployed = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			DumpResourcesAction
+			{
+				actionGroup = None
+			}
+		}
+		RESOURCE
+		{
+			name = LiquidFuel
+			amount = 719.99928116798401
+			maxAmount = 719.99928116798401
+			flowState = True
+			isTweakable = True
+			hideFlow = False
+			isVisible = True
+			flowMode = Both
+		}
+		RESOURCE
+		{
+			name = Oxidizer
+			amount = 879.99912142753601
+			maxAmount = 879.99912142753601
+			flowState = True
+			isTweakable = True
+			hideFlow = False
+			isVisible = True
+			flowMode = Both
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIResourceDistributor
+		isEnabled = True
+		isParticipating = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		DISTRIBUTION
+		{
+			resourceName = LiquidFuel
+			mode = 0
+		}
+		DISTRIBUTION
+		{
+			resourceName = Oxidizer
+			mode = 0
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableFuelTank
+		isEnabled = True
+		leakedUnitsPerSec = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleResourceLocksAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		quality = 5
+		qualityCap = -1
+		mtbfCap = -1
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		mtbfBonus = 180
+		currentQuality = 5
+		mtbf = 600
+		currentMTBF = 750
+		mtbfRepairMultiplier = 0.699999988
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		isFixedOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = False
+		mtbfHibernationFactor = 0.100000001
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = LiquidFuel
+		amount = 719.99928116798401
+		maxAmount = 719.99928116798401
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = Oxidizer
+		amount = 879.99912142753601
+		maxAmount = 879.99912142753601
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = WBI.FLM1600_4293842942
+	partName = Part
+	pos = 0.0464086533,20.5806179,-0.0261836648
+	attPos = 0,0,0
+	attPos0 = 0,4.6875,0
+	rot = 0,0,0,1
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Heaviest
+	rigidAttachment = False
+	istg = 1
+	resPri = 0
+	dstg = 2
+	sidx = -1
+	sqor = -1
+	sepI = 1
+	attm = 0
+	modCost = 734.399292
+	modMass = 0
+	modSize = 0,0,0
+	link = WBI.FLM6400_4294023600
+	attN = top,WBI.FLM1600_4293841756
+	attN = bottom,WBI.FLM6400_4294023600
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleKISInventory
+		isEnabled = True
+		invName = 
+		helmetEquipped = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBITextureSwitcher
+		isEnabled = True
+		selectedIndex = 1
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIConvertibleStorage
+		isEnabled = True
+		currentVolume = 0
+		templateNodes = STORAGE_TEMPLATE
+		baseStorage = 0.00100000005
+		maxStorage = 9100
+		decalsVisible = False
+		fillToMaxInEditor = True
+		capacityFactor = 0.888888001
+		partMass = 0
+		templateName = LFO
+		shortName = 
+		isDeployed = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			DumpResourcesAction
+			{
+				actionGroup = None
+			}
+		}
+		RESOURCE
+		{
+			name = LiquidFuel
+			amount = 719.99928116798401
+			maxAmount = 719.99928116798401
+			flowState = True
+			isTweakable = True
+			hideFlow = False
+			isVisible = True
+			flowMode = Both
+		}
+		RESOURCE
+		{
+			name = Oxidizer
+			amount = 879.99912142753601
+			maxAmount = 879.99912142753601
+			flowState = True
+			isTweakable = True
+			hideFlow = False
+			isVisible = True
+			flowMode = Both
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIResourceDistributor
+		isEnabled = True
+		isParticipating = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		DISTRIBUTION
+		{
+			resourceName = LiquidFuel
+			mode = 0
+		}
+		DISTRIBUTION
+		{
+			resourceName = Oxidizer
+			mode = 0
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableFuelTank
+		isEnabled = True
+		leakedUnitsPerSec = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleResourceLocksAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		quality = 5
+		qualityCap = -1
+		mtbfCap = -1
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		mtbfBonus = 180
+		currentQuality = 5
+		mtbf = 600
+		currentMTBF = 750
+		mtbfRepairMultiplier = 0.699999988
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		isFixedOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = False
+		mtbfHibernationFactor = 0.100000001
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = LiquidFuel
+		amount = 719.99928116798401
+		maxAmount = 719.99928116798401
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = Oxidizer
+		amount = 879.99912142753601
+		maxAmount = 879.99912142753601
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = WBI.FLM6400_4294023600
+	partName = Part
+	pos = 0.0464086533,15.8931179,-0.0261836648
+	attPos = 0,0,0
+	attPos0 = 0,15,0
+	rot = 0,0,0,1
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 1
+	resPri = 0
+	dstg = 2
+	sidx = -1
+	sqor = -1
+	sepI = 1
+	attm = 0
+	modCost = 2937.59717
+	modMass = 0
+	modSize = 0,0,0
+	link = radialDecoupler_4293897516
+	link = radialDecoupler_4293897150
+	link = strutConnector_4293851970
+	link = strutConnector_4293204532
+	link = WBIDelta8_4293879880
+	attN = top,WBI.FLM1600_4293842942
+	attN = bottom,WBIDelta8_4293879880
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleKISInventory
+		isEnabled = True
+		invName = 
+		helmetEquipped = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBITextureSwitcher
+		isEnabled = True
+		selectedIndex = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIConvertibleStorage
+		isEnabled = True
+		currentVolume = 0
+		templateNodes = STORAGE_TEMPLATE
+		baseStorage = 0.00100000005
+		maxStorage = 36400
+		decalsVisible = False
+		fillToMaxInEditor = True
+		capacityFactor = 3.55555201
+		partMass = 0
+		templateName = LFO
+		shortName = 
+		isDeployed = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			DumpResourcesAction
+			{
+				actionGroup = None
+			}
+		}
+		RESOURCE
+		{
+			name = LiquidFuel
+			amount = 2879.997124671936
+			maxAmount = 2879.997124671936
+			flowState = True
+			isTweakable = True
+			hideFlow = False
+			isVisible = True
+			flowMode = Both
+		}
+		RESOURCE
+		{
+			name = Oxidizer
+			amount = 3519.996485710144
+			maxAmount = 3519.996485710144
+			flowState = True
+			isTweakable = True
+			hideFlow = False
+			isVisible = True
+			flowMode = Both
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIResourceDistributor
+		isEnabled = True
+		isParticipating = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		DISTRIBUTION
+		{
+			resourceName = LiquidFuel
+			mode = 0
+		}
+		DISTRIBUTION
+		{
+			resourceName = Oxidizer
+			mode = 0
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableFuelTank
+		isEnabled = True
+		leakedUnitsPerSec = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleResourceLocksAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		quality = 5
+		qualityCap = -1
+		mtbfCap = -1
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		mtbfBonus = 150
+		currentQuality = 5
+		mtbf = 600
+		currentMTBF = 750
+		mtbfRepairMultiplier = 0.699999988
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		isFixedOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = False
+		mtbfHibernationFactor = 0.100000001
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = LiquidFuel
+		amount = 2879.997124671936
+		maxAmount = 2879.997124671936
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = Oxidizer
+		amount = 3519.996485710144
+		maxAmount = 3519.996485710144
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = radialDecoupler_4293897516
+	partName = Part
+	pos = -1.204409,15.9178963,-0.0261835903
+	attPos = 0,0.0377187729,0
+	attPos0 = -1.25081766,-0.0129404068,7.56443796E-08
+	rot = 5.02429621E-15,8.42937027E-08,1.15147337E-07,1
+	attRot = 0,0,0,1
+	attRot0 = 5.02429621E-15,8.42937027E-08,1.15147337E-07,1
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 1
+	resPri = 0
+	dstg = 3
+	sidx = 0
+	sqor = 1
+	sepI = 1
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = WBI.FLM6400_4293851318
+	sym = radialDecoupler_4293897150
+	srfN = srfAttach,WBI.FLM6400_4294023600
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleAnchoredDecoupler
+		isEnabled = True
+		ejectionForcePercent = 100
+		isDecoupled = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			DecoupleAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleToggleCrossfeed
+		isEnabled = True
+		crossfeedStatus = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+			EnableAction
+			{
+				actionGroup = None
+			}
+			DisableAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = WBI.FLM6400_4293851318
+	partName = Part
+	pos = -2.61573386,15.8988113,-0.0261833407
+	attPos = 0,0,0
+	attPos0 = -1.41132486,-0.0190846063,9.61568958E-09
+	rot = 1.00485924E-14,8.42937027E-08,1.15147316E-07,1
+	attRot = 0,0,0,1
+	attRot0 = 5.0242979E-15,0,-2.13162821E-14,1
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 1
+	resPri = 0
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 1
+	attm = 1
+	modCost = 2937.59717
+	modMass = 0
+	modSize = 0,0,0
+	link = WBI.FLM1600_4293845290
+	link = fuelLine_4293991368
+	link = strutConnector_4293862560
+	link = sepMotor1_4293925326
+	link = sepMotor1_4293203830
+	link = WBIDelta8_4293883000
+	sym = WBI.FLM6400_4293850290
+	srfN = srfAttach,radialDecoupler_4293897516
+	attN = top,WBI.FLM1600_4293845290
+	attN = bottom,WBIDelta8_4293883000
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleKISInventory
+		isEnabled = True
+		invName = 
+		helmetEquipped = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBITextureSwitcher
+		isEnabled = True
+		selectedIndex = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIConvertibleStorage
+		isEnabled = True
+		currentVolume = 0
+		templateNodes = STORAGE_TEMPLATE
+		baseStorage = 0.00100000005
+		maxStorage = 36400
+		decalsVisible = False
+		fillToMaxInEditor = True
+		capacityFactor = 3.55555201
+		partMass = 0
+		templateName = LFO
+		shortName = 
+		isDeployed = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			DumpResourcesAction
+			{
+				actionGroup = None
+			}
+		}
+		RESOURCE
+		{
+			name = LiquidFuel
+			amount = 2879.997124671936
+			maxAmount = 2879.997124671936
+			flowState = True
+			isTweakable = True
+			hideFlow = False
+			isVisible = True
+			flowMode = Both
+		}
+		RESOURCE
+		{
+			name = Oxidizer
+			amount = 3519.996485710144
+			maxAmount = 3519.996485710144
+			flowState = True
+			isTweakable = True
+			hideFlow = False
+			isVisible = True
+			flowMode = Both
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIResourceDistributor
+		isEnabled = True
+		isParticipating = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		DISTRIBUTION
+		{
+			resourceName = LiquidFuel
+			mode = 0
+		}
+		DISTRIBUTION
+		{
+			resourceName = Oxidizer
+			mode = 0
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableFuelTank
+		isEnabled = True
+		leakedUnitsPerSec = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleResourceLocksAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		quality = 5
+		qualityCap = -1
+		mtbfCap = -1
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		mtbfBonus = 150
+		currentQuality = 5
+		mtbf = 600
+		currentMTBF = 750
+		mtbfRepairMultiplier = 0.699999988
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		isFixedOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = False
+		mtbfHibernationFactor = 0.100000001
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = LiquidFuel
+		amount = 2879.997124671936
+		maxAmount = 2879.997124671936
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = Oxidizer
+		amount = 3519.996485710144
+		maxAmount = 3519.996485710144
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = WBI.FLM1600_4293845290
+	partName = Part
+	pos = -2.61573458,20.5863113,-0.0261833407
+	attPos = 0,0,0
+	attPos0 = 3.5762767E-07,4.6875,2.48396579E-14
+	rot = 0,0,-4.23516524E-22,1
+	attRot = 0,0,0,1
+	attRot0 = -1.00485924E-14,-8.42937027E-08,-1.15147316E-07,1
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 1
+	resPri = 0
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 1
+	attm = 0
+	modCost = 734.399292
+	modMass = 0
+	modSize = 0,0,0
+	link = WBI.FLM1600_4293844116
+	sym = WBI.FLM1600_4293845074
+	attN = top,WBI.FLM1600_4293844116
+	attN = bottom,WBI.FLM6400_4293851318
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleKISInventory
+		isEnabled = True
+		invName = 
+		helmetEquipped = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBITextureSwitcher
+		isEnabled = True
+		selectedIndex = 1
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIConvertibleStorage
+		isEnabled = True
+		currentVolume = 0
+		templateNodes = STORAGE_TEMPLATE
+		baseStorage = 0.00100000005
+		maxStorage = 9100
+		decalsVisible = False
+		fillToMaxInEditor = True
+		capacityFactor = 0.888888001
+		partMass = 0
+		templateName = LFO
+		shortName = 
+		isDeployed = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			DumpResourcesAction
+			{
+				actionGroup = None
+			}
+		}
+		RESOURCE
+		{
+			name = LiquidFuel
+			amount = 719.99928116798401
+			maxAmount = 719.99928116798401
+			flowState = True
+			isTweakable = True
+			hideFlow = False
+			isVisible = True
+			flowMode = Both
+		}
+		RESOURCE
+		{
+			name = Oxidizer
+			amount = 879.99912142753601
+			maxAmount = 879.99912142753601
+			flowState = True
+			isTweakable = True
+			hideFlow = False
+			isVisible = True
+			flowMode = Both
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIResourceDistributor
+		isEnabled = True
+		isParticipating = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		DISTRIBUTION
+		{
+			resourceName = LiquidFuel
+			mode = 0
+		}
+		DISTRIBUTION
+		{
+			resourceName = Oxidizer
+			mode = 0
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableFuelTank
+		isEnabled = True
+		leakedUnitsPerSec = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleResourceLocksAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		quality = 5
+		qualityCap = -1
+		mtbfCap = -1
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		mtbfBonus = 180
+		currentQuality = 5
+		mtbf = 600
+		currentMTBF = 750
+		mtbfRepairMultiplier = 0.699999988
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		isFixedOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = False
+		mtbfHibernationFactor = 0.100000001
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = LiquidFuel
+		amount = 719.99928116798401
+		maxAmount = 719.99928116798401
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = Oxidizer
+		amount = 879.99912142753601
+		maxAmount = 879.99912142753601
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = WBI.FLM1600_4293844116
+	partName = Part
+	pos = -2.61573458,22.4613113,-0.0261833407
+	attPos = 0,0,0
+	attPos0 = 4.50346249E-08,1.875,-7.38582237E-15
+	rot = 0,0,-4.23516524E-22,1
+	attRot = 0,0,0,1
+	attRot0 = 0,0,-8.47033048E-22,1
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 1
+	resPri = 0
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 1
+	attm = 0
+	modCost = 734.399292
+	modMass = 0
+	modSize = 0,0,0
+	link = strutConnector_4293878416
+	link = strutConnector_4293864076
+	link = sepMotor1_4293955084
+	link = sepMotor1_4293970996
+	link = adapterSize2-Size1_4294032308
+	sym = WBI.FLM1600_4293843900
+	attN = top,adapterSize2-Size1_4294032308
+	attN = bottom,WBI.FLM1600_4293845290
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleKISInventory
+		isEnabled = True
+		invName = 
+		helmetEquipped = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBITextureSwitcher
+		isEnabled = True
+		selectedIndex = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIConvertibleStorage
+		isEnabled = True
+		currentVolume = 0
+		templateNodes = STORAGE_TEMPLATE
+		baseStorage = 0.00100000005
+		maxStorage = 9100
+		decalsVisible = False
+		fillToMaxInEditor = True
+		capacityFactor = 0.888888001
+		partMass = 0
+		templateName = LFO
+		shortName = 
+		isDeployed = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			DumpResourcesAction
+			{
+				actionGroup = None
+			}
+		}
+		RESOURCE
+		{
+			name = LiquidFuel
+			amount = 719.99928116798401
+			maxAmount = 719.99928116798401
+			flowState = True
+			isTweakable = True
+			hideFlow = False
+			isVisible = True
+			flowMode = Both
+		}
+		RESOURCE
+		{
+			name = Oxidizer
+			amount = 879.99912142753601
+			maxAmount = 879.99912142753601
+			flowState = True
+			isTweakable = True
+			hideFlow = False
+			isVisible = True
+			flowMode = Both
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIResourceDistributor
+		isEnabled = True
+		isParticipating = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		DISTRIBUTION
+		{
+			resourceName = LiquidFuel
+			mode = 0
+		}
+		DISTRIBUTION
+		{
+			resourceName = Oxidizer
+			mode = 0
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableFuelTank
+		isEnabled = True
+		leakedUnitsPerSec = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleResourceLocksAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		quality = 5
+		qualityCap = -1
+		mtbfCap = -1
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		mtbfBonus = 180
+		currentQuality = 5
+		mtbf = 600
+		currentMTBF = 750
+		mtbfRepairMultiplier = 0.699999988
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		isFixedOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = False
+		mtbfHibernationFactor = 0.100000001
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = LiquidFuel
+		amount = 719.99928116798401
+		maxAmount = 719.99928116798401
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = Oxidizer
+		amount = 879.99912142753601
+		maxAmount = 879.99912142753601
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = strutConnector_4293878416
+	partName = CompoundPart
+	pos = -1.53843236,22.9582596,-0.648164153
+	attPos = 0,0,0
+	attPos0 = 1.07730222,0.496948004,-0.621980786
+	rot = 4.47034907E-08,0.965925872,-1.19782113E-08,-0.258819133
+	attRot = 0,0,0,1
+	attRot0 = 4.47034942E-08,0.965925872,-1.19782699E-08,-0.258819133
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 1
+	resPri = 0
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 1
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = strutConnector_4293874448
+	srfN = srfAttach,WBI.FLM1600_4293844116
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+		tgt = 4293841756
+		pos = -0.468397141,0.0189097375,-0.239999056
+		rot = 2.45534576E-16,-0.60876143,-6.8223251E-08,0.793353498
+		dir = -0.889401376,0.0359061658,-0.455714762
+	}
+	MODULE
+	{
+		name = CModuleLinkedMesh
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = CModuleStrut
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = strutConnector_4293864076
+	partName = CompoundPart
+	pos = -1.55651522,22.9408321,0.585357189
+	attPos = 0,0,0
+	attPos0 = 1.05921936,0.479520559,0.611540556
+	rot = -2.03553672E-08,-0.965925872,-5.4542606E-09,-0.258819044
+	attRot = 0,0,0,1
+	attRot0 = -2.03553743E-08,-0.965925872,-5.45420509E-09,-0.258819044
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 1
+	resPri = 0
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 1
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = strutConnector_4293865146
+	srfN = srfAttach,WBI.FLM1600_4293844116
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+		tgt = 4293841756
+		pos = -0.460561454,0.0442698188,0.247694001
+		rot = -5.97079983E-16,0.608761668,4.62501717E-08,0.793353319
+		dir = -0.877572,0.0843534619,0.471965939
+	}
+	MODULE
+	{
+		name = CModuleLinkedMesh
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = CModuleStrut
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = sepMotor1_4293955084
+	partName = Part
+	pos = -2.61573458,23.2327919,1.22301888
+	attPos = 0,0,0
+	attPos0 = -8.62773959E-08,0.77148056,1.24920225
+	rot = 4.00696258E-08,-3.86366885E-08,-0.707106829,-0.707106829
+	attRot = 0,0,-0.707106709,-0.707106709
+	attRot0 = 4.00696294E-08,-3.86366885E-08,-0.707106829,-0.707106829
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 1
+	resPri = 0
+	dstg = 4
+	sidx = 1
+	sqor = 1
+	sepI = 1
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = sepMotor1_4293970282
+	srfN = srfAttach,WBI.FLM1600_4293844116
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableEngine
+		isEnabled = True
+		failureThrustPercent = 0
+		isStuckOn = False
+		failureModeID = 0
+		wasRunning = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		quality = 5
+		qualityCap = -1
+		mtbfCap = -1
+		integrationBonus = 0
+		flightExperienceBonus = 16
+		mtbfBonus = 484.5
+		currentQuality = 21
+		mtbf = 18
+		currentMTBF = 502.5
+		mtbfRepairMultiplier = 0.699999988
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		isFixedOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = False
+		mtbfHibernationFactor = 0.00999999978
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = SolidFuel
+		amount = 8
+		maxAmount = 8
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = sepMotor1_4293970996
+	partName = Part
+	pos = -2.61573458,23.2325096,-1.25723028
+	attPos = 0,0,0
+	attPos0 = -2.75140053E-08,0.771198273,-1.23104703
+	rot = -0.707106829,0.707106829,-1.61819855E-07,-8.24443447E-08
+	attRot = 0,0,-0.707106769,0.707106769
+	attRot0 = -0.707106829,0.707106829,-1.61820253E-07,-8.24441457E-08
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 1
+	resPri = 0
+	dstg = 4
+	sidx = 2
+	sqor = 1
+	sepI = 1
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = sepMotor1_4293954876
+	srfN = srfAttach,WBI.FLM1600_4293844116
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableEngine
+		isEnabled = True
+		failureThrustPercent = 0
+		isStuckOn = False
+		failureModeID = 0
+		wasRunning = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		quality = 5
+		qualityCap = -1
+		mtbfCap = -1
+		integrationBonus = 0
+		flightExperienceBonus = 16
+		mtbfBonus = 484.5
+		currentQuality = 21
+		mtbf = 18
+		currentMTBF = 502.5
+		mtbfRepairMultiplier = 0.699999988
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		isFixedOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = False
+		mtbfHibernationFactor = 0.00999999978
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = SolidFuel
+		amount = 8
+		maxAmount = 8
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = adapterSize2-Size1_4294032308
+	partName = Part
+	pos = -2.61573458,24.6488113,-0.0261833407
+	attPos = 0,0,0
+	attPos0 = -2.69323834E-08,2.1875,4.4852563E-15
+	rot = 0,0,-4.23516524E-22,1
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 1
+	resPri = 0
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 1
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = noseCone_4294019230
+	sym = adapterSize2-Size1_4294030214
+	attN = top,noseCone_4294019230
+	attN = bottom,WBI.FLM1600_4293844116
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableFuelTank
+		isEnabled = True
+		leakedUnitsPerSec = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleResourceLocksAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		quality = 5
+		qualityCap = -1
+		mtbfCap = -1
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		mtbfBonus = 150
+		currentQuality = 5
+		mtbf = 600
+		currentMTBF = 750
+		mtbfRepairMultiplier = 0.699999988
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		isFixedOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = False
+		mtbfHibernationFactor = 0.100000001
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = LiquidFuel
+		amount = 360
+		maxAmount = 360
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = Oxidizer
+		amount = 440
+		maxAmount = 440
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = noseCone_4294019230
+	partName = Part
+	pos = -2.61573458,25.8988113,-0.0261833407
+	attPos = 0,0,0
+	attPos0 = -4.94497954E-08,1.25,8.17820475E-15
+	rot = 0,0,-4.23516524E-22,1
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 1
+	resPri = 0
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 1
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = noseCone_4293965998
+	attN = bottom01,adapterSize2-Size1_4294032308
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = fuelLine_4293991368
+	partName = CompoundPart
+	pos = -1.37264836,15.2077436,-0.0261834767
+	attPos = 0,0,0
+	attPos0 = 1.24308538,-0.691067934,7.40936059E-08
+	rot = -2.53501781E-07,1,2.00971848E-14,-8.42937027E-08
+	attRot = 0,0,0,1
+	attRot0 = -1.38354466E-07,1,-1.61381715E-15,-6.95133981E-22
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 1
+	resPri = 0
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 1
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = fuelLine_4293989908
+	srfN = srfAttach,WBI.FLM6400_4293851318
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+		tgt = 4294023600
+		pos = -0.169668362,-0.295676351,-0.0022759058
+		rot = -1.92942247E-15,0.13052614,2.21831598E-07,0.991444886
+		dir = -0.497698069,-0.86732465,-0.00667604711
+	}
+	MODULE
+	{
+		name = CModuleLinkedMesh
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = CModuleFuelLine
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableFuelTank
+		isEnabled = True
+		leakedUnitsPerSec = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleResourceLocksAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		quality = 5
+		qualityCap = -1
+		mtbfCap = -1
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		mtbfBonus = 150
+		currentQuality = 5
+		mtbf = 600
+		currentMTBF = 750
+		mtbfRepairMultiplier = 0.699999988
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		isFixedOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = False
+		mtbfHibernationFactor = 0.100000001
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = strutConnector_4293862560
+	partName = CompoundPart
+	pos = -1.53419125,12.3251896,-0.650612235
+	attPos = 0,0,0
+	attPos0 = 1.0815419,-3.57362199,-0.624428689
+	rot = -3.17551837E-07,0.965925872,2.54831551E-08,-0.258819133
+	attRot = 0,0,0,1
+	attRot0 = -2.06328068E-07,0.965925872,5.52854331E-08,-0.258819044
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 1
+	resPri = 0
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 1
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = strutConnector_4293204806
+	srfN = srfAttach,WBI.FLM6400_4293851318
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+		tgt = 4294023600
+		pos = -0.441074491,0.00237255334,-0.246009722
+		rot = 4.53248177E-15,-0.608761489,1.32471499E-07,0.793353438
+		dir = -0.873332381,0.00469768187,-0.487101972
+	}
+	MODULE
+	{
+		name = CModuleLinkedMesh
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = CModuleStrut
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = sepMotor1_4293925326
+	partName = Part
+	pos = -2.61573291,12.3149509,1.21186352
+	attPos = 0,0,0
+	attPos0 = -1.19209133E-07,-3.5838604,1.23804688
+	rot = 4.65403254E-08,5.3872931E-08,0.707106888,0.707106769
+	attRot = 0,0,0.707106709,0.707106709
+	attRot0 = -1.30643345E-08,-5.73171066E-09,0.707106829,0.707106829
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 1
+	resPri = 0
+	dstg = 4
+	sidx = 3
+	sqor = 1
+	sepI = 1
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = sepMotor1_4293204186
+	srfN = srfAttach,WBI.FLM6400_4293851318
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableEngine
+		isEnabled = True
+		failureThrustPercent = 0
+		isStuckOn = False
+		failureModeID = 0
+		wasRunning = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		quality = 5
+		qualityCap = -1
+		mtbfCap = -1
+		integrationBonus = 0
+		flightExperienceBonus = 16
+		mtbfBonus = 484.5
+		currentQuality = 21
+		mtbf = 18
+		currentMTBF = 502.5
+		mtbfRepairMultiplier = 0.699999988
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		isFixedOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = False
+		mtbfHibernationFactor = 0.00999999978
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = SolidFuel
+		amount = 8
+		maxAmount = 8
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = sepMotor1_4293203830
+	partName = Part
+	pos = -2.61573315,12.3508549,-1.26389599
+	attPos = 0,0,0
+	attPos0 = 1.19209446E-07,-3.54795647,-1.23771262
+	rot = -0.707106888,0.707106769,1.56317128E-08,-2.2964322E-08
+	attRot = 0,0,0.707106709,-0.707106709
+	attRot0 = -0.707106829,0.707106829,-4.39729497E-08,3.66403228E-08
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 1
+	resPri = 0
+	dstg = 4
+	sidx = 4
+	sqor = 1
+	sepI = 1
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = sepMotor1_4293926894
+	srfN = srfAttach,WBI.FLM6400_4293851318
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableEngine
+		isEnabled = True
+		failureThrustPercent = 0
+		isStuckOn = False
+		failureModeID = 0
+		wasRunning = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		quality = 5
+		qualityCap = -1
+		mtbfCap = -1
+		integrationBonus = 0
+		flightExperienceBonus = 16
+		mtbfBonus = 484.5
+		currentQuality = 21
+		mtbf = 18
+		currentMTBF = 502.5
+		mtbfRepairMultiplier = 0.699999988
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		isFixedOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = False
+		mtbfHibernationFactor = 0.00999999978
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = SolidFuel
+		amount = 8
+		maxAmount = 8
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = WBIDelta8_4293883000
+	partName = Part
+	pos = -2.61573315,11.6800613,-0.0261833407
+	attPos = 0,0,0
+	attPos0 = -2.38418394E-07,-4.21875,1.30322185E-13
+	rot = 0,0,-4.23516524E-22,1
+	attRot = 0,0,0,1
+	attRot0 = -1.00485924E-14,-8.42937027E-08,-1.15147316E-07,1
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Heaviest
+	rigidAttachment = False
+	istg = 1
+	resPri = 0
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 1
+	attm = 0
+	modCost = 367.199646
+	modMass = 0
+	modSize = 0,0,0
+	link = largeAdapter_4293811596
+	sym = WBIDelta8_4293882800
+	attN = top,WBI.FLM6400_4293851318
+	attN = bottom,largeAdapter_4293811596
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleKISInventory
+		isEnabled = True
+		invName = 
+		helmetEquipped = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBITextureSwitcher
+		isEnabled = True
+		selectedIndex = 1
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIConvertibleStorage
+		isEnabled = True
+		currentVolume = 0
+		templateNodes = STORAGE_TEMPLATE
+		baseStorage = 0.00100000005
+		maxStorage = 4550
+		decalsVisible = False
+		fillToMaxInEditor = True
+		capacityFactor = 0.444444001
+		partMass = 0
+		templateName = LFO
+		shortName = 
+		isDeployed = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			DumpResourcesAction
+			{
+				actionGroup = None
+			}
+		}
+		RESOURCE
+		{
+			name = LiquidFuel
+			amount = 359.999640583992
+			maxAmount = 359.999640583992
+			flowState = True
+			isTweakable = True
+			hideFlow = False
+			isVisible = True
+			flowMode = Both
+		}
+		RESOURCE
+		{
+			name = Oxidizer
+			amount = 439.99956071376801
+			maxAmount = 439.99956071376801
+			flowState = True
+			isTweakable = True
+			hideFlow = False
+			isVisible = True
+			flowMode = Both
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIResourceDistributor
+		isEnabled = True
+		isParticipating = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		DISTRIBUTION
+		{
+			resourceName = LiquidFuel
+			mode = 0
+		}
+		DISTRIBUTION
+		{
+			resourceName = Oxidizer
+			mode = 0
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableFuelTank
+		isEnabled = True
+		leakedUnitsPerSec = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleResourceLocksAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		quality = 5
+		qualityCap = -1
+		mtbfCap = -1
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		mtbfBonus = 150
+		currentQuality = 5
+		mtbf = 600
+		currentMTBF = 750
+		mtbfRepairMultiplier = 0.699999988
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		isFixedOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = False
+		mtbfHibernationFactor = 0.100000001
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = LiquidFuel
+		amount = 359.999640583992
+		maxAmount = 359.999640583992
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = Oxidizer
+		amount = 439.99956071376801
+		maxAmount = 439.99956071376801
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = radialDecoupler_4293897150
+	partName = Part
+	pos = 1.29722631,15.9178963,-0.0261838492
+	attPos = 0,0.0377187729,0
+	attPos0 = 1.25081766,-0.0129404068,-1.84994335E-07
+	rot = 1.15147337E-07,1,-1.00575464E-14,-1.28005098E-07
+	attRot = 0,0,0,1
+	attRot0 = 1.15147337E-07,1,-1.00575464E-14,-1.28005098E-07
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 1
+	resPri = 0
+	dstg = 3
+	sidx = 0
+	sqor = 1
+	sepI = 1
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = WBI.FLM6400_4293850290
+	sym = radialDecoupler_4293897516
+	srfN = srfAttach,WBI.FLM6400_4294023600
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleAnchoredDecoupler
+		isEnabled = True
+		ejectionForcePercent = 100
+		isDecoupled = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			DecoupleAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleToggleCrossfeed
+		isEnabled = True
+		crossfeedStatus = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+			EnableAction
+			{
+				actionGroup = None
+			}
+			DisableAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = WBI.FLM6400_4293850290
+	partName = Part
+	pos = 2.70855117,15.8988113,-0.0261842199
+	attPos = 0,0,0
+	attPos0 = -1.41132486,-0.0190846063,9.61563273E-09
+	rot = 1.15147316E-07,1,-1.50818418E-14,-1.28005098E-07
+	attRot = 0,0,0,1
+	attRot0 = 5.02429705E-15,0,-2.13162821E-14,1
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 1
+	resPri = 0
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 1
+	attm = 1
+	modCost = 2937.59717
+	modMass = 0
+	modSize = 0,0,0
+	link = WBI.FLM1600_4293845074
+	link = fuelLine_4293989908
+	link = strutConnector_4293204806
+	link = sepMotor1_4293204186
+	link = sepMotor1_4293926894
+	link = WBIDelta8_4293882800
+	sym = WBI.FLM6400_4293851318
+	srfN = srfAttach,radialDecoupler_4293897150
+	attN = top,WBI.FLM1600_4293845074
+	attN = bottom,WBIDelta8_4293882800
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleKISInventory
+		isEnabled = True
+		invName = 
+		helmetEquipped = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBITextureSwitcher
+		isEnabled = True
+		selectedIndex = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIConvertibleStorage
+		isEnabled = True
+		currentVolume = 0
+		templateNodes = STORAGE_TEMPLATE
+		baseStorage = 0.00100000005
+		maxStorage = 36400
+		decalsVisible = False
+		fillToMaxInEditor = True
+		capacityFactor = 3.55555201
+		partMass = 0
+		templateName = LFO
+		shortName = 
+		isDeployed = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			DumpResourcesAction
+			{
+				actionGroup = None
+			}
+		}
+		RESOURCE
+		{
+			name = LiquidFuel
+			amount = 2879.997124671936
+			maxAmount = 2879.997124671936
+			flowState = True
+			isTweakable = True
+			hideFlow = False
+			isVisible = True
+			flowMode = Both
+		}
+		RESOURCE
+		{
+			name = Oxidizer
+			amount = 3519.996485710144
+			maxAmount = 3519.996485710144
+			flowState = True
+			isTweakable = True
+			hideFlow = False
+			isVisible = True
+			flowMode = Both
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIResourceDistributor
+		isEnabled = True
+		isParticipating = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		DISTRIBUTION
+		{
+			resourceName = LiquidFuel
+			mode = 0
+		}
+		DISTRIBUTION
+		{
+			resourceName = Oxidizer
+			mode = 0
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableFuelTank
+		isEnabled = True
+		leakedUnitsPerSec = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleResourceLocksAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		quality = 5
+		qualityCap = -1
+		mtbfCap = -1
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		mtbfBonus = 150
+		currentQuality = 5
+		mtbf = 600
+		currentMTBF = 750
+		mtbfRepairMultiplier = 0.699999988
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		isFixedOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = False
+		mtbfHibernationFactor = 0.100000001
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = LiquidFuel
+		amount = 2879.997124671936
+		maxAmount = 2879.997124671936
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = Oxidizer
+		amount = 3519.996485710144
+		maxAmount = 3519.996485710144
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = WBI.FLM1600_4293845074
+	partName = Part
+	pos = 2.70855188,20.5863113,-0.0261842199
+	attPos = 0,0,0
+	attPos0 = 3.5762767E-07,4.6875,9.74063495E-15
+	rot = 0,1,0,-4.37113954E-08
+	attRot = 0,0,0,1
+	attRot0 = -1.00485924E-14,-8.42937027E-08,-1.15147316E-07,1
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 1
+	resPri = 0
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 1
+	attm = 0
+	modCost = 734.399292
+	modMass = 0
+	modSize = 0,0,0
+	link = WBI.FLM1600_4293843900
+	sym = WBI.FLM1600_4293845290
+	attN = top,WBI.FLM1600_4293843900
+	attN = bottom,WBI.FLM6400_4293850290
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleKISInventory
+		isEnabled = True
+		invName = 
+		helmetEquipped = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBITextureSwitcher
+		isEnabled = True
+		selectedIndex = 1
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIConvertibleStorage
+		isEnabled = True
+		currentVolume = 0
+		templateNodes = STORAGE_TEMPLATE
+		baseStorage = 0.00100000005
+		maxStorage = 9100
+		decalsVisible = False
+		fillToMaxInEditor = True
+		capacityFactor = 0.888888001
+		partMass = 0
+		templateName = LFO
+		shortName = 
+		isDeployed = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			DumpResourcesAction
+			{
+				actionGroup = None
+			}
+		}
+		RESOURCE
+		{
+			name = LiquidFuel
+			amount = 719.99928116798401
+			maxAmount = 719.99928116798401
+			flowState = True
+			isTweakable = True
+			hideFlow = False
+			isVisible = True
+			flowMode = Both
+		}
+		RESOURCE
+		{
+			name = Oxidizer
+			amount = 879.99912142753601
+			maxAmount = 879.99912142753601
+			flowState = True
+			isTweakable = True
+			hideFlow = False
+			isVisible = True
+			flowMode = Both
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIResourceDistributor
+		isEnabled = True
+		isParticipating = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		DISTRIBUTION
+		{
+			resourceName = LiquidFuel
+			mode = 0
+		}
+		DISTRIBUTION
+		{
+			resourceName = Oxidizer
+			mode = 0
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableFuelTank
+		isEnabled = True
+		leakedUnitsPerSec = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleResourceLocksAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		quality = 5
+		qualityCap = -1
+		mtbfCap = -1
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		mtbfBonus = 180
+		currentQuality = 5
+		mtbf = 600
+		currentMTBF = 750
+		mtbfRepairMultiplier = 0.699999988
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		isFixedOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = False
+		mtbfHibernationFactor = 0.100000001
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = LiquidFuel
+		amount = 719.99928116798401
+		maxAmount = 719.99928116798401
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = Oxidizer
+		amount = 879.99912142753601
+		maxAmount = 879.99912142753601
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = WBI.FLM1600_4293843900
+	partName = Part
+	pos = 2.70855188,22.4613113,-0.0261842199
+	attPos = 0,0,0
+	attPos0 = 4.50346249E-08,1.875,-2.51493908E-14
+	rot = 0,1,0,-4.37113954E-08
+	attRot = 0,0,0,1
+	attRot0 = 1.69406589E-21,0,-8.47033048E-22,1
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 1
+	resPri = 0
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 1
+	attm = 0
+	modCost = 734.399292
+	modMass = 0
+	modSize = 0,0,0
+	link = strutConnector_4293874448
+	link = strutConnector_4293865146
+	link = sepMotor1_4293970282
+	link = sepMotor1_4293954876
+	link = adapterSize2-Size1_4294030214
+	sym = WBI.FLM1600_4293844116
+	attN = top,adapterSize2-Size1_4294030214
+	attN = bottom,WBI.FLM1600_4293845074
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleKISInventory
+		isEnabled = True
+		invName = 
+		helmetEquipped = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBITextureSwitcher
+		isEnabled = True
+		selectedIndex = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIConvertibleStorage
+		isEnabled = True
+		currentVolume = 0
+		templateNodes = STORAGE_TEMPLATE
+		baseStorage = 0.00100000005
+		maxStorage = 9100
+		decalsVisible = False
+		fillToMaxInEditor = True
+		capacityFactor = 0.888888001
+		partMass = 0
+		templateName = LFO
+		shortName = 
+		isDeployed = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			DumpResourcesAction
+			{
+				actionGroup = None
+			}
+		}
+		RESOURCE
+		{
+			name = LiquidFuel
+			amount = 719.99928116798401
+			maxAmount = 719.99928116798401
+			flowState = True
+			isTweakable = True
+			hideFlow = False
+			isVisible = True
+			flowMode = Both
+		}
+		RESOURCE
+		{
+			name = Oxidizer
+			amount = 879.99912142753601
+			maxAmount = 879.99912142753601
+			flowState = True
+			isTweakable = True
+			hideFlow = False
+			isVisible = True
+			flowMode = Both
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIResourceDistributor
+		isEnabled = True
+		isParticipating = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		DISTRIBUTION
+		{
+			resourceName = LiquidFuel
+			mode = 0
+		}
+		DISTRIBUTION
+		{
+			resourceName = Oxidizer
+			mode = 0
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableFuelTank
+		isEnabled = True
+		leakedUnitsPerSec = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleResourceLocksAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		quality = 5
+		qualityCap = -1
+		mtbfCap = -1
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		mtbfBonus = 180
+		currentQuality = 5
+		mtbf = 600
+		currentMTBF = 750
+		mtbfRepairMultiplier = 0.699999988
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		isFixedOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = False
+		mtbfHibernationFactor = 0.100000001
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = LiquidFuel
+		amount = 719.99928116798401
+		maxAmount = 719.99928116798401
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = Oxidizer
+		amount = 879.99912142753601
+		maxAmount = 879.99912142753601
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = strutConnector_4293874448
+	partName = CompoundPart
+	pos = 1.63124979,22.9582596,0.595796704
+	attPos = 0,0,0
+	attPos0 = 1.07730222,0.496948004,-0.621980786
+	rot = -1.19782673E-08,-0.258819163,-4.47034765E-08,-0.965925813
+	attRot = 0,0,0,1
+	attRot0 = 4.47034942E-08,0.965925813,-1.19782699E-08,-0.258819103
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 1
+	resPri = 0
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 1
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = strutConnector_4293878416
+	srfN = srfAttach,WBI.FLM1600_4293843900
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+		tgt = 4293841756
+		pos = -0.468381792,0.0189097375,-0.240003437
+		rot = 2.46260239E-15,-0.60876143,3.8026652E-08,0.793353379
+		dir = -0.889391959,0.0359069631,-0.45573318
+	}
+	MODULE
+	{
+		name = CModuleLinkedMesh
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = CModuleStrut
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = strutConnector_4293865146
+	partName = CompoundPart
+	pos = 1.6493324,22.9408321,-0.637724698
+	attPos = 0,0,0
+	attPos0 = 1.05921936,0.479520559,0.611540556
+	rot = -5.45423084E-09,-0.258819014,2.03553654E-08,0.965925932
+	attRot = 0,0,0,1
+	attRot0 = -2.03553761E-08,-0.965925872,-5.45420376E-09,-0.258819044
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 1
+	resPri = 0
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 1
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = strutConnector_4293864076
+	srfN = srfAttach,WBI.FLM1600_4293843900
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+		tgt = 4293841756
+		pos = -0.460576892,0.0442698188,0.247689679
+		rot = 2.43945012E-16,0.60876143,-5.99997989E-08,0.793353617
+		dir = -0.877582192,0.0843516141,0.471947372
+	}
+	MODULE
+	{
+		name = CModuleLinkedMesh
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = CModuleStrut
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = sepMotor1_4293970282
+	partName = Part
+	pos = 2.70855188,23.2327919,-1.27538657
+	attPos = 0,0,0
+	attPos0 = -2.05486685E-07,0.77148056,1.24920225
+	rot = -0.707106829,-0.707106829,-9.16108878E-09,6.95452087E-08
+	attRot = 0,0,-0.707106709,-0.707106709
+	attRot0 = 4.00696258E-08,-3.86366885E-08,-0.707106829,-0.707106829
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 1
+	resPri = 0
+	dstg = 4
+	sidx = 1
+	sqor = 1
+	sepI = 1
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = sepMotor1_4293955084
+	srfN = srfAttach,WBI.FLM1600_4293843900
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableEngine
+		isEnabled = True
+		failureThrustPercent = 0
+		isStuckOn = False
+		failureModeID = 0
+		wasRunning = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		quality = 5
+		qualityCap = -1
+		mtbfCap = -1
+		integrationBonus = 0
+		flightExperienceBonus = 16
+		mtbfBonus = 484.5
+		currentQuality = 21
+		mtbf = 18
+		currentMTBF = 502.5
+		mtbfRepairMultiplier = 0.699999988
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		isFixedOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = False
+		mtbfHibernationFactor = 0.00999999978
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = SolidFuel
+		amount = 8
+		maxAmount = 8
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = sepMotor1_4293954876
+	partName = Part
+	pos = 2.70855188,23.2325096,1.20486283
+	attPos = 0,0,0
+	attPos0 = 9.16952843E-08,0.771198273,-1.23104703
+	rot = -1.30911232E-07,-1.13352755E-07,0.707106829,-0.707106829
+	attRot = 0,0,-0.707106769,0.707106769
+	attRot0 = -0.707106829,0.707106829,-1.61820282E-07,-8.24441315E-08
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 1
+	resPri = 0
+	dstg = 4
+	sidx = 2
+	sqor = 1
+	sepI = 1
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = sepMotor1_4293970996
+	srfN = srfAttach,WBI.FLM1600_4293843900
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableEngine
+		isEnabled = True
+		failureThrustPercent = 0
+		isStuckOn = False
+		failureModeID = 0
+		wasRunning = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		quality = 5
+		qualityCap = -1
+		mtbfCap = -1
+		integrationBonus = 0
+		flightExperienceBonus = 16
+		mtbfBonus = 484.5
+		currentQuality = 21
+		mtbf = 18
+		currentMTBF = 502.5
+		mtbfRepairMultiplier = 0.699999988
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		isFixedOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = False
+		mtbfHibernationFactor = 0.00999999978
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = SolidFuel
+		amount = 8
+		maxAmount = 8
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = adapterSize2-Size1_4294030214
+	partName = Part
+	pos = 2.70855188,24.6488113,-0.0261842199
+	attPos = 0,0,0
+	attPos0 = -2.69323834E-08,2.1875,-1.59428474E-14
+	rot = 0,1,0,-4.37113954E-08
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 1
+	resPri = 0
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 1
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = noseCone_4293965998
+	sym = adapterSize2-Size1_4294032308
+	attN = top,noseCone_4293965998
+	attN = bottom,WBI.FLM1600_4293843900
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableFuelTank
+		isEnabled = True
+		leakedUnitsPerSec = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleResourceLocksAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		quality = 5
+		qualityCap = -1
+		mtbfCap = -1
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		mtbfBonus = 150
+		currentQuality = 5
+		mtbf = 600
+		currentMTBF = 750
+		mtbfRepairMultiplier = 0.699999988
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		isFixedOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = False
+		mtbfHibernationFactor = 0.100000001
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = LiquidFuel
+		amount = 360
+		maxAmount = 360
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = Oxidizer
+		amount = 440
+		maxAmount = 440
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = noseCone_4293965998
+	partName = Part
+	pos = 2.70855188,25.8988113,-0.0261842217
+	attPos = 0,0,0
+	attPos0 = -4.94497954E-08,1.25,5.3475277E-14
+	rot = 0,1,0,-4.37113954E-08
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 1
+	resPri = 0
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 1
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = noseCone_4294019230
+	attN = bottom01,adapterSize2-Size1_4294030214
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = fuelLine_4293989908
+	partName = CompoundPart
+	pos = 1.46546566,15.2077436,-0.0261839777
+	attPos = 0,0,0
+	attPos0 = 1.24308538,-0.691067934,7.4093613E-08
+	rot = 3.11780969E-14,-1.28005098E-07,2.53501781E-07,-1
+	attRot = 0,0,0,1
+	attRot0 = -1.38354466E-07,1,-1.61381799E-15,-6.95133829E-22
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 1
+	resPri = 0
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 1
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = fuelLine_4293991368
+	srfN = srfAttach,WBI.FLM6400_4293850290
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+		tgt = 4294023600
+		pos = -0.169668123,-0.295660138,-0.0022764632
+		rot = -2.34099917E-15,0.130526274,2.72122094E-07,0.991444886
+		dir = -0.497718096,-0.867313206,-0.00667796005
+	}
+	MODULE
+	{
+		name = CModuleLinkedMesh
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = CModuleFuelLine
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableFuelTank
+		isEnabled = True
+		leakedUnitsPerSec = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleResourceLocksAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		quality = 5
+		qualityCap = -1
+		mtbfCap = -1
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		mtbfBonus = 150
+		currentQuality = 5
+		mtbf = 600
+		currentMTBF = 750
+		mtbfRepairMultiplier = 0.699999988
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		isFixedOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = False
+		mtbfHibernationFactor = 0.100000001
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = strutConnector_4293204806
+	partName = CompoundPart
+	pos = 1.62700868,12.3251896,0.598244786
+	attPos = 0,0,0
+	attPos0 = 1.08154178,-3.57362199,-0.624428689
+	rot = 2.54831534E-08,-0.258819163,3.17551837E-07,-0.965925813
+	attRot = 0,0,0,1
+	attRot0 = -2.06328068E-07,0.965925872,5.52854296E-08,-0.258819044
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 1
+	resPri = 0
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 1
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = strutConnector_4293862560
+	srfN = srfAttach,WBI.FLM6400_4293850290
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+		tgt = 4294023600
+		pos = -0.441072762,0.00237255334,-0.246008813
+		rot = 2.89339721E-15,-0.608761072,2.12159236E-07,0.793353617
+		dir = -0.873332441,0.00469770096,-0.487102121
+	}
+	MODULE
+	{
+		name = CModuleLinkedMesh
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = CModuleStrut
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = sepMotor1_4293204186
+	partName = Part
+	pos = 2.70854998,12.3149509,-1.2642312
+	attPos = 0,0,0
+	attPos0 = 1.52789158E-13,-3.5838604,1.23804688
+	rot = 0.707106888,0.707106769,-7.74489521E-08,-8.47815826E-08
+	attRot = 0,0,0.707106709,0.707106709
+	attRot0 = -1.30643389E-08,-5.73171066E-09,0.707106829,0.707106829
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 1
+	resPri = 0
+	dstg = 4
+	sidx = 3
+	sqor = 1
+	sepI = 1
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = sepMotor1_4293925326
+	srfN = srfAttach,WBI.FLM6400_4293850290
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableEngine
+		isEnabled = True
+		failureThrustPercent = 0
+		isStuckOn = False
+		failureModeID = 0
+		wasRunning = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		quality = 5
+		qualityCap = -1
+		mtbfCap = -1
+		integrationBonus = 0
+		flightExperienceBonus = 16
+		mtbfBonus = 484.5
+		currentQuality = 21
+		mtbf = 18
+		currentMTBF = 502.5
+		mtbfRepairMultiplier = 0.699999988
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		isFixedOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = False
+		mtbfHibernationFactor = 0.00999999978
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = SolidFuel
+		amount = 8
+		maxAmount = 8
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = sepMotor1_4293926894
+	partName = Part
+	pos = 2.70855069,12.3508549,1.2115283
+	attPos = 0,0,0
+	attPos0 = 1.51258482E-13,-3.54795647,-1.23771262
+	rot = 4.65403502E-08,-5.38729417E-08,0.707106888,-0.707106769
+	attRot = 0,0,0.707106709,-0.707106709
+	attRot0 = -0.707106829,0.707106829,-4.39729568E-08,3.66403228E-08
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 1
+	resPri = 0
+	dstg = 4
+	sidx = 4
+	sqor = 1
+	sepI = 1
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = sepMotor1_4293203830
+	srfN = srfAttach,WBI.FLM6400_4293850290
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableEngine
+		isEnabled = True
+		failureThrustPercent = 0
+		isStuckOn = False
+		failureModeID = 0
+		wasRunning = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		quality = 5
+		qualityCap = -1
+		mtbfCap = -1
+		integrationBonus = 0
+		flightExperienceBonus = 16
+		mtbfBonus = 484.5
+		currentQuality = 21
+		mtbf = 18
+		currentMTBF = 502.5
+		mtbfRepairMultiplier = 0.699999988
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		isFixedOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = False
+		mtbfHibernationFactor = 0.00999999978
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = SolidFuel
+		amount = 8
+		maxAmount = 8
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = WBIDelta8_4293882800
+	partName = Part
+	pos = 2.70855045,11.6800613,-0.0261842199
+	attPos = 0,0,0
+	attPos0 = -2.38418394E-07,-4.21875,2.12922765E-13
+	rot = 0,1,0,-4.37113954E-08
+	attRot = 0,0,0,1
+	attRot0 = -1.00485924E-14,-8.42937027E-08,-1.15147316E-07,1
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Heaviest
+	rigidAttachment = False
+	istg = 1
+	resPri = 0
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 1
+	attm = 0
+	modCost = 367.199646
+	modMass = 0
+	modSize = 0,0,0
+	link = largeAdapter_4293810554
+	sym = WBIDelta8_4293883000
+	attN = top,WBI.FLM6400_4293850290
+	attN = bottom,largeAdapter_4293810554
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleKISInventory
+		isEnabled = True
+		invName = 
+		helmetEquipped = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBITextureSwitcher
+		isEnabled = True
+		selectedIndex = 1
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIConvertibleStorage
+		isEnabled = True
+		currentVolume = 0
+		templateNodes = STORAGE_TEMPLATE
+		baseStorage = 0.00100000005
+		maxStorage = 4550
+		decalsVisible = False
+		fillToMaxInEditor = True
+		capacityFactor = 0.444444001
+		partMass = 0
+		templateName = LFO
+		shortName = 
+		isDeployed = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			DumpResourcesAction
+			{
+				actionGroup = None
+			}
+		}
+		RESOURCE
+		{
+			name = LiquidFuel
+			amount = 359.999640583992
+			maxAmount = 359.999640583992
+			flowState = True
+			isTweakable = True
+			hideFlow = False
+			isVisible = True
+			flowMode = Both
+		}
+		RESOURCE
+		{
+			name = Oxidizer
+			amount = 439.99956071376801
+			maxAmount = 439.99956071376801
+			flowState = True
+			isTweakable = True
+			hideFlow = False
+			isVisible = True
+			flowMode = Both
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIResourceDistributor
+		isEnabled = True
+		isParticipating = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		DISTRIBUTION
+		{
+			resourceName = LiquidFuel
+			mode = 0
+		}
+		DISTRIBUTION
+		{
+			resourceName = Oxidizer
+			mode = 0
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableFuelTank
+		isEnabled = True
+		leakedUnitsPerSec = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleResourceLocksAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		quality = 5
+		qualityCap = -1
+		mtbfCap = -1
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		mtbfBonus = 150
+		currentQuality = 5
+		mtbf = 600
+		currentMTBF = 750
+		mtbfRepairMultiplier = 0.699999988
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		isFixedOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = False
+		mtbfHibernationFactor = 0.100000001
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = LiquidFuel
+		amount = 359.999640583992
+		maxAmount = 359.999640583992
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = Oxidizer
+		amount = 439.99956071376801
+		maxAmount = 439.99956071376801
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = strutConnector_4293851970
+	partName = CompoundPart
+	pos = 1.12332118,12.3283272,-0.647939503
+	attPos = 0,0,0
+	attPos0 = 1.07691252,-3.56479073,-0.621755838
+	rot = -1.62842909E-07,0.965925872,4.36336371E-08,-0.258819103
+	attRot = 0,0,0,1
+	attRot0 = -1.62842909E-07,0.965925872,4.36336371E-08,-0.258819103
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 1
+	resPri = 0
+	dstg = 2
+	sidx = -1
+	sqor = -1
+	sepI = 1
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = strutConnector_4293204532
+	srfN = srfAttach,WBI.FLM6400_4294023600
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+		tgt = 4293850290
+		pos = -0.46242702,0.0115755433,-0.241718605
+		rot = 5.12367604E-15,-0.608761132,2.1437414E-07,0.793353856
+		dir = -0.886011064,0.0221787635,-0.463133305
+	}
+	MODULE
+	{
+		name = CModuleLinkedMesh
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = CModuleStrut
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = strutConnector_4293204532
+	partName = CompoundPart
+	pos = -1.03050387,12.3283272,0.595572293
+	attPos = 0,0,0
+	attPos0 = -1.07691252,-3.56479073,0.621755958
+	rot = 4.36336443E-08,-0.258819133,1.62842909E-07,-0.965925872
+	attRot = 0,0,0,1
+	attRot0 = 4.36336443E-08,-0.258819133,1.62842909E-07,-0.965925872
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 1
+	resPri = 0
+	dstg = 2
+	sidx = -1
+	sqor = -1
+	sepI = 1
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = strutConnector_4293851970
+	srfN = srfAttach,WBI.FLM6400_4294023600
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+		tgt = 4293851318
+		pos = -0.462427676,0.0115717286,-0.241721079
+		rot = 4.52362096E-15,-0.608761072,3.20624082E-07,0.793353736
+		dir = -0.886009574,0.0221713856,-0.463136613
+	}
+	MODULE
+	{
+		name = CModuleLinkedMesh
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = CModuleStrut
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = WBIDelta8_4293879880
+	partName = Part
+	pos = 0.0464086533,11.6743679,-0.0261836648
+	attPos = 0,0,0
+	attPos0 = 0,-4.21875,0
+	rot = 0,0,0,1
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 1
+	resPri = 0
+	dstg = 2
+	sidx = -1
+	sqor = -1
+	sepI = 1
+	attm = 0
+	modCost = 367.199646
+	modMass = 0
+	modSize = 0,0,0
+	link = largeAdapter_4293782824
+	attN = top,WBI.FLM6400_4294023600
+	attN = bottom,largeAdapter_4293782824
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleKISInventory
+		isEnabled = True
+		invName = 
+		helmetEquipped = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBITextureSwitcher
+		isEnabled = True
+		selectedIndex = 1
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIConvertibleStorage
+		isEnabled = True
+		currentVolume = 0
+		templateNodes = STORAGE_TEMPLATE
+		baseStorage = 0.00100000005
+		maxStorage = 4550
+		decalsVisible = False
+		fillToMaxInEditor = True
+		capacityFactor = 0.444444001
+		partMass = 0
+		templateName = LFO
+		shortName = 
+		isDeployed = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			DumpResourcesAction
+			{
+				actionGroup = None
+			}
+		}
+		RESOURCE
+		{
+			name = LiquidFuel
+			amount = 359.999640583992
+			maxAmount = 359.999640583992
+			flowState = True
+			isTweakable = True
+			hideFlow = False
+			isVisible = True
+			flowMode = Both
+		}
+		RESOURCE
+		{
+			name = Oxidizer
+			amount = 439.99956071376801
+			maxAmount = 439.99956071376801
+			flowState = True
+			isTweakable = True
+			hideFlow = False
+			isVisible = True
+			flowMode = Both
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIResourceDistributor
+		isEnabled = True
+		isParticipating = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		DISTRIBUTION
+		{
+			resourceName = LiquidFuel
+			mode = 0
+		}
+		DISTRIBUTION
+		{
+			resourceName = Oxidizer
+			mode = 0
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableFuelTank
+		isEnabled = True
+		leakedUnitsPerSec = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleResourceLocksAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		quality = 5
+		qualityCap = -1
+		mtbfCap = -1
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		mtbfBonus = 150
+		currentQuality = 5
+		mtbf = 600
+		currentMTBF = 750
+		mtbfRepairMultiplier = 0.699999988
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		isFixedOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = False
+		mtbfHibernationFactor = 0.100000001
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = LiquidFuel
+		amount = 359.999640583992
+		maxAmount = 359.999640583992
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = Oxidizer
+		amount = 439.99956071376801
+		maxAmount = 439.99956071376801
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = fairingSize2_4293789214
+	partName = Part
+	pos = 0.0464086533,30.1832542,-0.0261836648
+	attPos = 0,0,0
+	attPos0 = 0,0.345001221,0
+	rot = 0,0,0,1
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 0
+	resPri = 0
+	dstg = 1
+	sidx = 1
+	sqor = 0
+	sepI = -1
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	attN = bottom,deltaGuidanceUnit_4293863704
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleProceduralFairing
+		isEnabled = True
+		interstageCraftID = 0
+		nArcs = 3
+		ejectionForce = 100
+		useClamshell = False
+		stagingEnabled = True
+		fsm = st_idle
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			DeployFairingAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleCargoBay
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleStructuralNode
+		isEnabled = True
+		spawnState = False
+		visibilityState = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleStructuralNode
+		isEnabled = True
+		spawnState = False
+		visibilityState = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleStructuralNode
+		isEnabled = True
+		spawnState = False
+		visibilityState = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleStructuralNode
+		isEnabled = True
+		spawnState = False
+		visibilityState = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleStructuralNode
+		isEnabled = True
+		spawnState = False
+		visibilityState = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleStructuralNode
+		isEnabled = True
+		spawnState = False
+		visibilityState = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleStructuralNode
+		isEnabled = True
+		spawnState = False
+		visibilityState = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleStructuralNode
+		isEnabled = True
+		spawnState = False
+		visibilityState = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleStructuralNode
+		isEnabled = True
+		spawnState = False
+		visibilityState = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleStructuralNode
+		isEnabled = True
+		spawnState = False
+		visibilityState = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleStructuralNode
+		isEnabled = True
+		spawnState = False
+		visibilityState = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleStructuralNode
+		isEnabled = True
+		spawnState = False
+		visibilityState = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleStructuralNodeToggle
+		isEnabled = True
+		showMesh = True
+		showNodes = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = largeAdapter_4293811596
+	partName = Part
+	pos = -2.61573315,10.4563103,-0.0261833407
+	attPos = 0,0,0
+	attPos0 = -7.58045076E-08,-1.22375107,9.31335342E-10
+	rot = -5.78534331E-22,5.08219768E-21,-1,4.23516171E-22
+	attRot = 0,0,-0.99999994,0
+	attRot0 = -1.15706846E-21,8.47032947E-22,-1,8.47033048E-22
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Heaviest
+	rigidAttachment = False
+	istg = 1
+	resPri = 0
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 1
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = liquidEngine1-2_4293793602
+	sym = largeAdapter_4293810554
+	attN = top,liquidEngine1-2_4293793602
+	attN = bottom,WBIDelta8_4293883000
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = largeAdapter_4293810554
+	partName = Part
+	pos = 2.70855045,10.4563103,-0.0261842199
+	attPos = 0,0,0
+	attPos0 = -7.58045076E-08,-1.22375107,-9.31298372E-10
+	rot = -1,0,4.37113954E-08,-1.69406589E-21
+	attRot = 0,0,-0.99999994,0
+	attRot0 = -1.15706846E-21,2.54109884E-21,-1,8.47032897E-22
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Heaviest
+	rigidAttachment = False
+	istg = 1
+	resPri = 0
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 1
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = liquidEngine1-2_4293793252
+	sym = largeAdapter_4293811596
+	attN = top,liquidEngine1-2_4293793252
+	attN = bottom,WBIDelta8_4293882800
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = liquidEngine1-2_4293793602
+	partName = Part
+	pos = -2.61573315,10.078989,-0.0261833407
+	attPos = -2.64672622E-08,-1.43798637,-4.55191779E-15
+	attPos0 = -6.04277943E-08,1.81530762,-1.02140484E-14
+	rot = 0,0,-4.23516524E-22,1
+	attRot = 0,0,0,1
+	attRot0 = 1.15706846E-21,-8.47032947E-22,1,1.6940661E-21
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Heaviest
+	rigidAttachment = False
+	istg = 2
+	resPri = 0
+	dstg = 4
+	sidx = 0
+	sqor = 2
+	sepI = 1
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = liquidEngine1-2_4293793252
+	attN = top,largeAdapter_4293811596
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleJettison
+		isEnabled = True
+		isJettisoned = True
+		shroudHideOverride = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			JettisonAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGimbal
+		isEnabled = True
+		gimbalLock = False
+		gimbalLimiter = 100
+		currentShowToggles = False
+		enableYaw = True
+		enablePitch = True
+		enableRoll = True
+		gimbalActive = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+			LockAction
+			{
+				actionGroup = None
+			}
+			FreeAction
+			{
+				actionGroup = None
+			}
+			TogglePitchAction
+			{
+				actionGroup = None
+			}
+			ToggleYawAction
+			{
+				actionGroup = None
+			}
+			ToggleRollAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FXModuleAnimateThrottle
+		isEnabled = True
+		animState = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAlternator
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleSurfaceFX
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableEngine
+		isEnabled = True
+		failureThrustPercent = 0
+		isStuckOn = False
+		failureModeID = 0
+		wasRunning = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		quality = 5
+		qualityCap = -1
+		mtbfCap = -1
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		mtbfBonus = 4.5
+		currentQuality = 5
+		mtbf = 18
+		currentMTBF = 22.5
+		mtbfRepairMultiplier = 0.699999988
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		isFixedOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = False
+		mtbfHibernationFactor = 0.00999999978
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = liquidEngine1-2_4293793252
+	partName = Part
+	pos = 2.70855045,10.078989,-0.0261842199
+	attPos = -2.64672622E-08,-1.43798637,-1.79301086E-14
+	attPos0 = -6.04277943E-08,1.81530762,6.82788092E-15
+	rot = 0,1,0,-4.37113954E-08
+	attRot = 0,0,0,1
+	attRot0 = 1.15706846E-21,-8.47032947E-22,1,1.69406589E-21
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Heaviest
+	rigidAttachment = False
+	istg = 2
+	resPri = 0
+	dstg = 4
+	sidx = 0
+	sqor = 2
+	sepI = 1
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = liquidEngine1-2_4293793602
+	attN = top,largeAdapter_4293810554
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleJettison
+		isEnabled = True
+		isJettisoned = True
+		shroudHideOverride = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			JettisonAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGimbal
+		isEnabled = True
+		gimbalLock = False
+		gimbalLimiter = 100
+		currentShowToggles = False
+		enableYaw = True
+		enablePitch = True
+		enableRoll = True
+		gimbalActive = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+			LockAction
+			{
+				actionGroup = None
+			}
+			FreeAction
+			{
+				actionGroup = None
+			}
+			TogglePitchAction
+			{
+				actionGroup = None
+			}
+			ToggleYawAction
+			{
+				actionGroup = None
+			}
+			ToggleRollAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FXModuleAnimateThrottle
+		isEnabled = True
+		animState = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAlternator
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleSurfaceFX
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableEngine
+		isEnabled = True
+		failureThrustPercent = 0
+		isStuckOn = False
+		failureModeID = 0
+		wasRunning = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		quality = 5
+		qualityCap = -1
+		mtbfCap = -1
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		mtbfBonus = 4.5
+		currentQuality = 5
+		mtbf = 18
+		currentMTBF = 22.5
+		mtbfRepairMultiplier = 0.699999988
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		isFixedOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = False
+		mtbfHibernationFactor = 0.00999999978
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = largeAdapter_4293782824
+	partName = Part
+	pos = 0.0464086533,10.4506187,-0.0261836648
+	attPos = 0,0,0
+	attPos0 = 0,-1.22374916,0
+	rot = 0,0,-1,0
+	attRot = 0,0,-0.99999994,0
+	attRot0 = 0,0,-1,0
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Heaviest
+	rigidAttachment = False
+	istg = 1
+	resPri = 0
+	dstg = 2
+	sidx = -1
+	sqor = -1
+	sepI = 1
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = liquidEngine1-2_4293782778
+	attN = top,liquidEngine1-2_4293782778
+	attN = bottom,WBIDelta8_4293879880
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = liquidEngine1-2_4293782778
+	partName = Part
+	pos = 0.0464087389,10.0732975,-0.0261836648
+	attPos = -2.64672622E-08,-1.43798637,-4.55191779E-15
+	attPos0 = -6.04277943E-08,1.81530762,-1.02140484E-14
+	rot = -8.47032947E-22,-1.15706846E-21,-1.6940661E-21,1
+	attRot = 0,0,0,1
+	attRot0 = 1.15706846E-21,-8.47032947E-22,1,1.6940661E-21
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Heaviest
+	rigidAttachment = False
+	istg = 2
+	resPri = 0
+	dstg = 2
+	sidx = 1
+	sqor = 2
+	sepI = 1
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	attN = top,largeAdapter_4293782824
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleJettison
+		isEnabled = True
+		isJettisoned = True
+		shroudHideOverride = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			JettisonAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGimbal
+		isEnabled = True
+		gimbalLock = False
+		gimbalLimiter = 100
+		currentShowToggles = False
+		enableYaw = True
+		enablePitch = True
+		enableRoll = True
+		gimbalActive = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+			LockAction
+			{
+				actionGroup = None
+			}
+			FreeAction
+			{
+				actionGroup = None
+			}
+			TogglePitchAction
+			{
+				actionGroup = None
+			}
+			ToggleYawAction
+			{
+				actionGroup = None
+			}
+			ToggleRollAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FXModuleAnimateThrottle
+		isEnabled = True
+		animState = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAlternator
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleSurfaceFX
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableEngine
+		isEnabled = True
+		failureThrustPercent = 0
+		isStuckOn = False
+		failureModeID = 0
+		wasRunning = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		quality = 5
+		qualityCap = -1
+		mtbfCap = -1
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		mtbfBonus = 4.5
+		currentQuality = 5
+		mtbf = 18
+		currentMTBF = 22.5
+		mtbfRepairMultiplier = 0.699999988
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		isFixedOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = False
+		mtbfHibernationFactor = 0.00999999978
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}

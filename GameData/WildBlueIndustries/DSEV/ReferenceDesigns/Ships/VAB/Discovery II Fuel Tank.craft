@@ -1,8 +1,8 @@
 ship = Discovery II Fuel Tank
-version = 1.2.2
+version = 1.3.0
 description = In the NASA Discovery II mission, Discovery's fuel tanks detach from the ship and land at a refinery on a moon to refuel. This tanks provides the same capability.
 type = VAB
-size = 12.8573532,31.1997528,12.8573589
+size = 12.8425064,31.144043,12.8425121
 PART
 {
 	part = WBI.D2InstrumentUnit_4293705984
@@ -197,7 +197,6 @@ PART
 		selectedObject = 0
 		stagingEnabled = True
 		selectedObject = 0
-		showGui = True
 		EVENTS
 		{
 		}
@@ -225,22 +224,69 @@ PART
 	}
 	MODULE
 	{
-		name = TrajectoriesVesselSettings
+		name = WBIPartScrapper
 		isEnabled = True
-		EntryAngle = 0
-		EntryHorizon = False
-		HighAngle = 0
-		HighHorizon = False
-		LowAngle = 0
-		LowHorizon = False
-		GroundAngle = 0
-		GroundHorizon = False
-		ProgradeEntry = False
-		RetrogradeEntry = False
-		hasTarget = False
-		targetLocation = (0, 0, 0)
-		targetReferenceBody = 
 		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableSAS
+		isEnabled = True
+		IsActive = False
+		isBroken = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableTransmitter
+		isEnabled = True
+		isBroken = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		currentQuality = 5
+		mtbf = 600
+		currentMTBF = 750
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		breakableModuleCount = 2
+		recordedFlightLog = False
+		isActivated = True
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
 		EVENTS
 		{
 		}
@@ -319,6 +365,10 @@ PART
 				actionGroup = None
 			}
 			OnTranslatronToggleHSAction
+			{
+				actionGroup = None
+			}
+			OnAscentAPToggleAction
 			{
 				actionGroup = None
 			}
@@ -813,10 +863,26 @@ PART
 	{
 		name = WBIMeshHelper
 		isEnabled = True
-		selectedObject = 0
+		selectedObject = 2
 		stagingEnabled = True
-		selectedObject = 0
-		showGui = True
+		selectedObject = 2
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleKISInventory
+		isEnabled = True
+		invName = 
+		helmetEquipped = True
+		stagingEnabled = True
 		EVENTS
 		{
 		}
@@ -884,6 +950,80 @@ PART
 		{
 			resourceName = LqdHydrogen
 			mode = 0
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableFuelTank
+		isEnabled = True
+		leakedUnitsPerSec = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		currentQuality = 5
+		mtbf = 600
+		currentMTBF = 750
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = True
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = OseModuleInventoryPreference
+		isEnabled = True
+		IsFavored = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
 		}
 		UPGRADESAPPLIED
 		{
@@ -965,6 +1105,21 @@ PART
 	MODULE
 	{
 		name = ModuleConductionMultiplier
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
@@ -1098,6 +1253,21 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 	RESOURCE
 	{
 		name = ElectricCharge
@@ -1136,7 +1306,7 @@ PART
 {
 	part = AJ5ArcJetEngine_4293651112
 	partName = Part
-	pos = -0.723124146,16.4903812,-0.968067169
+	pos = -0.723124146,16.4903812,-0.968067408
 	attPos = 0,0,0
 	attPos0 = -0.940024018,-0.0470933914,9.09042797E-08
 	rot = -4.21468513E-08,-0.707106769,0,0.707106888
@@ -1239,12 +1409,73 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableEngine
+		isEnabled = True
+		failureThrustPercent = 0
+		isStuckOn = False
+		failureModeID = 0
+		wasRunning = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		currentQuality = 5
+		mtbf = 18
+		currentMTBF = 22.5
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = False
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = AJ5ArcJetEngine_4293642300
 	partName = Part
-	pos = -1.66315091,16.4903812,-0.0280396938
+	pos = -1.66315114,16.4903812,-0.0280396938
 	attPos = 0,0,0
 	attPos0 = 3.48744749E-08,-0.0470933914,0.940023959
 	rot = 3.16101278E-08,1.1920929E-07,7.37570076E-08,1.00000012
@@ -1347,12 +1578,73 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableEngine
+		isEnabled = True
+		failureThrustPercent = 0
+		isStuckOn = False
+		failureModeID = 0
+		wasRunning = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		currentQuality = 5
+		mtbf = 18
+		currentMTBF = 22.5
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = False
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = AJ5ArcJetEngine_4293642038
 	partName = Part
-	pos = -0.723124027,16.4903812,0.911987603
+	pos = -0.723124027,16.4903812,0.911987841
 	attPos = 0,0,0
 	attPos0 = 0.940024018,-0.0470933914,-1.73083791E-07
 	rot = 0,0.707106888,0,0.707106769
@@ -1455,12 +1747,73 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableEngine
+		isEnabled = True
+		failureThrustPercent = 0
+		isStuckOn = False
+		failureModeID = 0
+		wasRunning = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		currentQuality = 5
+		mtbf = 18
+		currentMTBF = 22.5
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = False
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = AJ5ArcJetEngine_4293641776
 	partName = Part
-	pos = 0.216902852,16.4903812,-0.028039813
+	pos = 0.21690309,16.4903812,-0.028039813
 	attPos = 0,0,0
 	attPos0 = -1.4693407E-07,-0.0470933914,-0.940023959
 	rot = 4.21468513E-08,1.00000012,4.21468513E-08,-2.08616257E-07
@@ -1563,12 +1916,73 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableEngine
+		isEnabled = True
+		failureThrustPercent = 0
+		isStuckOn = False
+		failureModeID = 0
+		wasRunning = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		currentQuality = 5
+		mtbf = 18
+		currentMTBF = 22.5
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = False
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = SmallGearBay_4293577202
 	partName = Part
-	pos = -2.33710718,16.5733376,0.903793752
+	pos = -2.33710766,16.5733376,0.90379411
 	attPos = 0,0,0
 	attPos0 = 0.931829512,-0.105863571,-1.61397552
 	rot = 0.500000238,0.499999881,0.500000119,-0.50000006
@@ -1699,6 +2113,7 @@ PART
 		name = ModuleWheelDeployment
 		isEnabled = True
 		shieldedCanDeploy = False
+		stateDisplayString = Retracted
 		stateString = Retracted
 		stagingEnabled = True
 		position = 0
@@ -1841,6 +2256,24 @@ PART
 	}
 	MODULE
 	{
+		name = FStextureSwitch2
+		isEnabled = True
+		selectedTexture = 0
+		selectedTextureURL = Cormorant Aeronology/Assets/mk3_Shuttle/LandingGear
+		selectedMapURL = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = ModuleWheelMotor
 		isEnabled = True
 		autoTorque = True
@@ -1863,12 +2296,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = SmallGearBay_4293576290
 	partName = Part
-	pos = -2.3371067,16.5733376,-0.959872603
+	pos = -2.33710718,16.5733376,-0.959872842
 	attPos = 0,0,0
 	attPos0 = -0.931829512,-0.105863571,-1.61397552
 	rot = -0.500000119,-0.50000006,-0.500000238,0.499999851
@@ -1999,6 +2447,7 @@ PART
 		name = ModuleWheelDeployment
 		isEnabled = True
 		shieldedCanDeploy = False
+		stateDisplayString = Retracted
 		stateString = Retracted
 		stagingEnabled = True
 		position = 0
@@ -2141,6 +2590,24 @@ PART
 	}
 	MODULE
 	{
+		name = FStextureSwitch2
+		isEnabled = True
+		selectedTexture = 0
+		selectedTextureURL = Cormorant Aeronology/Assets/mk3_Shuttle/LandingGear
+		selectedMapURL = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = ModuleWheelMotor
 		isEnabled = True
 		autoTorque = True
@@ -2163,12 +2630,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = AJ5ArcJetEngine_4293526636
 	partName = Part
-	pos = -2.03895807,16.4575787,1.60779715
+	pos = -2.03895855,16.4575787,1.60779762
 	attPos = 0,0,0
 	attPos0 = 1.54210341,0.0098938942,-1.54210365
 	rot = 0.50000006,0.5,-0.50000006,0.500000119
@@ -2271,12 +2753,73 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableEngine
+		isEnabled = True
+		failureThrustPercent = 0
+		isStuckOn = False
+		failureModeID = 0
+		wasRunning = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		currentQuality = 5
+		mtbf = 18
+		currentMTBF = 22.5
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = False
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = standardNoseCone_4293526368
 	partName = Part
-	pos = -1.50895166,16.4575787,1.60779691
+	pos = -1.50895166,16.4575787,1.60779738
 	attPos = 0,0,0
 	attPos0 = -2.08616044E-07,0.529999733,-2.98022957E-08
 	rot = -0.707106769,-0.707107067,-1.1920929E-07,1.49011612E-07
@@ -2322,12 +2865,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = AJ5ArcJetEngine_4293525624
 	partName = Part
-	pos = -2.03895688,16.4575787,-1.66387606
+	pos = -2.03895712,16.4575787,-1.66387653
 	attPos = 0,0,0
 	attPos0 = -1.54210341,0.0098938942,-1.54210377
 	rot = -0.49999994,-0.499999881,-0.500000179,0.500000238
@@ -2430,12 +2988,73 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableEngine
+		isEnabled = True
+		failureThrustPercent = 0
+		isStuckOn = False
+		failureModeID = 0
+		wasRunning = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		currentQuality = 5
+		mtbf = 18
+		currentMTBF = 22.5
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = False
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = standardNoseCone_4293525350
 	partName = Part
-	pos = -1.50895345,16.4575787,-1.66387606
+	pos = -1.50895357,16.4575787,-1.66387653
 	attPos = 0,0,0
 	attPos0 = -2.08616044E-07,0.529999733,-2.98022957E-08
 	rot = 2.98023224E-08,8.94069672E-08,-0.707106829,0.707106948
@@ -2481,12 +3100,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = WBI.ArcJetRCS5_4292408738
 	partName = Part
-	pos = -0.723123848,16.22999,1.8390758
+	pos = -0.723123848,16.22999,1.83907628
 	attPos = 0,0,0
 	attPos0 = 1.86710858,0.237484932,1.11758709E-07
 	rot = 0,-0.707106829,-0.707106829,0
@@ -2549,12 +3183,71 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableRCS
+		isEnabled = True
+		IsActive = False
+		isBroken = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		currentQuality = 5
+		mtbf = 12
+		currentMTBF = 15
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = False
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = WBI.ArcJetRCS5_4292408504
 	partName = Part
-	pos = -2.59023952,16.22999,-0.0280393958
+	pos = -2.59024,16.22999,-0.0280393958
 	attPos = 0,0,0
 	attPos0 = 2.38418579E-07,0.237484932,-1.86710846
 	rot = 0.50000006,-0.50000006,-0.50000006,-0.50000006
@@ -2617,12 +3310,71 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableRCS
+		isEnabled = True
+		IsActive = False
+		isBroken = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		currentQuality = 5
+		mtbf = 12
+		currentMTBF = 15
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = False
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = WBI.ArcJetRCS5_4292408284
 	partName = Part
-	pos = -0.723124087,16.22999,-1.89515543
+	pos = -0.723124087,16.22999,-1.89515591
 	attPos = 0,0,0
 	attPos0 = -1.86710858,0.237484932,5.21540642E-08
 	rot = 0.707106829,0,0,-0.707106829
@@ -2685,12 +3437,71 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableRCS
+		isEnabled = True
+		IsActive = False
+		isBroken = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		currentQuality = 5
+		mtbf = 12
+		currentMTBF = 15
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = False
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = WBI.ArcJetRCS5_4292408064
 	partName = Part
-	pos = 1.14399147,16.22999,-0.0280398726
+	pos = 1.14399195,16.22999,-0.0280398726
 	attPos = 0,0,0
 	attPos0 = 0,0.237484932,1.86710846
 	rot = 0.50000006,0.50000006,0.50000006,-0.50000006
@@ -2753,12 +3564,71 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableRCS
+		isEnabled = True
+		IsActive = False
+		isBroken = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		currentQuality = 5
+		mtbf = 12
+		currentMTBF = 15
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = False
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = AJ5ArcJetEngine_4293528874
 	partName = Part
-	pos = -2.00452948,23.2334862,1.57336807
+	pos = -2.00452995,23.2334862,1.57336855
 	attPos = 0,-0.51708746,0
 	attPos0 = 1.60140061,2.95309854,1.28140068
 	rot = -0.500000179,-0.49999997,0.50000006,-0.49999997
@@ -2861,12 +3731,73 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableEngine
+		isEnabled = True
+		failureThrustPercent = 0
+		isStuckOn = False
+		failureModeID = 0
+		wasRunning = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		currentQuality = 5
+		mtbf = 18
+		currentMTBF = 22.5
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = False
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = standardNoseCone_4293528612
 	partName = Part
-	pos = -1.4745307,23.2334862,1.57336807
+	pos = -1.47453094,23.2334862,1.57336831
 	attPos = 0,0,0
 	attPos0 = -2.08616044E-07,0.529999733,-2.98022957E-08
 	rot = 0.707106709,0.707107067,-1.1920929E-07,-2.08616257E-07
@@ -2912,12 +3843,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = AJ5ArcJetEngine_4293291212
 	partName = Part
-	pos = -2.00452828,23.2334862,-1.62944698
+	pos = -2.00452852,23.2334862,-1.62944746
 	attPos = 0,-0.51708746,0
 	attPos0 = -1.60140061,2.95309877,1.28140068
 	rot = -0.500000119,-0.5,-0.5,0.500000119
@@ -3020,15 +3966,76 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableEngine
+		isEnabled = True
+		failureThrustPercent = 0
+		isStuckOn = False
+		failureModeID = 0
+		wasRunning = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		currentQuality = 5
+		mtbf = 18
+		currentMTBF = 22.5
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = False
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = standardNoseCone_4293290944
 	partName = Part
-	pos = -1.47452486,23.2334862,-1.62944746
+	pos = -1.47452497,23.2334862,-1.62944794
 	attPos = 0,0,0
 	attPos0 = -2.08616044E-07,0.529999733,-2.98022957E-08
-	rot = -4.47034836E-07,-1.78813934E-07,-0.707106829,0.707107008
+	rot = -5.06639481E-07,-2.38418579E-07,-0.707106709,0.707107008
 	attRot = 0,0,0,1
 	attRot0 = 1.49011612E-08,-0.707106829,0,-0.707106829
 	mir = 1,1,1
@@ -3071,12 +4078,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = SmallGearBay_4293570304
 	partName = Part
-	pos = -2.34466791,23.5159683,0.90815872
+	pos = -2.34466839,23.5159683,0.908159077
 	attPos = 0,0,0
 	attPos0 = 0.936194181,2.71849465,1.62153625
 	rot = 0.500000119,0.5,0.5,-0.500000119
@@ -3207,6 +4229,7 @@ PART
 		name = ModuleWheelDeployment
 		isEnabled = True
 		shieldedCanDeploy = False
+		stateDisplayString = Retracted
 		stateString = Retracted
 		stagingEnabled = True
 		position = 0
@@ -3349,6 +4372,24 @@ PART
 	}
 	MODULE
 	{
+		name = FStextureSwitch2
+		isEnabled = True
+		selectedTexture = 0
+		selectedTextureURL = Cormorant Aeronology/Assets/mk3_Shuttle/LandingGear
+		selectedMapURL = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = ModuleWheelMotor
 		isEnabled = True
 		autoTorque = True
@@ -3371,12 +4412,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = SmallGearBay_4293289800
 	partName = Part
-	pos = -2.34466743,23.5159683,-0.964237332
+	pos = -2.34466791,23.5159683,-0.964237571
 	attPos = 0,0,0
 	attPos0 = -0.936194181,2.71849465,1.62153625
 	rot = -0.5,-0.500000179,-0.500000119,0.49999994
@@ -3507,6 +4563,7 @@ PART
 		name = ModuleWheelDeployment
 		isEnabled = True
 		shieldedCanDeploy = False
+		stateDisplayString = Retracted
 		stateString = Retracted
 		stagingEnabled = True
 		position = 0
@@ -3649,6 +4706,24 @@ PART
 	}
 	MODULE
 	{
+		name = FStextureSwitch2
+		isEnabled = True
+		selectedTexture = 0
+		selectedTextureURL = Cormorant Aeronology/Assets/mk3_Shuttle/LandingGear
+		selectedMapURL = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = ModuleWheelMotor
 		isEnabled = True
 		autoTorque = True
@@ -3671,12 +4746,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = foldingRadSmall_4293373584
 	partName = Part
-	pos = -0.241074204,17.7521763,1.77099919
+	pos = -0.241074085,17.7521763,1.77099967
 	attPos = 0,0,0
 	attPos0 = 1.79903197,-3.04529691,-0.482048988
 	rot = 0,0.991445005,8.42937027E-08,-0.130526125
@@ -3769,12 +4859,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = foldingRadSmall_4293251040
 	partName = Part
-	pos = -1.20517385,17.7521763,-1.82707882
+	pos = -1.20517397,17.7521763,-1.8270793
 	attPos = 0,0,0
 	attPos0 = -1.79903197,-3.04529691,0.482048988
 	rot = 8.16595218E-08,-0.130526125,8.16595218E-08,-0.991445005
@@ -3867,12 +4972,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = foldingRadSmall_4293368842
 	partName = Part
-	pos = -1.20614207,17.7361774,1.77461267
+	pos = -1.20614207,17.7361774,1.77461314
 	attPos = 0,0,0
 	attPos0 = 1.80264556,-3.06129622,0.483018041
 	rot = 0,0.991445005,8.42937027E-08,0.130526006
@@ -3965,12 +5085,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = foldingRadSmall_4293250668
 	partName = Part
-	pos = -0.240104914,17.7361774,-1.83069229
+	pos = -0.240104914,17.7361774,-1.83069277
 	attPos = 0,0,0
 	attPos0 = -1.80264556,-3.06129622,-0.483018041
 	rot = 8.42937027E-08,0.130526006,0,-0.991445005
@@ -4063,12 +5198,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = foldingRadSmall_4293250290
 	partName = Part
-	pos = -0.241428971,18.445776,1.76966524
+	pos = -0.241428852,18.445776,1.76966572
 	attPos = 0,0,0
 	attPos0 = 1.79769802,-2.35169697,-0.481692314
 	rot = 0,0.991445005,8.42937027E-08,-0.130526125
@@ -4161,12 +5311,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = foldingRadSmall_4293249962
 	partName = Part
-	pos = -1.20481718,18.445776,-1.82574487
+	pos = -1.2048173,18.445776,-1.82574534
 	attPos = 0,0,0
 	attPos0 = -1.79769802,-2.35169697,0.481692314
 	rot = 8.16595218E-08,-0.130526125,8.16595218E-08,-0.991445005
@@ -4259,12 +5424,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = foldingRadSmall_4293249602
 	partName = Part
-	pos = -1.2050091,18.4513111,1.7703855
+	pos = -1.2050091,18.4513111,1.77038598
 	attPos = 0,0,0
 	attPos0 = 1.79841805,-2.3461616,0.481884956
 	rot = 0,0.991445005,8.42937027E-08,0.130526006
@@ -4357,12 +5537,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = foldingRadSmall_4293249274
 	partName = Part
-	pos = -0.241240025,18.4513111,-1.82646489
+	pos = -0.241240025,18.4513111,-1.82646537
 	attPos = 0,0,0
 	attPos0 = -1.79841805,-2.3461616,-0.481884956
 	rot = 8.42937027E-08,0.130526006,0,-0.991445005
@@ -4455,12 +5650,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = WBI.RadialTrussMount_4293465174
 	partName = Part
-	pos = -0.723123729,20.8318825,1.85314846
+	pos = -0.723123729,20.8318825,1.85314894
 	attPos = 0,-0.0735883713,-3.27825546E-07
 	attPos0 = 1.88118124,0.107996941,1.11758709E-07
 	rot = 0.707106829,5.96046448E-08,-5.96046448E-08,0.707106829
@@ -4493,12 +5703,27 @@ PART
 	PARTDATA
 	{
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = WBI.RadialTrussMount_4293715664
 	partName = Part
-	pos = -0.723124206,20.8318825,-1.90922809
+	pos = -0.723124206,20.8318825,-1.90922856
 	attPos = 0,-0.0735883713,0
 	attPos0 = -1.88118124,0.107996941,5.21540642E-08
 	rot = 0,-0.707106829,0.707106829,0
@@ -4531,12 +5756,27 @@ PART
 	PARTDATA
 	{
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = WBI.ArcJetRCS_4293636396
 	partName = Part
-	pos = 1.11846161,24.5734825,-0.0280401111
+	pos = 1.11846209,24.5734825,-0.0280401111
 	attPos = 0,0,0
 	attPos0 = -1.78813934E-07,-0.134239197,-1.8415786
 	rot = 0.500000119,0.5,-0.500000119,0.49999994
@@ -4599,12 +5839,71 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableRCS
+		isEnabled = True
+		IsActive = False
+		isBroken = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		currentQuality = 5
+		mtbf = 12
+		currentMTBF = 15
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = False
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = WBI.ArcJetRCS_4293635958
 	partName = Part
-	pos = -0.723124206,24.5734825,-1.86962533
+	pos = -0.723124206,24.5734825,-1.86962581
 	attPos = 0,0,0
 	attPos0 = -1.84157848,-0.134239197,6.89178705E-08
 	rot = 0,0.707106829,-0.707106829,0
@@ -4667,12 +5966,71 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableRCS
+		isEnabled = True
+		IsActive = False
+		isBroken = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		currentQuality = 5
+		mtbf = 12
+		currentMTBF = 15
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = False
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = WBI.ArcJetRCS_4293635876
 	partName = Part
-	pos = -2.56470966,24.5734825,-0.0280392766
+	pos = -2.56471014,24.5734825,-0.0280392766
 	attPos = 0,0,0
 	attPos0 = 3.57627869E-07,-0.134239197,1.8415786
 	rot = -0.500000238,0.499999881,-0.500000119,-0.50000006
@@ -4735,12 +6093,71 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableRCS
+		isEnabled = True
+		IsActive = False
+		isBroken = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		currentQuality = 5
+		mtbf = 12
+		currentMTBF = 15
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = False
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = WBI.ArcJetRCS_4293635794
 	partName = Part
-	pos = -0.72312361,24.5734825,1.8135457
+	pos = -0.72312361,24.5734825,1.81354618
 	attPos = 0,0,0
 	attPos0 = 1.84157848,-0.134239197,-2.88709998E-07
 	rot = -0.707106829,0,0,-0.707106829
@@ -4798,6 +6215,65 @@ PART
 			{
 				actionGroup = None
 			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableRCS
+		isEnabled = True
+		IsActive = False
+		isBroken = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		currentQuality = 5
+		mtbf = 12
+		currentMTBF = 15
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = False
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
 		}
 		UPGRADESAPPLIED
 		{
@@ -4879,12 +6355,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = WBI.HexPort_4293715546
 	partName = Part
-	pos = -0.723124564,20.8318825,-2.06922793
+	pos = -0.723124564,20.8318825,-2.06922841
 	attPos = 3.72528497E-08,-1.78813934E-07,0.331683666
 	attPos0 = 5.58792879E-09,0.159999877,-8.88177202E-16
 	rot = 0,0.707106829,-0.707106829,0
@@ -4949,7 +6440,6 @@ PART
 		selectedObject = 0
 		stagingEnabled = True
 		selectedObject = 0
-		showGui = False
 		EVENTS
 		{
 		}
@@ -5017,12 +6507,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = WBI.HexPort_4293602316
 	partName = Part
-	pos = -0.723123848,20.8318825,2.01314855
+	pos = -0.723123848,20.8318825,2.01314902
 	attPos = 3.72528497E-08,-1.78813934E-07,0.331683666
 	attPos0 = -1.3038516E-08,0.159999847,0
 	rot = -0.707106829,0,0,-0.707106829
@@ -5087,7 +6592,6 @@ PART
 		selectedObject = 0
 		stagingEnabled = True
 		selectedObject = 0
-		showGui = False
 		EVENTS
 		{
 		}
@@ -5155,6 +6659,21 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
@@ -5196,12 +6715,27 @@ PART
 	PARTDATA
 	{
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = strutConnector_4293453078
 	partName = CompoundPart
-	pos = -0.723124325,25.1927547,-1.89258218
+	pos = -0.723124325,25.1927547,-1.89258265
 	attPos = 0,0,0
 	attPos0 = -1.86453533,-1.07309723,1.11758709E-07
 	rot = 0.0898364037,-0.701376796,-0.0898364037,0.701376915
@@ -5268,12 +6802,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = strutConnector_4293452790
 	partName = CompoundPart
-	pos = -2.58766651,25.1927547,-0.0280396342
+	pos = -2.58766699,25.1927547,-0.0280396342
 	attPos = 0,0,0
 	attPos0 = 0,-1.07309723,1.86453521
 	rot = 0,8.94069672E-08,-0.127047867,0.991896629
@@ -5340,12 +6889,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = strutConnector_4293452724
 	partName = CompoundPart
-	pos = -0.72312361,25.1927547,1.83650255
+	pos = -0.72312361,25.1927547,1.83650303
 	attPos = 0,0,0
 	attPos0 = 1.86453533,-1.07309723,-2.75671482E-07
 	rot = -0.0898364186,0.701376975,-0.0898364037,0.701376736
@@ -5412,12 +6976,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = strutConnector_4293452658
 	partName = CompoundPart
-	pos = 1.14141822,25.1927547,-0.0280401111
+	pos = 1.1414187,25.1927547,-0.0280401111
 	attPos = 0,0,0
 	attPos0 = -2.38418579E-07,-1.07309723,-1.86453521
 	rot = -0.127047867,0.991896629,0,-8.94069672E-08
@@ -5484,6 +7063,21 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
@@ -5520,6 +7114,21 @@ PART
 	}
 	PARTDATA
 	{
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
 	}
 }
 PART
@@ -5605,6 +7214,67 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableEngine
+		isEnabled = True
+		failureThrustPercent = 0
+		isStuckOn = False
+		failureModeID = 0
+		wasRunning = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		currentQuality = 5
+		mtbf = 18
+		currentMTBF = 22.5
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = False
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 	RESOURCE
 	{
 		name = SolidFuel
@@ -5641,9 +7311,9 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	link = Size3LargeTank_4293213138
+	link = WBI.FLM14400-2_4293696332
 	attN = top,WBILargeServiceBay_4293657634
-	attN = bottom,Size3LargeTank_4293213138
+	attN = bottom,WBI.FLM14400-2_4293696332
 	EVENTS
 	{
 	}
@@ -5717,14 +7387,29 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
-	part = Size3LargeTank_4293213138
+	part = WBI.FLM14400-2_4293696332
 	partName = Part
-	pos = -0.723124087,11.3807507,-0.0280397534
+	pos = -0.723124087,11.3707638,-0.0280397534
 	attPos = 0,0,0
-	attPos0 = 0,-4.17655849,0
+	attPos0 = 0,-4.18655872,0
 	rot = 0,0,0,1.00000012
 	attRot = 0,0,0,1
 	attRot0 = 0,0,0,1
@@ -5739,12 +7424,12 @@ PART
 	sqor = -1
 	sepI = 1
 	attm = 0
-	modCost = 0
+	modCost = 6609.6001
 	modMass = 0
 	modSize = 0,0,0
-	link = Size3SmallTank_4293210658
+	link = WBI.FLM3600-2_4293687106
 	attN = top,size3Decoupler_4293259882
-	attN = bottom,Size3SmallTank_4293210658
+	attN = bottom,WBI.FLM3600-2_4293687106
 	EVENTS
 	{
 	}
@@ -5753,6 +7438,192 @@ PART
 	}
 	PARTDATA
 	{
+	}
+	MODULE
+	{
+		name = WBIMeshHelper
+		isEnabled = True
+		selectedObject = 1
+		stagingEnabled = True
+		selectedObject = 1
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleKISInventory
+		isEnabled = True
+		invName = 
+		helmetEquipped = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIConvertibleStorage
+		isEnabled = True
+		currentVolume = 0
+		templateNodes = STORAGE_TEMPLATE
+		baseStorage = 0.00100000005
+		maxStorage = 33600
+		decalsVisible = False
+		fillToMaxInEditor = True
+		capacityFactor = 8
+		partMass = 0
+		templateName = LFO
+		shortName = 
+		isDeployed = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			DumpResourcesAction
+			{
+				actionGroup = None
+			}
+		}
+		RESOURCE
+		{
+			name = LiquidFuel
+			amount = 6480
+			maxAmount = 6480
+			flowState = True
+			isTweakable = True
+			hideFlow = False
+			isVisible = True
+			flowMode = Both
+		}
+		RESOURCE
+		{
+			name = Oxidizer
+			amount = 7920
+			maxAmount = 7920
+			flowState = True
+			isTweakable = True
+			hideFlow = False
+			isVisible = True
+			flowMode = Both
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIResourceDistributor
+		isEnabled = True
+		isParticipating = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		DISTRIBUTION
+		{
+			resourceName = LiquidFuel
+			mode = 0
+		}
+		DISTRIBUTION
+		{
+			resourceName = Oxidizer
+			mode = 0
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableFuelTank
+		isEnabled = True
+		leakedUnitsPerSec = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		currentQuality = 5
+		mtbf = 600
+		currentMTBF = 750
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = True
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = OseModuleInventoryPreference
+		isEnabled = True
+		IsFavored = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
 	}
 	RESOURCE
 	{
@@ -5779,11 +7650,11 @@ PART
 }
 PART
 {
-	part = Size3SmallTank_4293210658
+	part = WBI.FLM3600-2_4293687106
 	partName = Part
-	pos = -0.723124087,6.68074036,-0.0280397534
+	pos = -0.723124087,6.68326187,-0.0280397534
 	attPos = 0,0,0
-	attPos0 = 0,-4.6999979,0
+	attPos0 = 0,-4.68750334,0
 	rot = 0,0,0,1.00000012
 	attRot = 0,0,0,1
 	attRot0 = 0,0,0,1
@@ -5798,15 +7669,15 @@ PART
 	sqor = -1
 	sepI = 1
 	attm = 0
-	modCost = 0
+	modCost = 1652.40002
 	modMass = 0
 	modSize = 0,0,0
 	link = Size3EngineCluster_4293193558
-	link = wingShuttleRudder_4292876234
-	link = wingShuttleRudder_4292875382
 	link = wingShuttleRudder_4292875326
-	link = wingShuttleRudder_4292875270
-	attN = top,Size3LargeTank_4293213138
+	link = wingShuttleRudder_4293683460
+	link = wingShuttleRudder_4293683402
+	link = wingShuttleRudder_4293683344
+	attN = top,WBI.FLM14400-2_4293696332
 	attN = bottom,Size3EngineCluster_4293193558
 	EVENTS
 	{
@@ -5816,6 +7687,192 @@ PART
 	}
 	PARTDATA
 	{
+	}
+	MODULE
+	{
+		name = WBIMeshHelper
+		isEnabled = True
+		selectedObject = 1
+		stagingEnabled = True
+		selectedObject = 1
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleKISInventory
+		isEnabled = True
+		invName = 
+		helmetEquipped = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIConvertibleStorage
+		isEnabled = True
+		currentVolume = 0
+		templateNodes = STORAGE_TEMPLATE
+		baseStorage = 0.00100000005
+		maxStorage = 8400
+		decalsVisible = False
+		fillToMaxInEditor = True
+		capacityFactor = 2
+		partMass = 0
+		templateName = LFO
+		shortName = 
+		isDeployed = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			DumpResourcesAction
+			{
+				actionGroup = None
+			}
+		}
+		RESOURCE
+		{
+			name = LiquidFuel
+			amount = 1620
+			maxAmount = 1620
+			flowState = True
+			isTweakable = True
+			hideFlow = False
+			isVisible = True
+			flowMode = Both
+		}
+		RESOURCE
+		{
+			name = Oxidizer
+			amount = 1980
+			maxAmount = 1980
+			flowState = True
+			isTweakable = True
+			hideFlow = False
+			isVisible = True
+			flowMode = Both
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIResourceDistributor
+		isEnabled = True
+		isParticipating = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		DISTRIBUTION
+		{
+			resourceName = LiquidFuel
+			mode = 0
+		}
+		DISTRIBUTION
+		{
+			resourceName = Oxidizer
+			mode = 0
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleBreakableFuelTank
+		isEnabled = True
+		leakedUnitsPerSec = 0
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		currentQuality = 5
+		mtbf = 600
+		currentMTBF = 750
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = True
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = OseModuleInventoryPreference
+		isEnabled = True
+		IsFavored = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
 	}
 	RESOURCE
 	{
@@ -5844,9 +7901,9 @@ PART
 {
 	part = Size3EngineCluster_4293193558
 	partName = Part
-	pos = -0.723124087,4.18648911,-0.0280397534
+	pos = -0.723124087,4.21850967,-0.0280397534
 	attPos = 0,0,0
-	attPos0 = 0,-2.49424744,0
+	attPos0 = 0,-2.4647541,0
 	rot = 0,-0.707106888,0,0.707106888
 	attRot = 0,-0.707106769,0,0.707106769
 	attRot0 = 0,-0.707106829,0,0.707106829
@@ -5864,7 +7921,7 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	attN = top,Size3SmallTank_4293210658
+	attN = top,WBI.FLM3600-2_4293687106
 	EVENTS
 	{
 	}
@@ -6015,149 +8072,62 @@ PART
 		{
 		}
 	}
-}
-PART
-{
-	part = wingShuttleRudder_4292876234
-	partName = Part
-	pos = -0.72312659,4.18386078,1.82428885
-	attPos = 0,0,0
-	attPos0 = 1.67637744E-08,-2.49687672,1.852319
-	rot = 1.80899335E-07,0.707106829,1.80899363E-07,0.707106948
-	attRot = 0,0,0,1
-	attRot0 = 1.80899264E-07,0.707106769,1.80899292E-07,0.707106888
-	mir = 1,1,1
-	symMethod = Radial
-	autostrutMode = Off
-	rigidAttachment = False
-	istg = 1
-	resPri = 0
-	dstg = 2
-	sidx = -1
-	sqor = -1
-	sepI = 1
-	attm = 1
-	modCost = 0
-	modMass = 0
-	modSize = 0,0,0
-	sym = wingShuttleRudder_4292875382
-	sym = wingShuttleRudder_4292875326
-	sym = wingShuttleRudder_4292875270
-	srfN = srfAttach,Size3SmallTank_4293210658
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
 	MODULE
 	{
-		name = ModuleControlSurface
+		name = WBIPartScrapper
 		isEnabled = True
-		mirrorDeploy = False
-		usesMirrorDeploy = True
-		ignorePitch = False
-		ignoreYaw = False
-		ignoreRoll = False
-		deploy = False
-		deployInvert = False
-		partDeployInvert = False
-		authorityLimiter = 100
 		stagingEnabled = True
 		EVENTS
 		{
 		}
 		ACTIONS
 		{
-			ActionToggle
-			{
-				actionGroup = None
-			}
-			ActionExtend
-			{
-				actionGroup = None
-			}
-			ActionRetract
-			{
-				actionGroup = None
-			}
 		}
 		UPGRADESAPPLIED
 		{
 		}
 	}
-}
-PART
-{
-	part = wingShuttleRudder_4292875382
-	partName = Part
-	pos = 1.12920427,4.18386078,-0.028042376
-	attPos = 0,0,0
-	attPos0 = 1.85231888,-2.49687672,1.19209261E-07
-	rot = 2.55830344E-07,1.00000012,1.42108547E-14,1.1920929E-07
-	attRot = 0,0,0,1
-	attRot0 = 2.5583023E-07,1,1.42108547E-14,8.94069672E-08
-	mir = 1,1,1
-	symMethod = Radial
-	autostrutMode = Off
-	rigidAttachment = False
-	istg = 1
-	resPri = 0
-	dstg = 2
-	sidx = -1
-	sqor = -1
-	sepI = 1
-	attm = 1
-	modCost = 0
-	modMass = 0
-	modSize = 0,0,0
-	sym = wingShuttleRudder_4292876234
-	sym = wingShuttleRudder_4292875326
-	sym = wingShuttleRudder_4292875270
-	srfN = srfAttach,Size3SmallTank_4293210658
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
 	MODULE
 	{
-		name = ModuleControlSurface
+		name = ModuleBreakableEngine
 		isEnabled = True
-		mirrorDeploy = False
-		usesMirrorDeploy = True
-		ignorePitch = False
-		ignoreYaw = False
-		ignoreRoll = False
-		deploy = False
-		deployInvert = False
-		partDeployInvert = False
-		authorityLimiter = 100
+		failureThrustPercent = 0
+		isStuckOn = False
+		failureModeID = 0
+		wasRunning = False
 		stagingEnabled = True
 		EVENTS
 		{
 		}
 		ACTIONS
 		{
-			ActionToggle
-			{
-				actionGroup = None
-			}
-			ActionExtend
-			{
-				actionGroup = None
-			}
-			ActionRetract
-			{
-				actionGroup = None
-			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleQualityControl
+		isEnabled = True
+		integrationBonus = 0
+		flightExperienceBonus = 0
+		currentQuality = 5
+		mtbf = 18
+		currentMTBF = 22.5
+		repairCount = 0
+		maintenanceEmailSent = False
+		isBrokenOnStart = False
+		breakableModuleCount = 1
+		recordedFlightLog = False
+		isActivated = False
+		stagingEnabled = True
+		originalHighlightColor = 0,0,0,0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
 		}
 		UPGRADESAPPLIED
 		{
@@ -6168,12 +8138,12 @@ PART
 {
 	part = wingShuttleRudder_4292875326
 	partName = Part
-	pos = -0.723121822,4.18386078,-1.88036847
+	pos = -0.723123848,4.63843536,-1.87294006
 	attPos = 0,0,0
-	attPos0 = -1.78813892E-07,-2.49687672,-1.85231912
-	rot = 1.80899306E-07,0.707106888,-1.80899306E-07,-0.707106888
+	attPos0 = -2.38418636E-07,-2.04482746,-1.84490037
+	rot = 2.8497513E-07,0.707106829,-2.84975187E-07,-0.707106948
 	attRot = 0,0,0,1
-	attRot0 = 1.80899278E-07,0.707106829,-1.80899278E-07,-0.707106829
+	attRot0 = 2.84975073E-07,0.707106769,-2.8497513E-07,-0.707106888
 	mir = 1,1,1
 	symMethod = Radial
 	autostrutMode = Off
@@ -6188,10 +8158,10 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	sym = wingShuttleRudder_4292876234
-	sym = wingShuttleRudder_4292875382
-	sym = wingShuttleRudder_4292875270
-	srfN = srfAttach,Size3SmallTank_4293210658
+	sym = wingShuttleRudder_4293683460
+	sym = wingShuttleRudder_4293683402
+	sym = wingShuttleRudder_4293683344
+	srfN = srfAttach,WBI.FLM3600-2_4293687106
 	EVENTS
 	{
 	}
@@ -6237,17 +8207,32 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
-	part = wingShuttleRudder_4292875270
+	part = wingShuttleRudder_4293683460
 	partName = Part
-	pos = -2.57545257,4.18386078,-0.0280368924
+	pos = -2.5680244,4.63843536,-0.0280391574
 	attPos = 0,0,0
-	attPos0 = -1.85231888,-2.49687672,1.19209261E-07
-	rot = 1.42108547E-14,1.1920929E-07,-2.55830344E-07,-1.00000012
+	attPos0 = -1.84490037,-2.04482746,5.96046732E-07
+	rot = 0,-1.1920929E-07,-4.0301569E-07,-1.00000012
 	attRot = 0,0,0,1
-	attRot0 = 1.42108547E-14,8.94069672E-08,-2.5583023E-07,-1
+	attRot0 = 0,-1.19209275E-07,-4.03015633E-07,-1
 	mir = 1,1,1
 	symMethod = Radial
 	autostrutMode = Off
@@ -6262,10 +8247,10 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	sym = wingShuttleRudder_4292876234
-	sym = wingShuttleRudder_4292875382
 	sym = wingShuttleRudder_4292875326
-	srfN = srfAttach,Size3SmallTank_4293210658
+	sym = wingShuttleRudder_4293683402
+	sym = wingShuttleRudder_4293683344
+	srfN = srfAttach,WBI.FLM3600-2_4293687106
 	EVENTS
 	{
 	}
@@ -6306,6 +8291,199 @@ PART
 			{
 				actionGroup = None
 			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = wingShuttleRudder_4293683402
+	partName = Part
+	pos = -0.723124206,4.63843536,1.81686068
+	attPos = 0,0,0
+	attPos0 = 3.57627982E-07,-2.04482746,1.84490037
+	rot = -2.84975187E-07,-0.707107008,-2.8497513E-07,-0.707106769
+	attRot = 0,0,0,1
+	attRot0 = -2.8497513E-07,-0.707106948,-2.84975073E-07,-0.707106709
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 1
+	resPri = 0
+	dstg = 2
+	sidx = -1
+	sqor = -1
+	sepI = 1
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = wingShuttleRudder_4292875326
+	sym = wingShuttleRudder_4293683460
+	sym = wingShuttleRudder_4293683344
+	srfN = srfAttach,WBI.FLM3600-2_4293687106
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleControlSurface
+		isEnabled = True
+		mirrorDeploy = False
+		usesMirrorDeploy = True
+		ignorePitch = False
+		ignoreYaw = False
+		ignoreRoll = False
+		deploy = False
+		deployInvert = False
+		partDeployInvert = False
+		authorityLimiter = 100
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ActionToggle
+			{
+				actionGroup = None
+			}
+			ActionExtend
+			{
+				actionGroup = None
+			}
+			ActionRetract
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = wingShuttleRudder_4293683344
+	partName = Part
+	pos = 1.1217761,4.63843536,-0.0280404687
+	attPos = 0,0,0
+	attPos0 = 1.84490013,-2.04482746,-7.15256078E-07
+	rot = -4.0301569E-07,-1.00000012,0,1.1920929E-07
+	attRot = 0,0,0,1
+	attRot0 = -4.03015633E-07,-1,0,1.19209275E-07
+	mir = 1,1,1
+	symMethod = Radial
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = 1
+	resPri = 0
+	dstg = 2
+	sidx = -1
+	sqor = -1
+	sepI = 1
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = wingShuttleRudder_4292875326
+	sym = wingShuttleRudder_4293683460
+	sym = wingShuttleRudder_4293683402
+	srfN = srfAttach,WBI.FLM3600-2_4293687106
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleControlSurface
+		isEnabled = True
+		mirrorDeploy = False
+		usesMirrorDeploy = True
+		ignorePitch = False
+		ignoreYaw = False
+		ignoreRoll = False
+		deploy = False
+		deployInvert = False
+		partDeployInvert = False
+		authorityLimiter = 100
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ActionToggle
+			{
+				actionGroup = None
+			}
+			ActionExtend
+			{
+				actionGroup = None
+			}
+			ActionRetract
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
 		}
 		UPGRADESAPPLIED
 		{

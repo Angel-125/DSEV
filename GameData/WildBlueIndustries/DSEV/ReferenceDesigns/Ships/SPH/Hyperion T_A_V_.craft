@@ -925,10 +925,10 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	link = CADelta_4291974226
-	link = CADelta_4291973546
-	link = CAStrake_4291972866
-	link = CAStrake_4291972820
+	link = wingShuttleDelta_4291974226
+	link = wingShuttleDelta_4291973546
+	link = wingShuttleStrake_4291972866
+	link = wingShuttleStrake_4291972820
 	link = mk3FuselageLFO.25_4291972774
 	attN = top,mk3FuselageLF.50_4292449354
 	attN = bottom,mk3FuselageLFO.25_4291972774
@@ -1025,7 +1025,7 @@ PART
 }
 PART
 {
-	part = CADelta_4291974226
+	part = wingShuttleDelta_4291974226
 	partName = Part
 	pos = -0.769301414,8.12394238,0.0636997223
 	attPos = -0.0621145964,-1.90734863E-06,0
@@ -1051,7 +1051,7 @@ PART
 	link = wingShuttleElevon1_4291974134
 	link = GearLarge_4291974098
 	link = wingConnector5_4291973804
-	sym = CADelta_4291973546
+	sym = wingShuttleDelta_4291973546
 	srfN = srfAttach,mk3CargoBayL_4291974412
 	EVENTS
 	{
@@ -1161,7 +1161,7 @@ PART
 	modMass = 0
 	modSize = 0,0,0
 	sym = wingShuttleElevon2_4291973490
-	srfN = srfAttach,CADelta_4291974226
+	srfN = srfAttach,wingShuttleDelta_4291974226
 	EVENTS
 	{
 	}
@@ -1248,7 +1248,7 @@ PART
 	modMass = 0
 	modSize = 0,0,0
 	sym = wingShuttleElevon1_4291973454
-	srfN = srfAttach,CADelta_4291974226
+	srfN = srfAttach,wingShuttleDelta_4291974226
 	EVENTS
 	{
 	}
@@ -1335,7 +1335,7 @@ PART
 	modMass = 0
 	modSize = 0,0,0
 	sym = GearLarge_4291973418
-	srfN = srfAttach,CADelta_4291974226
+	srfN = srfAttach,wingShuttleDelta_4291974226
 	EVENTS
 	{
 	}
@@ -1654,7 +1654,7 @@ PART
 	link = fuelTank2-2_4291973768
 	link = vernierEngine_4291970744
 	sym = wingConnector5_4291973124
-	srfN = srfAttach,CADelta_4291974226
+	srfN = srfAttach,wingShuttleDelta_4291974226
 	EVENTS
 	{
 	}
@@ -2224,7 +2224,7 @@ PART
 }
 PART
 {
-	part = CADelta_4291973546
+	part = wingShuttleDelta_4291973546
 	partName = Part
 	pos = 2.61030173,8.12394238,0.0636978149
 	attPos = 0.0621145964,-3.81469727E-06,0
@@ -2250,7 +2250,7 @@ PART
 	link = wingShuttleElevon1_4291973454
 	link = GearLarge_4291973418
 	link = wingConnector5_4291973124
-	sym = CADelta_4291974226
+	sym = wingShuttleDelta_4291974226
 	srfN = srfAttach,mk3CargoBayL_4291974412
 	EVENTS
 	{
@@ -2360,7 +2360,7 @@ PART
 	modMass = 0
 	modSize = 0,0,0
 	sym = wingShuttleElevon2_4291974170
-	srfN = srfAttach,CADelta_4291973546
+	srfN = srfAttach,wingShuttleDelta_4291973546
 	EVENTS
 	{
 	}
@@ -2447,7 +2447,7 @@ PART
 	modMass = 0
 	modSize = 0,0,0
 	sym = wingShuttleElevon1_4291974134
-	srfN = srfAttach,CADelta_4291973546
+	srfN = srfAttach,wingShuttleDelta_4291973546
 	EVENTS
 	{
 	}
@@ -2534,7 +2534,7 @@ PART
 	modMass = 0
 	modSize = 0,0,0
 	sym = GearLarge_4291974098
-	srfN = srfAttach,CADelta_4291973546
+	srfN = srfAttach,wingShuttleDelta_4291973546
 	EVENTS
 	{
 	}
@@ -2853,7 +2853,7 @@ PART
 	link = fuelTank2-2_4291973088
 	link = vernierEngine_4291970706
 	sym = wingConnector5_4291973804
-	srfN = srfAttach,CADelta_4291973546
+	srfN = srfAttach,wingShuttleDelta_4291973546
 	EVENTS
 	{
 	}
@@ -3423,7 +3423,7 @@ PART
 }
 PART
 {
-	part = CAStrake_4291972866
+	part = wingShuttleStrake_4291972866
 	partName = Part
 	pos = -0.740867376,8.12394333,4.16266155
 	attPos = -0.0348979235,0.0471014977,-1.43050647E-06
@@ -3445,7 +3445,7 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	sym = CAStrake_4291972820
+	sym = wingShuttleStrake_4291972820
 	srfN = srfAttach,mk3CargoBayL_4291974412
 	EVENTS
 	{
@@ -3516,7 +3516,7 @@ PART
 }
 PART
 {
-	part = CAStrake_4291972820
+	part = wingShuttleStrake_4291972820
 	partName = Part
 	pos = 2.58186769,8.12394333,4.16265965
 	attPos = 0.0348979235,0.0470995903,-1.43050647E-06
@@ -3538,7 +3538,7 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	sym = CAStrake_4291972866
+	sym = wingShuttleStrake_4291972866
 	srfN = srfAttach,mk3CargoBayL_4291974412
 	EVENTS
 	{

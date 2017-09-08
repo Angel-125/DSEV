@@ -18,6 +18,41 @@ Copy the WildBlueIndustries directory into your GameData folder.
 
 ---REVISION HISTORY---
 
+2.3.0 Tank Redux
+
+This release remasters the fuel tanks, adds a couple new ones, and introduces a new Size 2 decoupler and probe core.
+
+Remodled Parts
+- 3.75m "Duna" Fuel Tanks: The existing Size 3 tanks have been remodeled and renamed the "Duna" series of tanks. CRAFT BUILT WITH THESE TANKS ARE SAFE! Just the names shown in the parts catalog and the texturing have changed. The tanks have several textures to choose from. You can switch between gray, white, and orange textures.
+Conversion Chart:
+FLM-3600 -> Duna-36
+FLM-7200 -> Duna-72
+FLM-14400 -> Duna-144
+
+- 2.5m "Delta" Fuel Tanks: The existing Size 2 tanks have been remodeled and renamed the "Delta" series of tanks. CRAFT BUILT WITH THESE TANKS ARE SAFE! Just the names shown in the parts catalog and the texturing have changed. You can switch between traditional orange and a new white texture. 
+Conversion Chart:
+FLM-1600 -> Delta-16
+FLM-3200 -> Delta-32
+FLM-6400 -> Delta-64
+
+- 1.25m "Moho" Fuel Tanks: The existing Size 1 tanks have been remodeled and renamed the "Moho" series of tanks. CRAFT BUILT WITH THESE TANKS ARE SAFE! Just the names shown in the parts catalog and the texturing have changed. 
+Conversion Chart:
+FLM-200 -> Moho-2
+FLM-400 -> Moho-4
+FLM-800 -> Moho-8
+
+- Delta Engine Coupler: This Size 2 part now switches between orange and white.
+
+New Parts
+- Delta-8 Storage Tank: This is the same size as the Rockomax X200-8 tank. It comes in orange and white
+- Duna-18 Storage Tank: The same height as the Rockomax X200-8, this Size 3 tank holds a variety of resources. It has several textures to choose from.
+- Delta Decoupler: This slim Size 2 decoupler can be switched from orange and white.
+- Delta Guidance Unit: While not as advanced as the RC-L01 Remote Guidance Unit, the Delta Guidance Unit combines a probe core with a SAS package. It comes in orange and white and is available when you unlock Specialized Control.
+
+Reference Designs
+- Hyperion T.A.V. now uses stock shuttle wings.
+- Added Delta Heavy reference design. It can lift 36 metric tons into orbit with delta-v to spare. Be sure to re-root the craft to your payload.
+
 2.2.5
 - BARIS is now an optional download as originally intended- just took awhile for me to figure out how to make that work. DO NOT DELETE the 000ABARISBridgeDoNotDelete FOLDER! That plugin is the bridge between this mod and BARIS.
 - Fixed some issues with Cryo Engines support.
@@ -701,7 +736,9 @@ Spindle and Spin Ring concept based upon parts by ZodiusInfuser/Sirkut.
 Special thanks to DasValdez, Kamuchi, BuzZBladE and the viewers of KSPTV for providing vital feedback and testing. It really helped to see the mod in use and to see what worked and what needed improvements. :)
 
 ---LICENSE---
-Art Assets, including .mu, .mbm, and .dds files are copyright 2014-2016 by Michael Billard, All Rights Reserved.
+"Timberwind" Bimodal NTR model by PorkJet, used with permission. License: Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+
+All other Art Assets, including .mu, .mbm, and .dds files are copyright 2014-2016 by Michael Billard, All Rights Reserved.
 
 Wild Blue Industries is trademarked by Michael Billard. All rights reserved.
 Note that Wild Blue Industries is a ficticious entity 
