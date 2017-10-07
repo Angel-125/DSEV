@@ -1,0 +1,43 @@
+@PART[WB8Supernova,biModalNTR]
+{
+	@MODULE[ModuleEnginesFXWBI]
+	{
+		@PROPELLANT[LqdHydrogen] 
+		{
+			@name = Propellium
+		}
+	}
+}
+
+@PART[WBI_ArcJetRCS]
+{
+	@MODULE[ModuleRCSFX]
+	{
+		@PROPELLANT[LqdHydrogen]
+		{
+			@name = Propellium
+		}
+	}
+}
+
+@PART[WBI_ArcJetRCS5]
+{
+	@MODULE[ModuleRCSFX]
+	{
+		@PROPELLANT[LqdHydrogen]
+		{
+			@name = Propellium
+		}
+	}
+}
+
+@PART[AJ5ArcJetEngine]
+{
+	@MODULE[ModuleEnginesFXWBI]
+	{
+		@PROPELLANT[LqdHydrogen] 
+		{
+			@name = Propellium
+		}
+	}
+}

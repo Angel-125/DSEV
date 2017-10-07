@@ -18,6 +18,37 @@ Copy the WildBlueIndustries directory into your GameData folder.
 
 ---REVISION HISTORY---
 
+2.4 Odyssey Two
+
+This release introduces the spirtual successor to Multipurpose Colony Modules in the form of new station parts. It also completes the kerbalized Copernicus spacecraft from NASA's Mars Design Reference Mission. Happy 2nd anniversary, DSEV!
+
+- Station Modules: This new Tier 6 node gives you new space station parts to play with.
+NOTE: With Community Tech Tree installed, parts found in the Station Modules node are moved to Short Term Habitation.
+- Tranquility Mk2 Habitat (Station Modules): Successor to the Pioneer module, this part is a 2.5m space station module that has capabilities similar to the D2 Habitat Module, and can conduct experiment research when configured as a lab. It also ties into Pathfinder's Habitation templates.
+- Mk2 Ground Hub(Station Modules): A modified version of the Settler, the Ground Hub provides a set of landing legs for planetary operations of the station modules. It seats one kerbal and can be used as an airlock. Its four hatches can be used to attach Pathfinder inflatable modules or Buffalo Mineshaft docking/crew tubes.
+- Junction Logistics Node (Station Modules): Successor to the Stagecoach, this part offers 6 attachment points for things like docking ports and has storage space.
+- Short Logistics Module (Station Modules): Think of the Delta-8 tank, but styled like a station part.
+- Quantum Leap Airlock (Station Modules): This module holds a crew of 2 that are ready to step outside. With EL installed, it can be a survey station.
+- S2-1 Adapter (Station Modules): This adapter sits between Size 2 and Size 1 parts and has built-in RCS thrusters.
+- Solar Truss (Specialized Electrics): This dual-axis solar array generates large amounts of power for your spacecraft needs.
+- Homestead Mk3 (Composites): Successor to the mk2, this inflatable part can be configured for a variety of different functions similar to a D2 Hab and D2 Lab, and ties into Pathfinder's Habitation, Science, and Industry templates. It can also store resources.
+- Duna Decoupler (Large Volume Containment): This slim Size 3 decoupler is great for getting rid of unwanted parts.
+- Size 2 Service Compartment (Command Pods): This is a resized version of the 3.75m Service Compartment.
+
+New Referenece Designs
+- Added the Kopernicus, based upon the Copernicus from NASA's Mars Design Reference Mission (https://www.nextbigfuture.com/2012/08/nasa-proposal-to-revive-nuclear-thermal.html).
+- Added the Deep Space Habitat, based upon NASA's Deep Space Habitat proposal (https://www.nasa.gov/exploration/technology/deep_space_habitat/constructing-demonstrators.html).
+
+Bug Fixes & Enhancements
+- All configurable parts now require an Engineer to reconfigure instead of a mix of Engineer and Scientist.
+- When Pathfinder is installed, the old Mule 3D model will be replaced with a newer one that matches the new station parts.
+- Play mode support added.
+- Added support for Classic Stock play mode and Pristine mode.
+- CRP is now a separate download.
+- D2 crewed modules moved to Long Term Habitation when Community Tech Tree is installed.
+- Clydesdale and Danube Delta moved to Heavy Command Modules when Community Tech Tree is installed.
+- Updated to KSP 1.3.1.
+
 2.3.0 Tank Redux
 
 This release remasters the fuel tanks, adds a couple new ones, and introduces a new Size 2 decoupler and probe core.
@@ -729,16 +760,13 @@ Realized that MultiModeEngine only allows two fuel modes, whereas MultiFuelSwitc
 ---ACKNOWLEDGEMENTS
 
 Module Manager by ialdabaot
-Community Resource Pack by RoverDude, Nertea, and the KSP community
 Portions of this codebase include source by Snjo and Swamp-IG, used under CC BY-NC SA 4.0 license
 Modular Fuel Tanks MM configs by Kolago.
 Spindle and Spin Ring concept based upon parts by ZodiusInfuser/Sirkut.
 Special thanks to DasValdez, Kamuchi, BuzZBladE and the viewers of KSPTV for providing vital feedback and testing. It really helped to see the mod in use and to see what worked and what needed improvements. :)
 
 ---LICENSE---
-"Timberwind" Bimodal NTR model by PorkJet, used with permission. License: Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
-
-All other Art Assets, including .mu, .mbm, and .dds files are copyright 2014-2016 by Michael Billard, All Rights Reserved.
+All Art Assets, including .mu, .mbm, and .dds files are copyright 2014-2016 by Michael Billard, All Rights Reserved.
 
 Wild Blue Industries is trademarked by Michael Billard. All rights reserved.
 Note that Wild Blue Industries is a ficticious entity 

@@ -49,6 +49,7 @@ namespace WildBlueIndustries
         protected MultiModeEngine multiModeEngine;
         protected ModuleEnginesFXWBI primaryEngine;
         protected ModuleEnginesFXWBI secondaryEngine;
+        protected FixedUpdateHelper fixedUpdateHelper;
 
         [KSPField(guiActive = true, guiName = "Reactor", isPersistant = true)]
         public string reactorStatus;
@@ -220,6 +221,13 @@ namespace WildBlueIndustries
 
             Events["DebugReset"].guiActive = showDebugButton;
             Events["ChargeCapacitor"].guiActive = showDebugButton;
+
+            if (fixedUpdateHelper == null)
+            {
+                fixedUpdateHelper = this.part.gameObject.AddComponent<FixedUpdateHelper>();
+                fixedUpdateHelper.onFixedUpdateDelegate = OnUpdateFixed;
+            }
+            fixedUpdateHelper.enabled = true;
         }
 
         public override void OnUpdate()
@@ -253,10 +261,8 @@ namespace WildBlueIndustries
             engineTemperature = String.Format("{0:#.##}K", this.part.temperature);
         }
 
-        public override void OnFixedUpdate()
+        public void OnUpdateFixed()
         {
-            base.OnFixedUpdate();
-
             //The logic below doesn't apply unless we're flying
             if (!HighLogic.LoadedSceneIsFlight)
                 return;

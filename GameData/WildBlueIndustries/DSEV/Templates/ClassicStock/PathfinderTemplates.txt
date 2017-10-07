@@ -1,0 +1,53 @@
+PATHFINDER_STORAGE:NEEDS[SnacksUtils]
+{
+	name = Snack Pack
+	author = Angel-125
+	logoPanel = WildBlueIndustries/Pathfinder/Decals/Bootstrap
+	glowPanel = WildBlueIndustries/Pathfinder/Decals/Bootstrap
+	description = The Snack Pack makes up for a lack of luggage space by providing extra snacks along with the basic resources for a greenhouse and a Pathfinder base.
+
+	RESOURCE
+	{
+		name = MaterialKits
+		amount = 500
+		maxAmount = 500
+	}
+
+	RESOURCE
+	{
+		name = ResearchKits
+		amount = 500
+		maxAmount = 500
+	}
+
+	RESOURCE
+	{
+		name = Equipment
+		amount = 1800
+		maxAmount = 1800
+	}
+
+	RESOURCE
+	{
+		name = Compost
+		amount = 1000
+		maxAmount = 1000
+		isTweakable = true
+	}
+
+	RESOURCE
+	{
+		name = Water
+		amount = 1000
+		maxAmount = 1000
+		isTweakable = true
+	}
+
+	RESOURCE
+	{
+		name = Snacks
+		amount = 800
+		maxAmount = 800
+		isTweakable = true
+	}
+}

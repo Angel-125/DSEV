@@ -20,7 +20,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 namespace WildBlueIndustries
 {
     [KSPAddon(KSPAddon.Startup.Flight, false)]
-    class WBIDSEVGameSettings : MonoBehaviour
+    public class WBIDSEVGameSettings : MonoBehaviour
     {
         public WBIDSEVGameSettings Instance;
 
@@ -38,12 +38,6 @@ namespace WildBlueIndustries
             {
                 settingsWindow.SetVisible(!settingsWindow.IsVisible());
             }
-        }
-
-        public void OnGUI()
-        {
-            if (settingsWindow.IsVisible())
-                settingsWindow.DrawWindow();
         }
     }
 }

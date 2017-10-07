@@ -15,7 +15,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 namespace WildBlueIndustries
 {
     public delegate void MassUpdateDelegate(float amount);
-    public class MassconWindow : Window<MassconWindow>
+    public class MassconWindow : Dialog<MassconWindow>
     {
         public MassUpdateDelegate massUpdateDelegate;
         private string massAmount = "0";

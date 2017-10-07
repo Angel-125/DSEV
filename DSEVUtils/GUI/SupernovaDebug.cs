@@ -7,7 +7,7 @@ using KSP.IO;
 
 namespace WildBlueIndustries
 {
-    public class SupernovaDebug : Window<SupernovaDebug>
+    public class SupernovaDebug : Dialog<SupernovaDebug>
     {
         public SupernovaController supernovaController;
 

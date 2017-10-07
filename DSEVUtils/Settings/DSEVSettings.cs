@@ -19,7 +19,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 */
 namespace WildBlueIndustries
 {
-    class DSEVSettings : Window<DSEVSettings>
+    public class DSEVSettings : Dialog<DSEVSettings>
     {
         static public float radiatorVolume;
         static public float radiatorSoundVolume = -1.0f;

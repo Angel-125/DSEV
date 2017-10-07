@@ -27,12 +27,6 @@ namespace WildBlueIndustries
             massconView.SetVisible(true);
         }
 
-        public void OnGUI()
-        {
-            if (massconView.IsVisible())
-                massconView.DrawWindow();
-        }
-
         public void OnUpdateMass(float mass)
         {
             ModuleMasscon massconModule;
