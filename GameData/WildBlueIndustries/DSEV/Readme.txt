@@ -18,6 +18,9 @@ Copy the WildBlueIndustries directory into your GameData folder.
 
 ---REVISION HISTORY---
 
+2.4.1
+- WBT Update
+
 2.4 Odyssey Two
 
 This release introduces the spirtual successor to Multipurpose Colony Modules in the form of new station parts. It also completes the kerbalized Copernicus spacecraft from NASA's Mars Design Reference Mission. Happy 2nd anniversary, DSEV!
