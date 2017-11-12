@@ -18,6 +18,9 @@ Copy the WildBlueIndustries directory into your GameData folder.
 
 ---REVISION HISTORY---
 
+2.4.2
+- WBT Update
+
 2.4.1
 - WBT Update
 
