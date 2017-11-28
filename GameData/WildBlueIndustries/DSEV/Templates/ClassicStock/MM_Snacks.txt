@@ -1,4 +1,67 @@
 //This MM patch configures DSEV's life support systems to use Snacks.
+@PART[wbiZenGreenhouse]:NEEDS[SnacksUtils]
+{
+	MODULE
+	{
+		name = WBIModuleGreenhouse
+		ConverterName = Greenhouse
+		StartActionName = Start Grenhouse
+		StopActionName = Stop Greenhouse
+		AutoShutdown = false
+		GeneratesHeat = false
+		UseSpecialistBonus = true
+		SpecialistEfficiencyFactor = 0.2
+		ExperienceEffect = ScienceSkill
+		EfficiencyBonus = 1
+		hoursPerCycle = 168 //Number of hours to grow crops
+		minimumSuccess = 45
+		criticalSuccess = 90
+		criticalFail = 20
+		cropResource = Snacks
+
+		//Calibrated for 1 snack per meal, 3 meals per day
+		//Supports 2 kerbals
+		cropYield = 168
+
+		criticalSuccessBonus = 0.25
+		failureLoss = 0.5
+
+		INPUT_RESOURCE
+		{
+			ResourceName = Water
+			Ratio = 0.000218750
+		}
+
+		INPUT_RESOURCE
+		{
+			ResourceName = Compost
+			Ratio = 0.000072917
+		}
+
+		INPUT_RESOURCE
+		{
+			ResourceName = ElectricCharge
+			Ratio = 12
+		}
+	}
+
+	RESOURCE
+	{
+		name = Compost
+		amount = 250
+		maxAmount = 250
+		isTweakable = true
+	}
+
+	RESOURCE
+	{
+		name = Water
+		amount = 250
+		maxAmount = 250
+		isTweakable = true
+	}
+}
+
 @TRANQ[Tranquility]:NEEDS[SnacksUtils]
 {
 	//This is calibrated for 4 kerbals at 100% efficiency when then consume

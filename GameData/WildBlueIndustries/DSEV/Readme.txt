@@ -6,7 +6,7 @@ This mod is inspired by several designs including:
 Discovery II: http://naca.larc.nasa.gov/search.jsp?R=20050160960
 NAUTILUS-X MMSEV (Multi-Mission Space Exploration Vehicle): http://www.scribd.com/doc/51592987/Nautilus-X-Holderman-1-26-11
 Deep Space Habitat: http://spacefellowship.com/news/art29280/constructing-next-generation-space-habitat-demonstrators.html
-The Mars One Crew Manual by Kerry mark Joels: http://www.amazon.com/The-Mars-One-Crew-Manual/dp/0345318811
+The Mars One Crew Manual by Kerry Mark Joels: http://www.amazon.com/The-Mars-One-Crew-Manual/dp/0345318811
 
 Additionally, the mod was inspired by Project Daedalus (http://www.bis-space.com/what-we-do/projects/project-daedalus).
 
@@ -18,8 +18,52 @@ Copy the WildBlueIndustries directory into your GameData folder.
 
 ---REVISION HISTORY---
 
-2.4.2
-- WBT Update
+2.5 Odyssey Three
+
+Odyssey Three delivers new parts to make the Estonian, a craft inspired by the iconic Mars Excursion Module (MEM). It is not a replica; there's no lab module or spindly ascent stage. Instead, the Estonian is built to be modular and configurable. With a full fuel load, the baseline craft can SSTO to and from Duna orbit. With Pathfinder installed, it can hold a small base, then drop the lander portion and launch into orbit. You can even integrate Duna tanks into its design for extra resource or payload capacity.
+
+Additionally, this release adds some new station parts and a new engine- the Trinity Tri-Modal Engine.
+
+New parts
+
+- Mk3-1 Estonian (Composites): This versatile size 3 command pod seats 8. Think of it as a kerbalized Orion space capsule.
+
+- ED-3 Cargo Drone (Composites): Derived from the Mk3-1 Estonian, this cargo drone carries cargo instead of crew.
+
+- Mk3-1 Heat Shield (Advanced Landing): This fashionable Size 3 heat shield has a crew hatch in the underside to support crew transfers.
+
+- Mk3-1 EDL Tank (Composites): This configurable storage tank also serves as an adapter for the Mk3-1 EDL Frame. NOTE: The bottom of the tank has TWO attachment nodes- one for the EDL Frame, and one for an engine (the stock T-1 "Dart" works well).
+
+- Mk3-1 EDL Frame (Composites): Designed for Entry Descent and Landing, the EDL Frame can be configured for a variety of different resources. It also has a significant amount of KIS inventory storage space (with KIS installed). It is specially designed to fit onto the bottom of the EDL Tank, and has a built-in decoupler for two-stage operations.
+
+- Mk3-1 Heat Shield Cap (Composites): Fitted to the bottom of the EDL Frame, this part shields engines from the fiery heat of atmospheric entry.
+
+- Mk3-1 Landing Leg (Composites): This landing leg is designed to fit into the Estonian EDL Frame.
+
+- S-1 Orbital Command Pod (Station Modules): This Size 1 cupola doubles as a 1-kerbal command pod.
+
+- Mk2 "Zen" Greenhouse Module (Station Modules): This Size 2 greenhouse provides a place to grow food for your life support needs.
+
+- Omni Hub (Station Modules): The Omni Hub lets you create corners and intersections just by attaching parts to the appropriate nodes.
+
+- Structural Spacer (Station Modules): Just as it sounds, the structural spacer puts space between your parts. It also generates some torque.
+
+- SPF-50 Solar Aray: This is a single-axis radially/stack-mounted solar array taken straight from the Solar Hex Truss.
+
+- Hex Hangar (Composites): This large hangar can snugly fit Size 3 parts. It comes in 3 sizes.
+
+- Kerbodyne DMB0 "Trinity" Tri-Modal Engine (Advanced Nuclear Engines): In addition to generating ElectricCharge with its built-in nuclear reactor, the Trinity is a Size 2 engine that can switch between LiquidFuel/Oxidizer and Explodium (a.k.a. nuclear salt water). The Explodium Sea is aptly named...
+NOTE: The Trinity uses NuclearSaltWater when Far Future Technologies is installed.
+
+Bug Fixes & Enhancements
+- The Duna Decoupler now has an additional attachment node for 2.5m parts.
+- Fixed missing resource icons.
+- TAC-LS balancing- thanks Space Kadet! :)
+
+Reference Designs
+- Estonian Crew Taxi: Built to fly up to 8 kerbals into LKO, the crew taxi is powered by a solid fuel first stage and a liquid fuel upper stage.
+- Estonian Duna Lander: Inspired by the iconic North American Mars Excursion Module, the Duna Lander is a two-stage craft that can also SSTO if configured properly.
+- Duna Base Camp: Inspired by Lockheed Martin's Mars Base Camp, the Duna Base Camp is a mobile space station.
 
 2.4.1
 - WBT Update
