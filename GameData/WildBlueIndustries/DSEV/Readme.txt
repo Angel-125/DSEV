@@ -106,6 +106,7 @@ NOTE: Nautilus requires Pathfinder as well as Snacks, KIS/KAS, and CRP.
 
 Acknowledgements
 Near Future Props by Nertea, licensed under CC-BY-NC-SA-4.0
+Alternate Resource Panel icons courtesy of JadeOfMaar. These look great! :)
 
 2.5 Odyssey Three
 
