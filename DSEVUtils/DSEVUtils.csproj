@@ -77,6 +77,9 @@
     <Compile Include="Parts\WBIHeatRadiator.cs" />
     <Compile Include="Centrifuge\WBICentrifuge.cs" />
     <Compile Include="Centrifuge\WBIIVARotationHelper.cs" />
+    <Compile Include="Parts\WBIHexTruss.cs" />
+    <Compile Include="Parts\WBIEngineCharger.cs" />
+    <Compile Include="Parts\WBIFixedHeatRadiator.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\BARIS\BARISBridge\BARISBridge.csproj">

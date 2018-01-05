@@ -2338,9 +2338,9 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	link = WBI.D2DoubleTruss_4293480262
+	link = wbiD2DoubleHexTruss_4293480262
 	attN = top,WBI.FLM1600_4293354640
-	attN = bottom,WBI.D2DoubleTruss_4293480262
+	attN = bottom,wbiD2DoubleHexTruss_4293480262
 	EVENTS
 	{
 	}
@@ -2483,7 +2483,7 @@ PART
 }
 PART
 {
-	part = WBI.D2DoubleTruss_4293480262
+	part = wbiD2DoubleHexTruss_4293480262
 	partName = Part
 	pos = -0.396859348,40.6274261,0.402113676
 	attPos = 0,0,0
@@ -2644,7 +2644,7 @@ PART
 	modMass = 0
 	modSize = 0,0,0
 	sym = WBI.LargeRadiator_4293473154
-	srfN = ,WBI.D2DoubleTruss_4293480262
+	srfN = ,wbiD2DoubleHexTruss_4293480262
 	EVENTS
 	{
 	}
@@ -2784,7 +2784,7 @@ PART
 	modMass = 0
 	modSize = 0,0,0
 	sym = WBI.LargeRadiator_4293474408
-	srfN = ,WBI.D2DoubleTruss_4293480262
+	srfN = ,wbiD2DoubleHexTruss_4293480262
 	EVENTS
 	{
 	}
@@ -2924,7 +2924,7 @@ PART
 	modMass = 0
 	modSize = 0,0,0
 	sym = WBI.LargeRadiator_4293471858
-	srfN = ,WBI.D2DoubleTruss_4293480262
+	srfN = ,wbiD2DoubleHexTruss_4293480262
 	EVENTS
 	{
 	}
@@ -3064,7 +3064,7 @@ PART
 	modMass = 0
 	modSize = 0,0,0
 	sym = WBI.LargeRadiator_4293472910
-	srfN = ,WBI.D2DoubleTruss_4293480262
+	srfN = ,wbiD2DoubleHexTruss_4293480262
 	EVENTS
 	{
 	}
@@ -3204,7 +3204,7 @@ PART
 	modMass = 0
 	modSize = 0,0,0
 	sym = WBI.LargeRadiator_4293470542
-	srfN = ,WBI.D2DoubleTruss_4293480262
+	srfN = ,wbiD2DoubleHexTruss_4293480262
 	EVENTS
 	{
 	}
@@ -3344,7 +3344,7 @@ PART
 	modMass = 0
 	modSize = 0,0,0
 	sym = WBI.LargeRadiator_4293471614
-	srfN = ,WBI.D2DoubleTruss_4293480262
+	srfN = ,wbiD2DoubleHexTruss_4293480262
 	EVENTS
 	{
 	}
@@ -3483,7 +3483,7 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	attN = bottom,WBI.D2DoubleTruss_4293480262
+	attN = bottom,wbiD2DoubleHexTruss_4293480262
 	EVENTS
 	{
 	}
@@ -3632,7 +3632,7 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	attN = bottom,WBI.D2DoubleTruss_4293480262
+	attN = bottom,wbiD2DoubleHexTruss_4293480262
 	EVENTS
 	{
 	}

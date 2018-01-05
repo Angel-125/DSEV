@@ -6,7 +6,7 @@ using UnityEngine;
 using KSP.IO;
 
 /*
-Source code copyright 2016, by Michael Billard (Angel-125)
+Source code copyright 2018, by Michael Billard (Angel-125)
 License: GNU General Public License Version 3
 License URL: http://www.gnu.org/licenses/
 Wild Blue Industries is trademarked by Michael Billard and may be used for non-commercial purposes. All other rights reserved.
@@ -24,6 +24,9 @@ namespace WildBlueIndustries
 
     public class ModuleEnginesFXWBI : ModuleEnginesFX
     {
+        [KSPField]
+        public bool canUpdateParticleEffects = true;
+
         public OnActiveDelegate onActiveDelegate;
 
         private float _lastCurrentThrottle = -1;
@@ -42,8 +45,9 @@ namespace WildBlueIndustries
 
         public void HideParticleEffects()
         {
+            if (!canUpdateParticleEffects)
+                return;
             KSPParticleEmitter[] emitters = part.GetComponentsInChildren<KSPParticleEmitter>();
-
             if (emitters == null)
                 return;
 
@@ -59,8 +63,9 @@ namespace WildBlueIndustries
 
         public void ShowParticleEffects(bool forceOn = false)
         {
+            if (!canUpdateParticleEffects)
+                return;
             KSPParticleEmitter[] emitters = part.GetComponentsInChildren<KSPParticleEmitter>();
-
             if (emitters == null)
                 return;
 

@@ -27,7 +27,7 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	attN = bottom,WBI.D2Truss_4293580452
+	attN = bottom,wbiD2HexTruss_4293580452
 	EVENTS
 	{
 	}
@@ -154,7 +154,7 @@ PART
 }
 PART
 {
-	part = WBI.D2Truss_4293580452
+	part = wbiD2HexTruss_4293580452
 	partName = Part
 	pos = -0.169106618,47.3667221,0.879250824
 	attPos = 0,0,0
@@ -327,8 +327,8 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	link = WBI.D2Truss_4293580452
-	attN = top,WBI.D2Truss_4293580452
+	link = wbiD2HexTruss_4293580452
+	attN = top,wbiD2HexTruss_4293580452
 	attN = bottom,size3Decoupler_4290101614
 	EVENTS
 	{
@@ -660,7 +660,7 @@ PART
 	modMass = 0
 	modSize = 0,0,0
 	sym = WBI.HexPort_4293754230
-	srfN = srfAttach,WBI.D2Truss_4293580452
+	srfN = srfAttach,wbiD2HexTruss_4293580452
 	EVENTS
 	{
 	}
@@ -812,7 +812,7 @@ PART
 	modMass = 0
 	modSize = 0,0,0
 	sym = WBI.HexPort_4293570100
-	srfN = srfAttach,WBI.D2Truss_4293580452
+	srfN = srfAttach,wbiD2HexTruss_4293580452
 	EVENTS
 	{
 	}
@@ -964,7 +964,7 @@ PART
 	modMass = 0
 	modSize = 0,0,0
 	sym = WBI.HexPort_4293753010
-	srfN = srfAttach,WBI.D2Truss_4293580452
+	srfN = srfAttach,wbiD2HexTruss_4293580452
 	EVENTS
 	{
 	}
@@ -1116,7 +1116,7 @@ PART
 	modMass = 0
 	modSize = 0,0,0
 	sym = WBI.HexPort_4293753674
-	srfN = srfAttach,WBI.D2Truss_4293580452
+	srfN = srfAttach,wbiD2HexTruss_4293580452
 	EVENTS
 	{
 	}

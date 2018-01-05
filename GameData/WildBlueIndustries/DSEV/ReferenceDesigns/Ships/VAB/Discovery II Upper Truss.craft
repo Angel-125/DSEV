@@ -1814,9 +1814,9 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	link = WBI.D2Truss_4293541400
+	link = wbiD2HexTruss_4293541400
 	attN = top,fairingSize3_4293211612
-	attN = bottom,WBI.D2Truss_4293541400
+	attN = bottom,wbiD2HexTruss_4293541400
 	EVENTS
 	{
 	}
@@ -1943,7 +1943,7 @@ PART
 }
 PART
 {
-	part = WBI.D2Truss_4293541400
+	part = wbiD2HexTruss_4293541400
 	partName = Part
 	pos = -0.151052177,38.3647614,0.275256872
 	attPos = 0,0,0
@@ -1970,8 +1970,8 @@ PART
 	link = WBI.LargeRadiator_4293531126
 	link = WBI.LargeRadiator_4293529752
 	link = WBI.AE35Array_4293569836
-	link = WBI.D2HalfTruss_4293550842
-	attN = top,WBI.D2HalfTruss_4293550842
+	link = wbiD2HalfHexTruss_4293550842
+	attN = top,wbiD2HalfHexTruss_4293550842
 	attN = bottom,WBI.LargeDockingRing_4293396774
 	EVENTS
 	{
@@ -2101,7 +2101,7 @@ PART
 	modMass = 0
 	modSize = 0,0,0
 	sym = WBI.LargeRadiator_4293531388
-	srfN = ,WBI.D2Truss_4293541400
+	srfN = ,wbiD2HexTruss_4293541400
 	EVENTS
 	{
 	}
@@ -2241,7 +2241,7 @@ PART
 	modMass = 0
 	modSize = 0,0,0
 	sym = WBI.LargeRadiator_4293532690
-	srfN = ,WBI.D2Truss_4293541400
+	srfN = ,wbiD2HexTruss_4293541400
 	EVENTS
 	{
 	}
@@ -2381,7 +2381,7 @@ PART
 	modMass = 0
 	modSize = 0,0,0
 	sym = WBI.LargeRadiator_4293529752
-	srfN = ,WBI.D2Truss_4293541400
+	srfN = ,wbiD2HexTruss_4293541400
 	EVENTS
 	{
 	}
@@ -2521,7 +2521,7 @@ PART
 	modMass = 0
 	modSize = 0,0,0
 	sym = WBI.LargeRadiator_4293531126
-	srfN = ,WBI.D2Truss_4293541400
+	srfN = ,wbiD2HexTruss_4293541400
 	EVENTS
 	{
 	}
@@ -2660,7 +2660,7 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	srfN = srfAttach,WBI.D2Truss_4293541400
+	srfN = srfAttach,wbiD2HexTruss_4293541400
 	EVENTS
 	{
 	}
@@ -2878,7 +2878,7 @@ PART
 }
 PART
 {
-	part = WBI.D2HalfTruss_4293550842
+	part = wbiD2HalfHexTruss_4293550842
 	partName = Part
 	pos = -0.151052177,43.1848183,0.275256872
 	attPos = 0,0,0
@@ -2902,7 +2902,7 @@ PART
 	modSize = 0,0,0
 	link = WBI.LargeDockingRing_4293512908
 	attN = top,WBI.LargeDockingRing_4293512908
-	attN = bottom,WBI.D2Truss_4293541400
+	attN = bottom,wbiD2HexTruss_4293541400
 	EVENTS
 	{
 	}
@@ -3030,7 +3030,7 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	attN = bottom,WBI.D2HalfTruss_4293550842
+	attN = bottom,wbiD2HalfHexTruss_4293550842
 	EVENTS
 	{
 	}

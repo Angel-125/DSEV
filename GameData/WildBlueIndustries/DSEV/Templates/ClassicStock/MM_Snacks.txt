@@ -1,5 +1,5 @@
 //This MM patch configures DSEV's life support systems to use Snacks.
-@PART[wbiZenGreenhouse]:NEEDS[SnacksUtils]
+@PART[wbiZenGreenhouse,wbiNautilusBridge]:NEEDS[SnacksUtils]
 {
 	MODULE
 	{

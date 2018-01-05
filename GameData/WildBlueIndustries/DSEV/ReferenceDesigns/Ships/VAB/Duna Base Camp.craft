@@ -1094,8 +1094,8 @@ PART
 	modCost = 2800
 	modMass = 0
 	modSize = 0,0,0
-	link = WBI.HexTruss2_4293762216
-	attN = top,WBI.HexTruss2_4293762216
+	link = wbiHexTruss_4293762216
+	attN = top,wbiHexTruss_4293762216
 	attN = bottom,WBI.D2Hab_4293781490
 	EVENTS
 	{
@@ -1271,7 +1271,7 @@ PART
 }
 PART
 {
-	part = WBI.HexTruss2_4293762216
+	part = wbiHexTruss_4293762216
 	partName = Part
 	pos = -1.57679242E-05,29.663475,4.40042859E-05
 	attPos = 0,0.199285507,0
@@ -1431,7 +1431,7 @@ PART
 	sym = WBI.FLM3200_4293741612
 	sym = WBI.FLM3200_4293741496
 	sym = WBI.FLM3200_4293741380
-	srfN = srfAttach,WBI.HexTruss2_4293762216
+	srfN = srfAttach,wbiHexTruss_4293762216
 	EVENTS
 	{
 	}
@@ -1648,7 +1648,7 @@ PART
 	sym = WBI.FLM3200_4293741612
 	sym = WBI.FLM3200_4293741496
 	sym = WBI.FLM3200_4293741380
-	srfN = srfAttach,WBI.HexTruss2_4293762216
+	srfN = srfAttach,wbiHexTruss_4293762216
 	EVENTS
 	{
 	}
@@ -1866,7 +1866,7 @@ PART
 	sym = WBI.FLM3200_4293741612
 	sym = WBI.FLM3200_4293741496
 	sym = WBI.FLM3200_4293741380
-	srfN = srfAttach,WBI.HexTruss2_4293762216
+	srfN = srfAttach,wbiHexTruss_4293762216
 	EVENTS
 	{
 	}
@@ -2167,7 +2167,7 @@ PART
 	sym = WBI.FLM3200_4293741728
 	sym = WBI.FLM3200_4293741496
 	sym = WBI.FLM3200_4293741380
-	srfN = srfAttach,WBI.HexTruss2_4293762216
+	srfN = srfAttach,wbiHexTruss_4293762216
 	EVENTS
 	{
 	}
@@ -2467,7 +2467,7 @@ PART
 	sym = WBI.FLM3200_4293741728
 	sym = WBI.FLM3200_4293741612
 	sym = WBI.FLM3200_4293741380
-	srfN = srfAttach,WBI.HexTruss2_4293762216
+	srfN = srfAttach,wbiHexTruss_4293762216
 	EVENTS
 	{
 	}
@@ -2684,7 +2684,7 @@ PART
 	sym = WBI.FLM3200_4293741728
 	sym = WBI.FLM3200_4293741612
 	sym = WBI.FLM3200_4293741496
-	srfN = srfAttach,WBI.HexTruss2_4293762216
+	srfN = srfAttach,wbiHexTruss_4293762216
 	EVENTS
 	{
 	}
@@ -2898,7 +2898,7 @@ PART
 	modSize = 0,0,0
 	link = adapterSmallMiniShort_4291557708
 	attN = top,adapterSmallMiniShort_4291557708
-	attN = bottom,WBI.HexTruss2_4293762216
+	attN = bottom,wbiHexTruss_4293762216
 	EVENTS
 	{
 	}
@@ -4599,8 +4599,8 @@ PART
 	modCost = 2800
 	modMass = 0
 	modSize = 0,0,0
-	link = WBI.HexTruss2_4293376976
-	attN = top,WBI.HexTruss2_4293376976
+	link = wbiHexTruss_4293376976
+	attN = top,wbiHexTruss_4293376976
 	attN = bottom,WBI.D2Lab_4293780282
 	EVENTS
 	{
@@ -4776,7 +4776,7 @@ PART
 }
 PART
 {
-	part = WBI.HexTruss2_4293376976
+	part = wbiHexTruss_4293376976
 	partName = Part
 	pos = -1.57679242E-05,14.3034763,4.40042859E-05
 	attPos = 0,0.199285507,0
@@ -4936,7 +4936,7 @@ PART
 	sym = WBI.FLM3200_4293374940
 	sym = WBI.FLM3200_4293374744
 	sym = WBI.FLM3200_4293374620
-	srfN = srfAttach,WBI.HexTruss2_4293376976
+	srfN = srfAttach,wbiHexTruss_4293376976
 	EVENTS
 	{
 	}
@@ -5153,7 +5153,7 @@ PART
 	sym = WBI.FLM3200_4293374940
 	sym = WBI.FLM3200_4293374744
 	sym = WBI.FLM3200_4293374620
-	srfN = srfAttach,WBI.HexTruss2_4293376976
+	srfN = srfAttach,wbiHexTruss_4293376976
 	EVENTS
 	{
 	}
@@ -5371,7 +5371,7 @@ PART
 	sym = WBI.FLM3200_4293374940
 	sym = WBI.FLM3200_4293374744
 	sym = WBI.FLM3200_4293374620
-	srfN = srfAttach,WBI.HexTruss2_4293376976
+	srfN = srfAttach,wbiHexTruss_4293376976
 	EVENTS
 	{
 	}
@@ -5672,7 +5672,7 @@ PART
 	sym = WBI.FLM3200_4293375136
 	sym = WBI.FLM3200_4293374744
 	sym = WBI.FLM3200_4293374620
-	srfN = srfAttach,WBI.HexTruss2_4293376976
+	srfN = srfAttach,wbiHexTruss_4293376976
 	EVENTS
 	{
 	}
@@ -5972,7 +5972,7 @@ PART
 	sym = WBI.FLM3200_4293375136
 	sym = WBI.FLM3200_4293374940
 	sym = WBI.FLM3200_4293374620
-	srfN = srfAttach,WBI.HexTruss2_4293376976
+	srfN = srfAttach,wbiHexTruss_4293376976
 	EVENTS
 	{
 	}
@@ -6189,7 +6189,7 @@ PART
 	sym = WBI.FLM3200_4293375136
 	sym = WBI.FLM3200_4293374940
 	sym = WBI.FLM3200_4293374744
-	srfN = srfAttach,WBI.HexTruss2_4293376976
+	srfN = srfAttach,wbiHexTruss_4293376976
 	EVENTS
 	{
 	}
@@ -6403,7 +6403,7 @@ PART
 	modSize = 0,0,0
 	link = adapterSmallMiniShort_4291626740
 	attN = top,adapterSmallMiniShort_4291626740
-	attN = bottom,WBI.HexTruss2_4293376976
+	attN = bottom,wbiHexTruss_4293376976
 	EVENTS
 	{
 	}

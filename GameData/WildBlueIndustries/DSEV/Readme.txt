@@ -18,6 +18,95 @@ Copy the WildBlueIndustries directory into your GameData folder.
 
 ---REVISION HISTORY---
 
+3.0.0.1 The Final Odyssey
+
+The last major release to Deep Space Exploration Vessels completes the original vision for the mod by introducing new parts to make the Nautilus, a kerbalized version of NASA's NAUTILUS-X along with new cargo bays, a revised hex truss system, a new 2.5m cryopod, non-cylindrical fuel tanks, a new radiator, and a powerful new fusion engine. At this point, future updates to DSEV will focus on bug fixes and minor tweaks.
+
+I'm happy to say that DSEV is now feature complete!
+
+New parts
+
+- D2 Cargo Bay (Advanced Metalworks): Styled like the D2 crewed parts, the cargo bay is a nice Size 3 alternative to the stock Mk3 cargo bay. It comes in 3 lengths.
+
+- Hex Hangar (Composites): This large hangar can snugly fit Size 3 parts. It comes in 3 lengths.
+
+- Hangar Adapter (Composites): Use this adapter to attach the Hex Hangar to Size 3, Size 2, or Size 1 parts.
+
+- Automated Construction Hangar (Composites): This specialized hangar lets you make individual parts without the need for kerbals- albiet slowly- if you have OSE Workshop installed.
+
+- Nautilus Airlock (Composites): This radially attached hexagonal airlock seats 2 and has an extendable porch for conveniently attaching EVA items.
+
+- S-2 Nautilus O.C.P. (Composites): This radially attached orbital command pod provides guidance for your vessels and good views. It even has a small built-in greenhouse!
+
+- Nautilus Centrifuge (Composites): The Nautilus Centrifuge is a spinning habitat ring that living quarters for up to 16 kerbals. With Pathfinder installed, the centrifuge slowly generates data for use in labs, and provides production bonuses to the vessel's Pathfinder templates. The Jukebox actually works! Sadly, licensing doesn't let me distribute songs from Saturday Night Fever (not even MIDI versions). But you can place custom music under 000WildBlueTools/Music. Just look around for a free converter that can make .ogg files (Audacity comes to mind) and you're good to go!
+
+- Nautilus Tank Cluster (Composites): This cluster of fuel tanks has built-in radiators as well as built-in adapters for Size 3 and Size 2 parts. it also has engine mounts for up to 7 Size 7 engines.
+
+- Daedalus Storage Tank (Large Volume Containment): This 10-meter spherical fuel tank holds a variety of resources. A *lot* of resources.
+
+- Meat Locker CryoShelter (Station Modules): Essentially a smaller version of the D2 Cryo Shelter, the Meat Locker is the size of a Hitchhiker and can hold 4 kerbals in cold storage.
+
+- D2HT-2 Adapter (Advanced Metalworks): This is a longer version of the D2 to Hex truss adapter.
+
+- D2 Quarter Truss (Advanced Metalworks): This part is the D2 equivalent of the Quarter Hex Truss.
+
+- D2 Hex Node (Advanced metalworks): This part is the D2 equivalent to the Hex Node.
+
+- Multi Truss: What this truss lacks in amenities it makes up for in its multi-length options. There's also a D2 equivalent.
+
+- WB-9 "Hypernova" Fusion Torch (Torch Drives): This advanced fusion engine has two modes; a high thrust, high specific impulse, high heat "Torch Mode" and a lower thrust and insane ISP "Cruise Mode." If you activate Cruise Control, you can perform engine burns during timewarp. And yes, the transmitter functionality is intended; Project Daedalus's second stage motor doubled as an antenna...
+
+- Avatar Radiator (Large Electrics): This non-rotating radiator is cheaper and lighter than the Graphene Radiator.
+
+- Storage Shield (Nanolathing): This massive heat shield is 22.5m in diameter when fully assembled, and can hold an enormous amount of resources. It has a hollow center for attaching other parts like engines (You'll need to toggle the built-in cap first). Once assembled, it cannot be disassembled.
+
+- Storage Shield Cap (Nanolathing): This specialized part caps the hole in the Storage Shield when you remove its built-in shield cap. It has the ability to open and close to expose parts stored inside the hollow section of the Storage Shield.
+
+New Contract
+- Touring: This contract requires you to send 1 or more tourists to a specific vessel and return them home safely after a few days stay.
+
+Cruise Control
+This is a new feature added to all DSEV engines. Cruise Control lets you perform engine burns during timewarp. There are some caveats which will be explained below. To use Cruise Control, right-click on the part to set the desire cruise throttle level and fuel reserve percent, then click the Cruise Control button. Symmetry parts will automatically be updated.
+
+---Controls---
+Cruise Control Button: On/Off, this button enables/disables cruise control. If enabled, then the engine will perform a burn when you timewarp.
+Cruise Throttle: Controls the throttle level during cruise control. The throttle affects how much propellant to expend and thus your delta-v during timewarp.
+Fuel Reserve: During timewarp you can expend fuel pretty quickly. This slider prevents you from using up all your fuel. When your fuel supply drops below the setting, you'll drop out of cruise control and timewarp.
+
+---Caveats---
+The game's heat mechanics don't work in timewarp.
+You cannot change the context menu controls during timewarp.
+You cannot change the ship's course during timewarp.
+
+Bug Fixes & Enhancements
+- The D2 Habitat, Lab, Office, CryoShelter, and Greenhouse now have an optional MMOD shield that you can toggle. It is conveniently the same dimensions and shape as the small Hex Hangar.
+- Revised the Hex Truss parts to improve rendering performance.
+- Revised the K2 frames to improve rendering performance.
+- The D2 hex truss crew tubes are now the same size as the regular hex trusses.
+- The D2 Adapter has a new End Cap option.
+- Increased thrust on the Supernova's Pulsed Plasma mode.
+- Hex nodes now support stack symmetry.
+- Cruise Control added to the Supernova, Viper, Tesla, and Trinity.
+
+- Deprecated the older versions of the hex trusses. Craft in the field are unaffected. To fix your craft files in the VAB/SPH, you'll need to rename some parts in the craft file. Here's the conversion guide:
+Old Name -> New Name
+WBI.HexTrussHalf -> wbiHalfHexTruss
+WBI.HexTrussQuarter -> wbiQuarterHexTruss
+WBI.HexTruss2 -> wbiHexTruss
+WBI.HexTrussDouble -> wbiDoubleHexTruss
+WBI.HexAdapter2 -> wbiHexAdapter
+WBI.HexNode2 -> wbiHexNode
+WBI.D2Truss -> wbiD2HexTruss
+WBI.D2DoubleTruss -> wbiD2DoubleHexTruss
+WBI.D2HalfTruss -> wbiD2HalfHexTruss
+
+Reference Designs
+- Nautilus: Inspired by NASA's NAUTILUS-X, this nuclear-powered variant has the fuel to move from low Kerbin orbit to low Duna orbit with fuel to spare. It already comes equipped with two Estonian Duna Landers, each configured deliver a small Pathfinder outpost for extended exploration.
+NOTE: Nautilus requires Pathfinder as well as Snacks, KIS/KAS, and CRP.
+
+Acknowledgements
+Near Future Props by Nertea, licensed under CC-BY-NC-SA-4.0
+
 2.5 Odyssey Three
 
 Odyssey Three delivers new parts to make the Estonian, a craft inspired by the iconic Mars Excursion Module (MEM). It is not a replica; there's no lab module or spindly ascent stage. Instead, the Estonian is built to be modular and configurable. With a full fuel load, the baseline craft can SSTO to and from Duna orbit. With Pathfinder installed, it can hold a small base, then drop the lander portion and launch into orbit. You can even integrate Duna tanks into its design for extra resource or payload capacity.
@@ -815,7 +904,34 @@ Modular Fuel Tanks MM configs by Kolago.
 Spindle and Spin Ring concept based upon parts by ZodiusInfuser/Sirkut.
 Special thanks to DasValdez, Kamuchi, BuzZBladE and the viewers of KSPTV for providing vital feedback and testing. It really helped to see the mod in use and to see what worked and what needed improvements. :)
 
+--- MUSIC ---
+Ether Disco Kevin MacLeod (incompetech.com)
+Licensed under Creative Commons: By Attribution 3.0 License
+http://creativecommons.org/licenses/by/3.0/
+
+Stringed Disco Kevin MacLeod (incompetech.com)
+Licensed under Creative Commons: By Attribution 3.0 License
+http://creativecommons.org/licenses/by/3.0/
+
+Beach Life Miami Slice
+Licensed under Creative Commons: By Attribution 3.0 License
+http://creativecommons.org/licenses/by/3.0/
+
+Solid Gold
+Licensed under Creative Commons: By Attribution 3.0 License
+http://creativecommons.org/licenses/by/3.0/
+
+Hold On Phish Funk
+Licensed under Creative Commons: By Attribution 3.0 License
+http://creativecommons.org/licenses/by/3.0/
+
+Strum (Capture My Heart)
+Licensed under Creative Commons: By Attribution 3.0 License
+http://creativecommons.org/licenses/by/3.0/
+
 ---LICENSE---
+Near Future Props by Nertea, licensed under CC-BY-NC-SA-4.0
+
 All Art Assets, including .mu, .mbm, and .dds files are copyright 2014-2016 by Michael Billard, All Rights Reserved.
 
 Wild Blue Industries is trademarked by Michael Billard. All rights reserved.

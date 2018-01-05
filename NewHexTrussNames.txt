@@ -1,0 +1,3 @@
+WBI_HexTrussHalf -> wbiHalfHexTruss
+WBI_HexTrussQuarter -> wbiQuarterHexTruss
+WBI_HexTruss2 -> wbiHexTruss
