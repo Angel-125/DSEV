@@ -18,6 +18,12 @@ Copy the WildBlueIndustries directory into your GameData folder.
 
 ---REVISION HISTORY---
 
+3.0.0.2
+- Cruise Control fix for single-mode engines. They still need ModuleEnginesFX though.
+- Exhaust plume effect fix for Hypernova in Torch Mode.
+- Fix for deprecated parts.
+- MM path fixes. Thanks Li0n! :)
+
 3.0.0.1 The Final Odyssey
 
 The last major release to Deep Space Exploration Vessels completes the original vision for the mod by introducing new parts to make the Nautilus, a kerbalized version of NASA's NAUTILUS-X along with new cargo bays, a revised hex truss system, a new 2.5m cryopod, non-cylindrical fuel tanks, a new radiator, and a powerful new fusion engine. At this point, future updates to DSEV will focus on bug fixes and minor tweaks.
