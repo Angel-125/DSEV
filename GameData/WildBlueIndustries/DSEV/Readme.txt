@@ -18,6 +18,10 @@ Copy the WildBlueIndustries directory into your GameData folder.
 
 ---REVISION HISTORY---
 
+3.0.0.3
+- Fix for Hex Truss - D2 Truss Adapter
+- Collider fix for the Storage Shield
+
 3.0.0.2
 - Cruise Control fix for single-mode engines. They still need ModuleEnginesFX though.
 - Exhaust plume effect fix for Hypernova in Torch Mode.
