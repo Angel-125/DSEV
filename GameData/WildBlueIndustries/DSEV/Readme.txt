@@ -18,6 +18,12 @@ Copy the WildBlueIndustries directory into your GameData folder.
 
 ---REVISION HISTORY---
 
+3.0.0.4
+- Fixed radial airlock's missing ladder and airlock hatch.
+- Fusion reactors now generate ElectroPlasma to avoid CRP resource conflicts.
+- Compact ISRU can now create LiquidFuel & Oxidizer from Water, Minerite, and Nitronite. This only applies to Classic Stock play mode.
+- WBT update.
+
 3.0.0.3
 - Fix for Hex Truss - D2 Truss Adapter
 - Collider fix for the Storage Shield
