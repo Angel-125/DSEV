@@ -18,6 +18,10 @@ Copy the WildBlueIndustries directory into your GameData folder.
 
 ---REVISION HISTORY---
 
+3.1
+- Recompiled for KSP 1.4.1
+- Removed deprecated parts.
+
 3.0.0.4
 - Fixed radial airlock's missing ladder and airlock hatch.
 - Fusion reactors now generate ElectroPlasma to avoid CRP resource conflicts.

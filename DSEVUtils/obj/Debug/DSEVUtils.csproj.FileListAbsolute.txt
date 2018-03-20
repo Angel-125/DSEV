@@ -14,11 +14,11 @@ C:\Projects\KSP\WildBlueIndustries\DSEV\DSEVUtils\bin\Debug\UnityEngine.UI.dll
 C:\Projects\KSP\WildBlueIndustries\DSEV\DSEVUtils\bin\Debug\WildBlueTools.dll
 C:\Projects\KSP\WildBlueIndustries\DSEV\DSEVUtils\bin\Debug\KSPTrackIR.dll
 C:\Projects\KSP\WildBlueIndustries\DSEV\DSEVUtils\bin\Debug\Mono.Cecil.dll
+C:\Projects\KSP\WildBlueIndustries\DSEV\DSEVUtils\bin\Debug\Ionic.Zip.dll
 C:\Projects\KSP\WildBlueIndustries\DSEV\DSEVUtils\bin\Debug\TDx.TDxInput.dll
-C:\Projects\KSP\WildBlueIndustries\DSEV\DSEVUtils\bin\Debug\Mono.Security.dll
+C:\Projects\KSP\WildBlueIndustries\DSEV\DSEVUtils\bin\Debug\RedShellSDK.dll
 C:\Projects\KSP\WildBlueIndustries\DSEV\DSEVUtils\bin\Debug\BARISBridge.pdb
 C:\Projects\KSP\WildBlueIndustries\DSEV\DSEVUtils\bin\Debug\WildBlueTools.pdb
-C:\Projects\KSP\WildBlueIndustries\DSEV\DSEVUtils\bin\Debug\UnityEngine.xml
 C:\Projects\KSP\WildBlueIndustries\DSEV\DSEVUtils\obj\Debug\DSEVUtils.dll
 C:\Projects\KSP\WildBlueIndustries\DSEV\DSEVUtils\obj\Debug\DSEVUtils.pdb
 C:\Projects\KSP\WildBlueIndustries\DSEV\DSEVUtils\obj\Debug\DSEVUtils.csprojResolveAssemblyReference.cache
