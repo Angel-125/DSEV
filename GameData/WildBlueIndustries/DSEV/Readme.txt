@@ -18,6 +18,15 @@ Copy the WildBlueIndustries directory into your GameData folder.
 
 ---REVISION HISTORY---
 
+3.1.1
+- Recompiled for KSP 1.4.3
+- Improved resource summary in the geology lab.
+- Fixed a situation where resource distribution that wouldn't distribute resources.
+- Added Cruise Control to the stock ion engine and stock NERV.
+- Adjusted Classic Stock resource densities to reflect the 5-liter standard used by most stock resources.
+- Adjusted Classic Stock storage capacities to reflect the 5-liter standard used by most stock resources. These changes will affect new parts and when you reconfigure an existing part.
+- Classic Stock is now the default Play Mode for new installs of WBI mods. Existing games are unchanged.
+
 3.1
 - Recompiled for KSP 1.4.1
 - Removed deprecated parts.
