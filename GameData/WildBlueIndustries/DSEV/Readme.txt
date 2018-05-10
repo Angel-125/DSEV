@@ -18,6 +18,9 @@ Copy the WildBlueIndustries directory into your GameData folder.
 
 ---REVISION HISTORY---
 
+3.1.3
+- WBT and BARIS bridge update.
+
 3.1.1
 - Recompiled for KSP 1.4.3
 - Improved resource summary in the geology lab.
