@@ -18,6 +18,10 @@ Copy the WildBlueIndustries directory into your GameData folder.
 
 ---REVISION HISTORY---
 
+3.1.4
+- WBT Update
+- Classic Stock templates update - thanks JadeOfMaar! :)
+
 3.1.3
 - WBT and BARIS bridge update.
 
