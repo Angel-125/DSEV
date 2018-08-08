@@ -18,6 +18,9 @@ Copy the WildBlueIndustries directory into your GameData folder.
 
 ---REVISION HISTORY---
 
+3.1.6
+- WildBlueTools update.
+
 3.1.5
 - Recompiled for KSP 1.4.4
 - Updated support for Extraplanetary Launchpads.
