@@ -18,8 +18,8 @@ Copy the WildBlueIndustries directory into your GameData folder.
 
 ---REVISION HISTORY---
 
-3.1.7
-- Bug fixes for experiments.
+3.1.8
+- WBT update.
 
 3.1.6
 - WildBlueTools update.
