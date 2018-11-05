@@ -18,6 +18,9 @@ Copy the WildBlueIndustries directory into your GameData folder.
 
 ---REVISION HISTORY---
 
+3.1.12
+- KSP 1.5 update
+
 3.1.11.0
 Last release for KSP 1.4.5!
 
