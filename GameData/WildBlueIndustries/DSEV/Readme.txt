@@ -18,6 +18,14 @@ Copy the WildBlueIndustries directory into your GameData folder.
 
 ---REVISION HISTORY---
 
+3.2.0
+- Added thermal mechanics to the Trinity (thanks dire! :) )
+- Fixed suncatcher transform on the SPF-50
+- Recompiled for KSP 1.6
+
+3.1.13
+- Removed duplicate Play Mode patches.
+
 3.1.12
 - KSP 1.5 update
 
