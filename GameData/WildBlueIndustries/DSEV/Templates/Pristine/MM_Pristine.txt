@@ -1,0 +1,26 @@
+@PART[WBI_FLM200,WBI_FLM400,WBI_FLM800,WBIDelta8,WBI_FLM1600,WBI_FLM3200,WBI_FLM6400,WBIDuna18,WBI_FLM3600-2,WBI_FLM7200-2,WBI_FLM14400-2,WBI_FLM100,estonianEDLTank,estonianEDLFrame,WBI_D2DoubleTruss,WBI_D2HalfTruss,WBI_D2Truss,WBI_HexTrussD2TrussAdapter,WBI_HexTruss2,WBI_HexTrussDouble,WBI_HexTrussHalf,WBI_HexTrussQuarter,WBI_K2CargoBox,WBI_K2ShortSaddleTank,WBI_K2StorageWedge,WBI_QuadEngineCoupler,junctionStorageNode,shortLogisticsModule]
+{
+	!MODULE[WBIConvertibleStorage]{}
+}
+
+@PART[WBI_D2Lab,WBI_D2Centrifuge]:HAS[@MODULE[WBIConvertibleMPL]]
+{
+	!MODULE[WBIConvertibleMPL]{}
+	!MODULE[WBIResourceDistributor]{}
+}
+@PART[WBI_D2Lab,WBI_D2Centrifuge]:HAS[@MODULE[WBIMultipurposeLab]]
+{
+	!MODULE[WBIMultipurposeLab]{}
+	!MODULE[WBIResourceDistributor]{}
+}
+
+@PART[WBI_D2Hab,WBI_D2Office]:HAS[@MODULE[WBIMultiConverter]]
+{
+	!MODULE[WBIMultiConverter]{}
+	!MODULE[WBIResourceDistributor]{}
+}
+@PART[WBI_D2Hab,WBI_D2Office]:HAS[@MODULE[WBIMultipurposeHab]]
+{
+	!MODULE[WBIMultipurposeHab]{}
+	!MODULE[WBIResourceDistributor]{}
+}

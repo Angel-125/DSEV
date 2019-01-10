@@ -1,0 +1,28 @@
+{
+    "NAME":"Kerbal KIS Items",
+    "URL":"https://raw.githubusercontent.com/Angel-125/SuperKerbal/master/GameData/WildBlueIndustries/SuperKerbal.version",
+    "DOWNLOAD":"https://github.com/Angel-125/SuperKerbal/releases",
+    "GITHUB":
+    {
+        "USERNAME":"Angel-125",
+        "REPOSITORY":"SuperKerbal",
+        "ALLOW_PRE_RELEASE":false,
+    },
+    "VERSION":
+    {
+	"MAJOR":2,
+	"MINOR":1,
+	"PATCH":4,
+	"BUILD":0
+    },
+     "KSP_VERSION_MIN":{
+         "MAJOR":1,
+         "MINOR":5,
+         "PATCH":0
+     },
+     "KSP_VERSION_MAX":{
+         "MAJOR":1,
+         "MINOR":5,
+         "PATCH":99
+     },
+}

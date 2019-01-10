@@ -1,0 +1,106 @@
+@PART[CompactISRU]
+{
+	MODULE
+	{
+		name = ModuleBreakableConverter
+		ConverterName = Coolant
+		StartActionName = Start ISRU [Coolant]
+		StopActionName = Stop ISRU [Coolant]
+		AutoShutdown = true
+		UseSpecialistBonus = true
+		SpecialistEfficiencyFactor = 0.2
+		SpecialistBonusBase = 0.05
+		ExperienceEffect = ConverterSkill
+		EfficiencyBonus = 1
+
+		INPUT_RESOURCE
+		{
+			ResourceName = Water
+			Ratio = 1
+			FlowMode = STAGE_PRIORITY_FLOW
+  		}
+		INPUT_RESOURCE
+		{
+			ResourceName = Ore
+			Ratio = 5
+			FlowMode = STAGE_PRIORITY_FLOW
+  		}
+		INPUT_RESOURCE
+		{
+			ResourceName = Minerals
+			Ratio = 3
+			FlowMode = STAGE_PRIORITY_FLOW
+  		}
+		INPUT_RESOURCE
+		{
+			ResourceName = ElectricCharge
+			Ratio = 30
+		}
+		OUTPUT_RESOURCE
+		{
+			ResourceName = Coolant
+			Ratio = 0.21
+			DumpExcess = false
+			FlowMode = STAGE_PRIORITY_FLOW
+		}
+	}
+
+	MODULE
+	{
+		name = ModuleBreakableConverter
+		ConverterName = FusionPellets
+		StartActionName = Start Fusion Pellets
+		StopActionName = Stop Fusion Pellets
+		AutoShutdown = true
+		UseSpecialistBonus = true
+		SpecialistEfficiencyFactor = 0.2
+		SpecialistBonusBase = 0.05
+		ExperienceEffect = ConverterSkill
+		EfficiencyBonus = 1
+	 
+		INPUT_RESOURCE
+		{
+			ResourceName = Ore
+			Ratio = 10
+			FlowMode = STAGE_PRIORITY_FLOW
+  		}
+		INPUT_RESOURCE
+		{
+			ResourceName = Water
+			Ratio = 1
+			FlowMode = STAGE_PRIORITY_FLOW
+  		}
+		INPUT_RESOURCE
+		{
+			ResourceName = Minerals
+			Ratio = 0.01
+			FlowMode = STAGE_PRIORITY_FLOW
+  		}
+		INPUT_RESOURCE
+		{
+			ResourceName = ElectricCharge
+			Ratio = 30
+		}
+		OUTPUT_RESOURCE
+		{
+			ResourceName = FusionPellets
+			Ratio = 0.00015
+			DumpExcess = false
+			FlowMode = STAGE_PRIORITY_FLOW
+		}
+		OUTPUT_RESOURCE
+		{
+			ResourceName = Oxygen
+			Ratio = 27.78
+			DumpExcess = true
+			FlowMode = STAGE_PRIORITY_FLOW
+		}
+		OUTPUT_RESOURCE
+		{
+			ResourceName = LqdHydrogen
+			Ratio = 0.78455
+			DumpExcess = true
+			FlowMode = STAGE_PRIORITY_FLOW
+		}
+	}
+}
