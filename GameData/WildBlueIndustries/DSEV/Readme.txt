@@ -18,6 +18,12 @@ Copy the WildBlueIndustries directory into your GameData folder.
 
 ---REVISION HISTORY---
 
+3.2.2
+- Fixed overchange of Equipment costs for OmniConverter templates.
+- Fixed incorrect display of Equipment costs in the Operations Manager.
+- Fixed duplicate OmniConverter and OmniStorage loadouts that happen when you revert a flight back to the editor and create a new part.
+- Updated Remote Tech support- thanks Jarred Allen!
+
 3.2.1
 - Fixed propellant issues with the Trinity.
 - Removed LiquidFuel propellant option from the Trinity.
