@@ -18,6 +18,11 @@ Copy the WildBlueIndustries directory into your GameData folder.
 
 ---REVISION HISTORY---
 
+3.2.1
+- Fixed propellant issues with the Trinity.
+- Removed LiquidFuel propellant option from the Trinity.
+- Fixed issues with WBIMultiModeEngine not reporting delta-v stats properly to Kerbal Engineer. NOTE: Stock delta-v won't recognize the engine switch. Nothing I can do for now...
+
 3.2.0
 - Added thermal mechanics to the Trinity (thanks dire! :) )
 - Fixed suncatcher transform on the SPF-50
