@@ -18,6 +18,100 @@ Copy the WildBlueIndustries directory into your GameData folder.
 
 ---REVISION HISTORY---
 
+3.2.2
+- Fixed overchange of Equipment costs for OmniConverter templates.
+- Fixed incorrect display of Equipment costs in the Operations Manager.
+- Fixed duplicate OmniConverter and OmniStorage loadouts that happen when you revert a flight back to the editor and create a new part.
+- Updated Remote Tech support- thanks Jarred Allen!
+
+3.2.1
+- Fixed propellant issues with the Trinity.
+- Removed LiquidFuel propellant option from the Trinity.
+- Fixed issues with WBIMultiModeEngine not reporting delta-v stats properly to Kerbal Engineer. NOTE: Stock delta-v won't recognize the engine switch. Nothing I can do for now...
+
+3.2.0
+- Added thermal mechanics to the Trinity (thanks dire! :) )
+- Fixed suncatcher transform on the SPF-50
+- Recompiled for KSP 1.6
+
+3.1.13
+- Removed duplicate Play Mode patches.
+
+3.1.12
+- KSP 1.5 update
+
+3.1.11.0
+Last release for KSP 1.4.5!
+
+Bug Fixes & Enhancements
+- Fixed issue where switching Play Modes would cause some files to not be renamed and cause all kinds of fun for players...
+NOTE: For the changes to take effect, you'll need to switch your Play Mode to some mode other than the current one, then switch it to the desired mode.
+
+3.1.10.0
+
+Omni Converters & Storage
+- Added search functions to OmniStorage and OmniConverter GUI.
+- Play Mode now lists which mods support a particular mode.
+
+Classic Stock
+- Added new Classic Stock omni converters: Propellium Distiller, Oxium Distiller, Snack Grinder (requres Snacks), Soil Dehydrator (requires Snacks).
+- D2 Centrifuge, Nautilis Centrifuge, D2 Hab, and D2 Office, D2 Lab, all now default to Omni converter templates.
+
+3.1.9.4
+- Fixes Play Mode failing to rename certain files. NOTE: You might need to reset your current play mode. Simply open the WBT app from the Space Center, choose another mode, press OK, and again open the app, selecting your original play mode. Then be sure to restart KSP.
+
+3.1.9.3
+- WBT update.
+
+3.1.9.1
+- WBT update.
+
+3.1.8
+- WBT update.
+
+3.1.6
+- WildBlueTools update.
+
+3.1.5
+- Recompiled for KSP 1.4.4
+- Updated support for Extraplanetary Launchpads.
+
+3.1.4
+- WBT Update
+- Classic Stock templates update - thanks JadeOfMaar! :)
+
+3.1.3
+- WBT and BARIS bridge update.
+
+3.1.1
+- Recompiled for KSP 1.4.3
+- Improved resource summary in the geology lab.
+- Fixed a situation where resource distribution that wouldn't distribute resources.
+- Added Cruise Control to the stock ion engine and stock NERV.
+- Adjusted Classic Stock resource densities to reflect the 5-liter standard used by most stock resources.
+- Adjusted Classic Stock storage capacities to reflect the 5-liter standard used by most stock resources. These changes will affect new parts and when you reconfigure an existing part.
+- Classic Stock is now the default Play Mode for new installs of WBI mods. Existing games are unchanged.
+
+3.1
+- Recompiled for KSP 1.4.1
+- Removed deprecated parts.
+
+3.0.0.4
+- Fixed radial airlock's missing ladder and airlock hatch.
+- Fusion reactors now generate ElectroPlasma to avoid CRP resource conflicts.
+- Compact ISRU can now create LiquidFuel & Oxidizer from Water, Minerite, and Nitronite. This only applies to Classic Stock play mode.
+- WBT update.
+
+3.0.0.3
+- Fix for Hex Truss - D2 Truss Adapter
+- Collider fix for the Storage Shield
+
+3.0.0.2
+- Cruise Control fix for single-mode engines. They still need ModuleEnginesFX though.
+- Exhaust plume effect fix for Hypernova in Torch Mode.
+- Fix for deprecated parts.
+- MM path fixes. Thanks Li0n! :)
+
 3.0.0.1 The Final Odyssey
 
 The last major release to Deep Space Exploration Vessels completes the original vision for the mod by introducing new parts to make the Nautilus, a kerbalized version of NASA's NAUTILUS-X along with new cargo bays, a revised hex truss system, a new 2.5m cryopod, non-cylindrical fuel tanks, a new radiator, and a powerful new fusion engine. At this point, future updates to DSEV will focus on bug fixes and minor tweaks.

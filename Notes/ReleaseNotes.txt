@@ -1,0 +1,4 @@
+- Fixed overchange of Equipment costs for OmniConverter templates.
+- Fixed incorrect display of Equipment costs in the Operations Manager.
+- Fixed duplicate OmniConverter and OmniStorage loadouts that happen when you revert a flight back to the editor and create a new part.
+- Updated Remote Tech support- thanks Jarred Allen!

@@ -19,7 +19,7 @@ namespace WildBlueIndustries
         [KSPField(guiActiveEditor = true, guiName = "Mass", guiFormat = "f3", isPersistant = true)]
         public float partMass = 0f;
 
-        private MassconWindow massconView = new MassconWindow();
+        private MassconWindow massconView;
 
         [KSPEvent(guiActiveEditor = true)]
         public void EditMass()
@@ -64,7 +64,7 @@ namespace WildBlueIndustries
         {
             base.OnStart(state);
             PartResourceDefinitionList definitions = PartResourceLibrary.Instance.resourceDefinitions;
-
+            massconView = new MassconWindow();
             massconView.massUpdateDelegate = OnUpdateMass;
 
             if (partMass > 0f)
