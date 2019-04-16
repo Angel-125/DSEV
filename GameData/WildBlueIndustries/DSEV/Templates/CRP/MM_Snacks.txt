@@ -299,7 +299,7 @@ D2HAB:NEEDS[SnacksUtils]
 	requiredAmount = 1400
 	reconfigureSkill = ConverterSkill
 	logoPanel = WildBlueIndustries/000WildBlueTools/Decals/Ponderosa
-	glowPanel = WildBlueIndustries/000WildBlueTools/Decals/Ponderosa
+	glowPanel = WildBlueIndustries/000WildBlueTools/Decals/PonderosaGlow
 	description = The D2 Habitat contains advanced equipment to supply kerbals with snacks, recycle their waste products, and create fertilizer needed for the greenhouse.
 	toolTip = You can recycle soil into snacks and create fertilizer
 	toolTipTitle = Your First D2 Habitat
