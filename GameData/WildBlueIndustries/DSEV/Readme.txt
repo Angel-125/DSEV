@@ -18,6 +18,10 @@ Copy the WildBlueIndustries directory into your GameData folder.
 
 ---REVISION HISTORY---
 
+3.3
+- Updated to KSP 1.7
+- Decal updates courtesy of JadeofMaar
+
 3.2.2
 - Fixed overchange of Equipment costs for OmniConverter templates.
 - Fixed incorrect display of Equipment costs in the Operations Manager.
