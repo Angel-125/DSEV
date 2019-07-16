@@ -18,6 +18,25 @@ Copy the WildBlueIndustries directory into your GameData folder.
 
 ---REVISION HISTORY---
 
+3.3.6
+- WBT update
+
+3.3.5
+- Bug fix for Snacks patch.
+
+3.3.4
+- Updated to support Snacks events.
+- Increased breaking force and breaking torque for the truss parts.
+
+3.3.3
+- Added support for Air and Stress from Snacks.
+
+3.3.2
+- Updated Snacks support.
+
+3.3.1
+- Fixed NREs produced by centrifuge when it's spinning and the vessel isn't the active vessel.
+
 3.3
 - Updated to KSP 1.7
 - Decal updates courtesy of JadeofMaar
