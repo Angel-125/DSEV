@@ -18,6 +18,10 @@ Copy the WildBlueIndustries directory into your GameData folder.
 
 ---REVISION HISTORY---
 
+3.4.0
+- Updated to KSP 1.8
+- Added new Estonian S1 Adapter.
+
 3.3.6
 - WBT update
 
