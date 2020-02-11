@@ -18,6 +18,16 @@ Copy the WildBlueIndustries directory into your GameData folder.
 
 ---REVISION HISTORY---
 
+3.4.1
+- Drag cube fix for D2 Instrument Unit.
+- 2.5m station parts parts now have a DSEV White texture option.
+
+New Parts
+- S0-18 Adapter: This adapter goes between Size 0 and Size 1p5, and has both the original and DSEV White texture option.
+- S1-18 Adapter: This adapter goes between Size 1 and Size 1p5, and has both the original and DSEV White texture option.
+- S2-18 Adapter: This adapter goes between Size 2 and Size 1p5, and has both the original and DSEV White texture option.
+- S2 Cargo Bay: This is a small 2.5m diameter cargo bay
+
 3.4.0
 - Updated to KSP 1.8
 - Added new Estonian S1 Adapter.
