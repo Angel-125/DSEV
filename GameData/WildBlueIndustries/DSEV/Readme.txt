@@ -18,6 +18,10 @@ Copy the WildBlueIndustries directory into your GameData folder.
 
 ---REVISION HISTORY---
 
+4.5.0
+- Shiny Solar Panels Update
+- Bug Fixes
+
 3.4.1
 - Drag cube fix for D2 Instrument Unit.
 - 2.5m station parts parts now have a DSEV White texture option.
