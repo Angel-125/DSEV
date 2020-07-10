@@ -18,6 +18,47 @@ Copy the WildBlueIndustries directory into your GameData folder.
 
 ---REVISION HISTORY---
 
+4.5.0
+- Shiny Solar Panels Update
+- Bug Fixes
+
+3.4.1
+- Drag cube fix for D2 Instrument Unit.
+- 2.5m station parts parts now have a DSEV White texture option.
+
+New Parts
+- S0-18 Adapter: This adapter goes between Size 0 and Size 1p5, and has both the original and DSEV White texture option.
+- S1-18 Adapter: This adapter goes between Size 1 and Size 1p5, and has both the original and DSEV White texture option.
+- S2-18 Adapter: This adapter goes between Size 2 and Size 1p5, and has both the original and DSEV White texture option.
+- S2 Cargo Bay: This is a small 2.5m diameter cargo bay
+
+3.4.0
+- Updated to KSP 1.8
+- Added new Estonian S1 Adapter.
+
+3.3.6
+- WBT update
+
+3.3.5
+- Bug fix for Snacks patch.
+
+3.3.4
+- Updated to support Snacks events.
+- Increased breaking force and breaking torque for the truss parts.
+
+3.3.3
+- Added support for Air and Stress from Snacks.
+
+3.3.2
+- Updated Snacks support.
+
+3.3.1
+- Fixed NREs produced by centrifuge when it's spinning and the vessel isn't the active vessel.
+
+3.3
+- Updated to KSP 1.7
+- Decal updates courtesy of JadeofMaar
+
 3.2.2
 - Fixed overchange of Equipment costs for OmniConverter templates.
 - Fixed incorrect display of Equipment costs in the Operations Manager.

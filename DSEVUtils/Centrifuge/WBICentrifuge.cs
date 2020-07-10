@@ -382,7 +382,8 @@ namespace WildBlueIndustries
                     counterTorqueTransform.Rotate(rotationAxisVec, counterRotationsPerFrame);
 
                 //Rotate the IVA
-                this.part.internalModel.transform.Rotate(rotationAxisVec, -rotationsPerFrame);
+                if (this.part.internalModel != null)
+                    this.part.internalModel.transform.Rotate(rotationAxisVec, -rotationsPerFrame);
             }
             return true;
         }
