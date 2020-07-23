@@ -18,6 +18,11 @@ Copy the WildBlueIndustries directory into your GameData folder.
 
 ---REVISION HISTORY---
 
+X
+- Reduced D2 Centrifuge experiments to 4.
+- Updated the Advanced Construction Hangar to support the latest OSE Workshop.
+- Added Extraplanetary Launchpads support to the Advanced Construction Hangar.
+
 4.5.0
 - Shiny Solar Panels Update
 - Bug Fixes

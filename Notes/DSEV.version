@@ -6,13 +6,13 @@
     {
         "USERNAME":"Angel-125",
         "REPOSITORY":"DSEV",
-        "ALLOW_PRE_RELEASE":false,
+        "ALLOW_PRE_RELEASE":false
     },
     "VERSION":
     {
 	"MAJOR":3,
-	"MINOR":4,
-	"PATCH":1,
+	"MINOR":5,
+	"PATCH":0,
 	"BUILD":0
     },
     "KSP_VERSION_MIN":
