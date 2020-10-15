@@ -18,12 +18,21 @@ Copy the WildBlueIndustries directory into your GameData folder.
 
 ---REVISION HISTORY---
 
-X
+3.6.0
 - Reduced D2 Centrifuge experiments to 4.
 - Updated the Advanced Construction Hangar to support the latest OSE Workshop.
 - Added Extraplanetary Launchpads support to the Advanced Construction Hangar.
 
-4.5.0
+Thanks to JadeOfMaar :)
+- Deprecated RBCC Scimitar engine.
+- Fixed attach problems with radiators.
+- Rebalanced radiators to be more massive, more costly, more powerful, positioned aptly in CTT.
+- Updated (Increased) Glykerol capacity in cryo chambers.
+- Updated TweakScale config.
+- Updated plumes on WB-9 Hypernova, DMB0 Trinity, WB-7 Viper engines.
+
+
+3.5.0
 - Shiny Solar Panels Update
 - Bug Fixes
 
