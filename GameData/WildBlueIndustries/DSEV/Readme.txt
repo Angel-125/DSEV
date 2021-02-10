@@ -18,6 +18,12 @@ Copy the WildBlueIndustries directory into your GameData folder.
 
 ---REVISION HISTORY---
 
+3.7.0
+- Added support for KSP 1.11.1
+- Fixed missing stack node on Nautilus Bridge.
+- Fixed decal issues on Nautilus Bridge.
+- Size 1 (Moho), Size 2 (Delta), and Size 3 (Duna) tanks are hidden when Restock is installed.
+
 3.6.0
 - Reduced D2 Centrifuge experiments to 4.
 - Updated the Advanced Construction Hangar to support the latest OSE Workshop.
