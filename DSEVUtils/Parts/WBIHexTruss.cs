@@ -43,6 +43,7 @@ namespace WildBlueIndustries
         protected string[] optionNames = null;
         Dictionary<string, WBIHexTrussOption> trussOptions = new Dictionary<string, WBIHexTrussOption>();
         Dictionary<string, Transform> trussObjects = new Dictionary<string, Transform>();
+        WBIOmniStorage omniStorage = null;
 
         public override void OnStart(StartState state)
         {
@@ -50,6 +51,7 @@ namespace WildBlueIndustries
 
             //Find the switch if any.
             switcher = this.part.FindModuleImplementing<WBIConvertibleStorage>();
+            omniStorage = part.FindModuleImplementing<WBIOmniStorage>();
 
             //Find the resource distributor if any
             int totalCount = this.part.Modules.Count;
@@ -115,43 +117,52 @@ namespace WildBlueIndustries
             setVisibleObjects(trussOption);
 
             //Setup the fuel tank
-            if (switcher == null)
-                return;
-            if (trussOption.isFuelTank)
+            if (omniStorage != null)
             {
-                switcher.isEnabled = true;
-                switcher.enabled = true;
-                switcher.SetGUIVisible(true);
-                switcher.ReloadTemplate();
-
-                if (resourceDistributor != null)
-                {
-                    resourceDistributor.isEnabled = true;
-                    resourceDistributor.enabled = true;
-                    resourceDistributor.Events["SetupDistribution"].guiActive = true;
-                    resourceDistributor.Events["SetupDistribution"].guiActiveEditor = true;
-                }
+                omniStorage.isEnabled = trussOption.isFuelTank;
+                omniStorage.enabled = trussOption.isFuelTank;
+                if (!trussOption.isFuelTank)
+                    omniStorage.RemoveAllResources();
             }
 
-            else
+            if (switcher != null)
             {
-                List<PartResource> doomedResources = new List<PartResource>();
-                foreach (PartResource resource in this.part.Resources)
-                    doomedResources.Add(resource);
-                foreach (PartResource doomed in doomedResources)
-                    this.part.Resources.Remove(doomed);
-
-                if (switcher.isEnabled)
+                if (trussOption.isFuelTank)
                 {
-                    switcher.SetGUIVisible(false);
-                    switcher.isEnabled = false;
-                    switcher.enabled = false;
+                    switcher.isEnabled = true;
+                    switcher.enabled = true;
+                    switcher.SetGUIVisible(true);
+                    switcher.ReloadTemplate();
+
                     if (resourceDistributor != null)
                     {
-                        resourceDistributor.isEnabled = false;
-                        resourceDistributor.enabled = false;
-                        resourceDistributor.Events["SetupDistribution"].guiActive = false;
-                        resourceDistributor.Events["SetupDistribution"].guiActiveEditor = false;
+                        resourceDistributor.isEnabled = true;
+                        resourceDistributor.enabled = true;
+                        resourceDistributor.Events["SetupDistribution"].guiActive = true;
+                        resourceDistributor.Events["SetupDistribution"].guiActiveEditor = true;
+                    }
+                }
+
+                else
+                {
+                    List<PartResource> doomedResources = new List<PartResource>();
+                    foreach (PartResource resource in this.part.Resources)
+                        doomedResources.Add(resource);
+                    foreach (PartResource doomed in doomedResources)
+                        this.part.Resources.Remove(doomed);
+
+                    if (switcher.isEnabled)
+                    {
+                        switcher.SetGUIVisible(false);
+                        switcher.isEnabled = false;
+                        switcher.enabled = false;
+                        if (resourceDistributor != null)
+                        {
+                            resourceDistributor.isEnabled = false;
+                            resourceDistributor.enabled = false;
+                            resourceDistributor.Events["SetupDistribution"].guiActive = false;
+                            resourceDistributor.Events["SetupDistribution"].guiActiveEditor = false;
+                        }
                     }
                 }
             }

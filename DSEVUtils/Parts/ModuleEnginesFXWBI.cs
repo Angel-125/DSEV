@@ -43,59 +43,6 @@ namespace WildBlueIndustries
             }
         }
 
-        public void HideParticleEffects()
-        {
-            if (!canUpdateParticleEffects)
-                return;
-            KSPParticleEmitter[] emitters = part.GetComponentsInChildren<KSPParticleEmitter>();
-            if (emitters == null)
-                return;
-
-            foreach (KSPParticleEmitter emitter in emitters)
-            {
-                if (emitter.name == this.runningEffectName)
-                {
-                    emitter.emit = false;
-                    emitter.enabled = false;
-                }
-            }
-        }
-
-        public void ShowParticleEffects(bool forceOn = false)
-        {
-            if (!canUpdateParticleEffects)
-                return;
-            KSPParticleEmitter[] emitters = part.GetComponentsInChildren<KSPParticleEmitter>();
-            if (emitters == null)
-                return;
-
-            foreach (KSPParticleEmitter emitter in emitters)
-            {
-                //If the emitter is on the list then show it
-                if (emitter.name == this.runningEffectName)
-                {
-                    if ((currentThrottle > 0 && isOperational) || forceOn)
-                    {
-                        emitter.emit = true;
-                        emitter.enabled = true;
-                        emitter.Emit();
-                    }
-                    else
-                    {
-                        emitter.emit = false;
-                        emitter.enabled = false;
-                    }
-                }
-
-                //Emitter is not on the list, hide it.
-                else
-                {
-                    emitter.emit = false;
-                    emitter.enabled = false;
-                }
-            }
-        }
-
         //We have no access to OnUpdate or OnUpdateFixed so we need a helper...
         public void UpdateEngineState()
         {
@@ -109,8 +56,6 @@ namespace WildBlueIndustries
                 if (onActiveDelegate != null)
                     onActiveDelegate(this.engineID, true);
             }
-
-            ShowParticleEffects();
         }
     }
 }

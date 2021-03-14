@@ -96,7 +96,6 @@
     <Compile Include="Parts\ModuleFusionReactor.cs" />
     <Compile Include="Parts\ModuleHexNode.cs" />
     <Compile Include="Parts\ModuleHexPort.cs" />
-    <Compile Include="Parts\ModuleHexTruss.cs" />
     <Compile Include="Parts\ModuleMasscon.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Parts\SupernovaController.cs" />

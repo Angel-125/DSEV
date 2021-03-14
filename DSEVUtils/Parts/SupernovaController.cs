@@ -241,18 +241,13 @@ namespace WildBlueIndustries
             {
                 if (!wasRunningPrimary)
                 {
-                    secondaryEngine.HideParticleEffects();
-                    primaryEngine.ShowParticleEffects();
                     wasRunningPrimary = multiModeEngine.runningPrimary;
                 }
-                primaryEngine.UpdateEngineState();
             }
             else
             {
                 if (wasRunningPrimary)
                 {
-                    secondaryEngine.ShowParticleEffects();
-                    primaryEngine.HideParticleEffects();
                     wasRunningPrimary = multiModeEngine.runningPrimary;
                 }
                 secondaryEngine.UpdateEngineState();
@@ -397,8 +392,6 @@ namespace WildBlueIndustries
                 wasRunningPrimary = true;
                 primaryEngine.Activate();
                 primaryEngine.part.force_activate();
-                if (primaryEngine.currentThrottle > 0)
-                    primaryEngine.ShowParticleEffects(true);
             }
             else
             {
@@ -406,8 +399,6 @@ namespace WildBlueIndustries
                 secondaryEngine.Activate();
                 secondaryEngine.part.force_activate();
                 secondaryEngine.staged = true;
-                if (secondaryEngine.currentThrottle > 0)
-                    secondaryEngine.ShowParticleEffects(true);
             }
         }
 

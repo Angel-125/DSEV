@@ -18,6 +18,23 @@ Copy the WildBlueIndustries directory into your GameData folder.
 
 ---REVISION HISTORY---
 
+3.8.0: DSEV Restocked
+
+New Part
+
+- Rotating Hub: Available if Breaking Ground is installed, this hub has a section that rotates.
+
+Changes
+
+- Retextured nearly all the parts in order to better match the Restock art color palette and style.
+- Added stock inventory support for the K2 cargo parts and the ED-3 Cargo Drone.
+- Hex trusses, ED-3 Cargo Drone, and K2 cargo parts now use Omni Storage.
+- Added emissive effects to the WB-6 "Viper" Nuclear Aerospike.
+- Added Waterfall support to the Viper, ArcJet, Trinity, Supernova, and Hypernova.
+- Removed reference designs.
+- Fixed emissive effects on the Trinity.
+- Fixed Dual-Axis Solar Array's inability to generate electric charge in some orientations.
+
 3.7.0
 - Added support for KSP 1.11.1
 - Fixed missing stack node on Nautilus Bridge.
