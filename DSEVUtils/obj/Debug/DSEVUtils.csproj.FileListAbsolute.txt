@@ -78,3 +78,4 @@ C:\Projects\KSP\WildBlueIndustries\DSEV\DSEVUtils\obj\Debug\DSEVUtils.csproj.Cor
 C:\Projects\KSP\WildBlueIndustries\DSEV\DSEVUtils\obj\Debug\DSEVUtils.csproj.CopyComplete
 C:\Projects\KSP\WildBlueIndustries\DSEV\DSEVUtils\obj\Debug\DSEVUtils.dll
 C:\Projects\KSP\WildBlueIndustries\DSEV\DSEVUtils\obj\Debug\DSEVUtils.pdb
+C:\Projects\KSP\WildBlueIndustries\DSEV\DSEVUtils\bin\Debug\UnityEngine.SubsystemsModule.dll

@@ -18,6 +18,9 @@ Copy the WildBlueIndustries directory into your GameData folder.
 
 ---REVISION HISTORY---
 
+3.9.0
+- Recompiled for KSP 1.12.2.
+
 3.8.0: DSEV Restocked
 
 New Part
