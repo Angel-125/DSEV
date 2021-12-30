@@ -90,6 +90,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Parts\ModuleHexAdapter.cs" />
+    <Compile Include="Parts\WBIDynamicHeatShield.cs" />
     <Compile Include="Settings\DSEVSettings.cs" />
     <Compile Include="GUI\MassconWindow.cs" />
     <Compile Include="Parts\ModuleEnginesFXWBI.cs" />
