@@ -18,6 +18,9 @@ Copy the WildBlueIndustries directory into your GameData folder.
 
 ---REVISION HISTORY---
 
+3.11.0
+- Removed BARIS dependency dll.
+
 3.10.0
 - Added Size 2 (2.5m) Saddle Truss parts.
 - The Storage Shield now has a removable back plate to accommodate longer engines and parts.
