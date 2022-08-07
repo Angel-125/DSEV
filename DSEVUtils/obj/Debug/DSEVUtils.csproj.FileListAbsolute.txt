@@ -67,7 +67,7 @@ C:\Projects\KSP\WildBlueIndustries\DSEV\DSEVUtils\bin\Debug\UnityEngine.ARModule
 C:\Projects\KSP\WildBlueIndustries\DSEV\DSEVUtils\bin\Debug\UnityEngine.InputModule.dll
 C:\Projects\KSP\WildBlueIndustries\DSEV\DSEVUtils\bin\Debug\WildBlueTools.pdb
 C:\Projects\KSP\WildBlueIndustries\DSEV\DSEVUtils\bin\Debug\KSPAssets.XmlSerializers.dll
-C:\Projects\KSP\WildBlueIndustries\DSEV\DSEVUtils\obj\Debug\DSEVUtils.csprojAssemblyReference.cache
+C:\Projects\KSP\WildBlueIndustries\DSEV\DSEVUtils\obj\Debug\DSEVUtils.csproj.AssemblyReference.cache
 C:\Projects\KSP\WildBlueIndustries\DSEV\DSEVUtils\obj\Debug\DSEVUtils.csproj.CoreCompileInputs.cache
 C:\Projects\KSP\WildBlueIndustries\DSEV\DSEVUtils\obj\Debug\DSEVUtils.csproj.CopyComplete
 C:\Projects\KSP\WildBlueIndustries\DSEV\DSEVUtils\obj\Debug\DSEVUtils.dll

@@ -18,6 +18,14 @@ Copy the WildBlueIndustries directory into your GameData folder.
 
 ---REVISION HISTORY---
 
+3.12
+
+- Added missing stock inventory storage.
+- Updated textures on the D2 series of parts to have a "thermal blanket" look. This helps them mesh better with mods like Space Station Parts Redux.
+- Added "D2 Refit" interior/exterior 3D model updates for the D2 Hab, Science, Briefing Room, and Greenhouse modules that appear when Bufflo 2 is installed. These "Refit" model updates work like Restock; when Buffalo 2 is installed, the existing parts will get new 3D models.
+- Added new D2 Stateroom half-sized module. This is only available when Buffalo 2 is installed.
+- Added new D2 Sickbay half-sized module. This is only available when Buffalo 2 is installed.
+
 3.11.0
 - Removed BARIS dependency dll.
 
