@@ -1,0 +1,44 @@
+// A small patch to change the Supernova's manufacturer to Kerbodyne.
+@PART[WB8Supernova]:FOR[WildBlueIndustries/DSEV]
+{
+	
+	@title = KF-1 "Supernova" Fusion Engine
+	@manufacturer = #autoLOC_501638 //#autoLOC_501638 = Kerbodyne
+	@description = Harness the power of an exploding sun! Well, a tiny artificial sun-like blob of fusion fire that exists for microseconds. The KF-1 Supernova concentrates its Waxon-Waxoff Corporation electromagnets, focusing their power into a crushing blow that fuses fusion pellets into white hot plasma. The plasma then mixes with propellant pumped through the engine's center, which is then ejected out of the magnetic nozzle to produce thrust. The Supernova needs a significant amount of electric charge to start up, and the integrated fusion reactor consumes fusion pellets even when idle. And while engine heat while idle is taken care of, you'll need radiators to shed heat when the engine is running.
+
+	MODULE
+	{
+		name = ModulePartVariants
+		baseVariant = BlueStripe
+		baseMass = 0
+		baseCost = 0
+		useProceduralDragCubes = true
+
+		VARIANT
+		{
+			name = BlueStripe
+			displayName =  Blue Stripe
+			primaryColor = #003562
+			secondaryColor = #003562
+			sizeGroup = GroupB
+			TEXTURE
+			{
+				materialName = SupernovaTexture
+				_MainTex = WildBlueIndustries/DSEV/Assets/SupernovaTexture
+			}
+		}
+		VARIANT
+		{
+			name = OrangeStripe
+			displayName =  Orange Stripe
+			primaryColor = #c37639
+			secondaryColor = #c37639
+			sizeGroup = GroupB
+			TEXTURE
+			{
+				materialName = SupernovaTexture
+				_MainTex = WildBlueIndustries/DSEV/Assets/SupernovaTextureKerbodyne
+			}
+		}
+
+}

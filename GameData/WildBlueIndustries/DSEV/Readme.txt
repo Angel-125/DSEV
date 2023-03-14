@@ -18,6 +18,14 @@ Copy the WildBlueIndustries directory into your GameData folder.
 
 ---REVISION HISTORY---
 
+3.14
+- Added D2 OmniLab.
+- Added D2 Logistics Module. This requires Buffalo 2.
+- Added TVR-400 Stack Bi-Coupler.
+- Added TVR-600 Stack Bi-Coupler.
+- Added new flags for naming ships.
+- Bug fixes in Wild Blue Tools.
+
 3.12
 
 - Added missing stock inventory storage.
