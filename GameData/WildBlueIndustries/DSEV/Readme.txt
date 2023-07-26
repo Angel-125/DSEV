@@ -18,6 +18,12 @@ Copy the WildBlueIndustries directory into your GameData folder.
 
 ---REVISION HISTORY---
 
+3.2
+- Added new texture variants to the Nautilus Centrifuge.
+- Added new texture variants to the 2.5m station parts.
+NOTE: The Nautilus Centrifuge and the S2 Cargo Bay parts have to use the stock texture switcher, while the rest can use the Wild Blue texture switchers as before. It's a bit of a kludge, but it works and no parts had to be retired.
+- Removed BARIS configs from the 2.5m station parts.
+
 3.14
 - Added D2 OmniLab.
 - Added D2 Logistics Module. This requires Buffalo 2.
