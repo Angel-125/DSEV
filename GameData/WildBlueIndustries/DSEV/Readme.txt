@@ -18,6 +18,10 @@ Copy the WildBlueIndustries directory into your GameData folder.
 
 ---REVISION HISTORY---
 
+3.3
+- Added D2 Hab Ring: This is a variant of the Nautilus Centrifuge that has a Size 3 hub. It cannot retract its ring, and it sports 4 Omni Converters instead of the Pathfinder template system, but it's otherwise identical to the Nautilus Centrifuge.
+- Added D2 Conference Room: This is a half-height version of the D2 Briefing Room's upper floor.
+
 3.2
 - Added new texture variants to the Nautilus Centrifuge.
 - Added new texture variants to the 2.5m station parts.
@@ -738,21 +742,21 @@ NOTE: This will replace DSEV's Cooldown with Nertea's HeatControl, and requires 
 - The Supernova's temperature readout will not be shown if MM_HeatControl or MM_DisableCooldown are installed.
 
 How to use the Module Manager patches
-DSEV comes with several Module Manager patches to alter the mod’s configuration to suit your play style. Several of them are applied automatically, while others are optional. You can find the patches in the DSEV root directory; they all start with MM_.
+DSEV comes with several Module Manager patches to alter the mod s configuration to suit your play style. Several of them are applied automatically, while others are optional. You can find the patches in the DSEV root directory; they all start with MM_.
 
 MM_CTT.cfg: This patch is used to integrate DSEV with the Community Tech Tree. It runs automatically if you have Community Tech Tree installed.
 
-MM_HideHexTrusses.txt: This patch will hide the hex trusses, typically used if you install a similar system such as Nertea’s Near Future Construction. Simply rename the file from .txt to .cfg to enable it.
+MM_HideHexTrusses.txt: This patch will hide the hex trusses, typically used if you install a similar system such as Nertea s Near Future Construction. Simply rename the file from .txt to .cfg to enable it.
 
 MM_LiquidFuel.txt: This patch switches the Supernova and ArcJet engine and RCS thrusters over to use LiquidFuel instead of LqdHydrogen. Simply rename the file from .txt to .cfg to enable it.
 
 MM_Resources.cfg: This patch adds resource distributions to various planets in the game. It is applied automatically.
 
-MM_TechTree.cfg: This patch adds the Experimental Fusion tech node to the technology tree. It is applied automatically if you don’t have Community Tech Tree installed.
+MM_TechTree.cfg: This patch adds the Experimental Fusion tech node to the technology tree. It is applied automatically if you don t have Community Tech Tree installed.
 
-MM_HeatControl.txt: This patch reconfigures the heat radiators so that they use Nertea’s HeatControl instead of using the Cooldown plugin installed with DSEV. Simply rename the file from .txt to .cfg to enable it.
+MM_HeatControl.txt: This patch reconfigures the heat radiators so that they use Nertea s HeatControl instead of using the Cooldown plugin installed with DSEV. Simply rename the file from .txt to .cfg to enable it.
 
-MM_DisableCooldown.txt: An alternate patch, this will disable heat management altogether, and rely upon the game’s built-in mechanics to distribute the heat. If you use this patch, your radiators will no longer glow. Simply rename the file from .txt to .cfg to enable it. Do not use this patch if you are using MM_HeatControl.
+MM_DisableCooldown.txt: An alternate patch, this will disable heat management altogether, and rely upon the game s built-in mechanics to distribute the heat. If you use this patch, your radiators will no longer glow. Simply rename the file from .txt to .cfg to enable it. Do not use this patch if you are using MM_HeatControl.
 
 
 0.3.27: One Small Step

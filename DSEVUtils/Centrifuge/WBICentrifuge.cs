@@ -129,8 +129,11 @@ namespace WildBlueIndustries
                     currentDegPerSecCounter = 0.0f;
                     rotationState = (int)centrifugeState;
                     Events["ToggleCentrifuge"].guiName = stopCentrifugeName;
-                    Events["ToggleArms"].guiActive = false;
-                    Events["ToggleArms"].guiName = animation.Events["Toggle"].guiName;
+                    if (animation != null)
+                    {
+                        Events["ToggleArms"].guiActive = false;
+                        Events["ToggleArms"].guiName = animation.Events["Toggle"].guiName;
+                    }
                     break;
 
                 case CentrifugeStates.SpinningUp:
@@ -251,9 +254,14 @@ namespace WildBlueIndustries
                 Events["ToggleCentrifuge"].guiName = stopCentrifugeName;
             else
                 Events["ToggleCentrifuge"].guiName = startCentrifugeName;
-            Events["ToggleArms"].guiName = animation.Events["Toggle"].guiName;
-            if (centrifugeState == CentrifugeStates.Stopped)
-                Events["ToggleArms"].guiActive = true;
+            if (animation != null)
+            {
+                Events["ToggleArms"].guiName = animation.Events["Toggle"].guiName;
+                if (centrifugeState == CentrifugeStates.Stopped)
+                    Events["ToggleArms"].guiActive = true;
+                else
+                    Events["ToggleArms"].guiActive = false;
+            }
             else
                 Events["ToggleArms"].guiActive = false;
         }
@@ -349,7 +357,8 @@ namespace WildBlueIndustries
                     rotationState = (int)centrifugeState;
                     Events["ToggleCentrifuge"].guiActive = true;
                     Events["ToggleCentrifuge"].guiName = startCentrifugeName;
-                    Events["ToggleArms"].guiActive = true;
+                    if (animation != null)
+                        Events["ToggleArms"].guiActive = true;
                     return false;
             }
 
