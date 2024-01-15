@@ -18,11 +18,11 @@ Copy the WildBlueIndustries directory into your GameData folder.
 
 ---REVISION HISTORY---
 
-3.3
+3.30
 - Added D2 Hab Ring: This is a variant of the Nautilus Centrifuge that has a Size 3 hub. It cannot retract its ring, and it sports 4 Omni Converters instead of the Pathfinder template system, but it's otherwise identical to the Nautilus Centrifuge.
 - Added D2 Conference Room: This is a half-height version of the D2 Briefing Room's upper floor.
 
-3.2
+3.20
 - Added new texture variants to the Nautilus Centrifuge.
 - Added new texture variants to the 2.5m station parts.
 NOTE: The Nautilus Centrifuge and the S2 Cargo Bay parts have to use the stock texture switcher, while the rest can use the Wild Blue texture switchers as before. It's a bit of a kludge, but it works and no parts had to be retired.
