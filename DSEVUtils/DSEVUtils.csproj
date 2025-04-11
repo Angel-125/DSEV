@@ -91,6 +91,7 @@
   <ItemGroup>
     <Compile Include="Parts\ModuleHexAdapter.cs" />
     <Compile Include="Parts\WBIDynamicHeatShield.cs" />
+    <Compile Include="Parts\WBIEngineRepLoss.cs" />
     <Compile Include="Settings\DSEVSettings.cs" />
     <Compile Include="GUI\MassconWindow.cs" />
     <Compile Include="Parts\ModuleEnginesFXWBI.cs" />
@@ -110,9 +111,9 @@
     <Compile Include="Parts\WBIFixedHeatRadiator.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\WildBlueTools\WildBlueTools.csproj">
-      <Project>{CC0BDF1A-9641-4628-9F0F-3500DDC99534}</Project>
-      <Name>WildBlueTools</Name>
+    <ProjectReference Include="..\..\WBIResources\Source\WBIResources.csproj">
+      <Project>{9e6c131f-3161-486a-84f3-9f16768b4d4b}</Project>
+      <Name>WBIResources</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

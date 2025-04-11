@@ -18,6 +18,29 @@ Copy the WildBlueIndustries directory into your GameData folder.
 
 ---REVISION HISTORY---
 
+3.31.0
+This has been a long time coming, but the 10+ year-old template system, which was a holdover from the earliest days of Multipurpose Colony Modules, is being retired in favor of the more flexible Omni Converter and Omni Storage system.
+Existing parts are deprecated, so your existing bases are safe. But new bases will use the new Omni system instead.
+
+BE SURE TO DELETE YOUR WildBlueIndustries/000WildBlueTools folder if you have one!
+
+- All convertible storage and template modules have been replaced with OmniStorage and OmniConverters.
+- Play Mode is no longer a factor; if you have Community Resource Pack installed, you get CRP converters. If you have Classic Stock Resources installed, you get Classic Stock converters. If you have both installed, you get both.
+NOTE: This may affect vessels in flight, but you can easily reconfigure your modules by turning off resource and skill requirements in Game Settings -> WBIResources.
+
+- Deprecated the Mk2 Tranquility Habitat in favor of its new V2 variant.
+NOTE: The new Mk2 Tranquility Habitat is dedicated to habitat functionality; no more template-based science lab capabilities.
+- Deprecated the D2 Lab in favor of the D2 OmniLab added in Release 3.14.
+
+- Renamed the S2 Cargo Bay to S2 Cargo Bay (Medium).
+- Added new S2 Cargo Bay (Short) and S2 Cargo Bay (Long).
+- Added new S2 Logistics Module- it is twice the size of the Short Logistics Module.
+- Added new Kosmos Science Lab. It uses the Mobile Processing Lab MPL-LG-2's IVA, and has the functionality that was in the Tranquility Habitat.
+- Added new Fjord Mk3 Command Module.
+
+3.30.1
+- Fixed floating cyropod models
+
 3.30
 - Added D2 Hab Ring: This is a variant of the Nautilus Centrifuge that has a Size 3 hub. It cannot retract its ring, and it sports 4 Omni Converters instead of the Pathfinder template system, but it's otherwise identical to the Nautilus Centrifuge.
 - Added D2 Conference Room: This is a half-height version of the D2 Briefing Room's upper floor.
