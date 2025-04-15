@@ -18,6 +18,9 @@ Copy the WildBlueIndustries directory into your GameData folder.
 
 ---REVISION HISTORY---
 
+3.32.0
+- Added new S2 Cargo Bay (Short) and S2 Cargo Bay (Long).
+
 3.31.0
 This has been a long time coming, but the 10+ year-old template system, which was a holdover from the earliest days of Multipurpose Colony Modules, is being retired in favor of the more flexible Omni Converter and Omni Storage system.
 Existing parts are deprecated, so your existing bases are safe. But new bases will use the new Omni system instead.
@@ -33,10 +36,8 @@ NOTE: The new Mk2 Tranquility Habitat is dedicated to habitat functionality; no 
 - Deprecated the D2 Lab in favor of the D2 OmniLab added in Release 3.14.
 
 - Renamed the S2 Cargo Bay to S2 Cargo Bay (Medium).
-- Added new S2 Cargo Bay (Short) and S2 Cargo Bay (Long).
 - Added new S2 Logistics Module- it is twice the size of the Short Logistics Module.
 - Added new Kosmos Science Lab. It uses the Mobile Processing Lab MPL-LG-2's IVA, and has the functionality that was in the Tranquility Habitat.
-- Added new Fjord Mk3 Command Module.
 
 3.30.1
 - Fixed floating cyropod models
@@ -236,7 +237,7 @@ Classic Stock
 
 3.0.0.4
 - Fixed radial airlock's missing ladder and airlock hatch.
-- Fusion reactors now generate ElectroPlasma to avoid CRP resource conflicts.
+- Fusion reactors now generate wbiElectroPlasma to avoid CRP resource conflicts.
 - Compact ISRU can now create LiquidFuel & Oxidizer from Water, Minerite, and Nitronite. This only applies to Classic Stock play mode.
 - WBT update.
 
