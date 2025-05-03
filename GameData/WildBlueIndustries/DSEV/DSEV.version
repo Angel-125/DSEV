@@ -11,8 +11,8 @@
     "VERSION":
     {
 	"MAJOR":3,
-	"MINOR":31,
-	"PATCH":1,
+	"MINOR":32,
+	"PATCH":2,
 	"BUILD":0
     },
     "KSP_VERSION_MIN":

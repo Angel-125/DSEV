@@ -18,6 +18,9 @@ Copy the WildBlueIndustries directory into your GameData folder.
 
 ---REVISION HISTORY---
 
+3.32.2
+- Bug fixes
+
 3.32.0
 - Added new S2 Cargo Bay (Short) and S2 Cargo Bay (Long).
 
