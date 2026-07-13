@@ -18,6 +18,11 @@ Copy the WildBlueIndustries directory into your GameData folder.
 
 ---REVISION HISTORY---
 
+3.33.0
+
+- Updated the model for the DR-375 Docking Ring
+- Added the DR-25 Docking Ring
+
 3.32.2
 - Bug fixes
 
