@@ -16,49 +16,13 @@ Special thanks for Nyrath for sharing all that fantastic information on his Atom
 
 Copy the WildBlueIndustries directory into your GameData folder.
 
-Changes
-
-- Updated converter efficiency ratings- experienced kerbals matter!
-
 ---REVISION HISTORY---
 
-3.33.0
-
-- Updated the model for the DR-375 Docking Ring
-- Added the DR-25 Docking Ring
-
-3.32.2
-- Bug fixes
-
-3.32.0
-- Added new S2 Cargo Bay (Short) and S2 Cargo Bay (Long).
-
-3.31.0
-This has been a long time coming, but the 10+ year-old template system, which was a holdover from the earliest days of Multipurpose Colony Modules, is being retired in favor of the more flexible Omni Converter and Omni Storage system.
-Existing parts are deprecated, so your existing bases are safe. But new bases will use the new Omni system instead.
-
-BE SURE TO DELETE YOUR WildBlueIndustries/000WildBlueTools folder if you have one!
-
-- All convertible storage and template modules have been replaced with OmniStorage and OmniConverters.
-- Play Mode is no longer a factor; if you have Community Resource Pack installed, you get CRP converters. If you have Classic Stock Resources installed, you get Classic Stock converters. If you have both installed, you get both.
-NOTE: This may affect vessels in flight, but you can easily reconfigure your modules by turning off resource and skill requirements in Game Settings -> WBIResources.
-
-- Deprecated the Mk2 Tranquility Habitat in favor of its new V2 variant.
-NOTE: The new Mk2 Tranquility Habitat is dedicated to habitat functionality; no more template-based science lab capabilities.
-- Deprecated the D2 Lab in favor of the D2 OmniLab added in Release 3.14.
-
-- Renamed the S2 Cargo Bay to S2 Cargo Bay (Medium).
-- Added new S2 Logistics Module- it is twice the size of the Short Logistics Module.
-- Added new Kosmos Science Lab. It uses the Mobile Processing Lab MPL-LG-2's IVA, and has the functionality that was in the Tranquility Habitat.
-
-3.30.1
-- Fixed floating cyropod models
-
-3.30
+3.3
 - Added D2 Hab Ring: This is a variant of the Nautilus Centrifuge that has a Size 3 hub. It cannot retract its ring, and it sports 4 Omni Converters instead of the Pathfinder template system, but it's otherwise identical to the Nautilus Centrifuge.
 - Added D2 Conference Room: This is a half-height version of the D2 Briefing Room's upper floor.
 
-3.20
+3.2
 - Added new texture variants to the Nautilus Centrifuge.
 - Added new texture variants to the 2.5m station parts.
 NOTE: The Nautilus Centrifuge and the S2 Cargo Bay parts have to use the stock texture switcher, while the rest can use the Wild Blue texture switchers as before. It's a bit of a kludge, but it works and no parts had to be retired.
@@ -249,7 +213,7 @@ Classic Stock
 
 3.0.0.4
 - Fixed radial airlock's missing ladder and airlock hatch.
-- Fusion reactors now generate wbiElectroPlasma to avoid CRP resource conflicts.
+- Fusion reactors now generate ElectroPlasma to avoid CRP resource conflicts.
 - Compact ISRU can now create LiquidFuel & Oxidizer from Water, Minerite, and Nitronite. This only applies to Classic Stock play mode.
 - WBT update.
 
