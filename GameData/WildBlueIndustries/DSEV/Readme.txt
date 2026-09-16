@@ -16,11 +16,31 @@ Special thanks for Nyrath for sharing all that fantastic information on his Atom
 
 Copy the WildBlueIndustries directory into your GameData folder.
 
+---CHANGES---
+
+Changes
+
+- Removed previously deprecated parts.
+- Removed hard dependency on WBIResources.
+- As result of the above, most DSEV parts now have a "V2" or "V3" in their titles to reflect the latest changes. Older parts won't have the suffix, including vessels with said parts that are in the field.
+- Deprecated the Masscon.
+- NRE fixes
+- Fixes issue where the Multi Hex Truss & D2 Multi Hex Truss weren't providing configuration options.
+- Fixed fuel starvation issues with the Supernova and Hypernova engines.
+- Fixes for negative dry-costs.
+- Part volume/storable part volume corrections- thanks Ooglak!
+- Restock whitelist corrections- thanks Ooglak!
+
+IMPORTANT NOTE: The newly deprecated parts (anything without "V2" or "V3" in its name, and now have the part variant icon in the editor) WILL BE REMOVED IN A FUTURE UPDATE. Please update your craft and retire ones in flight for new craft using the new parts.
+
+---END CHANGES---
+
+
+---REVISION HISTORY---
+
 Changes
 
 - Updated converter efficiency ratings- experienced kerbals matter!
-
----REVISION HISTORY---
 
 3.33.0
 
@@ -1178,14 +1198,16 @@ http://creativecommons.org/licenses/by/3.0/
 ---LICENSE---
 Near Future Props by Nertea, licensed under CC-BY-NC-SA-4.0
 
-All Art Assets, including .mu, .mbm, and .dds files are copyright 2014-2016 by Michael Billard, All Rights Reserved.
+All Art Assets, including .mu, .mbm, and .dds files are copyright 2014-2026 by Michael Billard, All Rights Reserved.
 
 Wild Blue Industries is trademarked by Michael Billard. All rights reserved.
 Note that Wild Blue Industries is a ficticious entity 
 created for entertainment purposes. It is in no way meant to represent a real entity.
 Any similarity to a real entity is purely coincidental.
 
-Source code copyright 2014-2016 by Michael Billard (Angel-125)
+Portions of this code were done in collaboration with ChatGPT. Thanks for handling the drudgery!
+
+Source code copyright 2014-2026 by Michael Billard (Angel-125)
 
     This source code is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by

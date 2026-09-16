@@ -74,7 +74,7 @@ namespace WildBlueIndustries
             for (int index = 0; index < count; index++)
             {
                 checkEngine = engineList[index];
-                if (checkEngine.EngineIgnited && checkEngine.isOperational && repLossEngineIDs.Contains(checkEngine.engineID))
+                if (checkEngine.EngineIgnited && checkEngine.isOperational && appliesToEngine(checkEngine.engineID))
                 {
                     engine = engineList[index];
                     break;
@@ -136,6 +136,21 @@ namespace WildBlueIndustries
                 playerInformed = true;
                 ScreenMessages.PostScreenMessage(Localizer.Format(repLossMessage), repLossDuration, ScreenMessageStyle.UPPER_CENTER);
             }
+        }
+
+        private bool appliesToEngine(string engineID)
+        {
+            if (string.IsNullOrEmpty(repLossEngineIDs))
+                return true;
+
+            string[] engineIDs = repLossEngineIDs.Split(new char[] { ';' }, StringSplitOptions.RemoveEmptyEntries);
+            for (int index = 0; index < engineIDs.Length; index++)
+            {
+                if (string.Equals(engineIDs[index].Trim(), engineID, StringComparison.OrdinalIgnoreCase))
+                    return true;
+            }
+
+            return false;
         }
     }
 }

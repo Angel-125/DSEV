@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 using KSP.IO;
-using WBIResources;
 
 namespace WildBlueIndustries
 {

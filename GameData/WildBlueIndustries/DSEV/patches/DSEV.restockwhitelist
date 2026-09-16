@@ -1,0 +1,4 @@
+// DSEV reuses these stock meshes. Keep them available when ReStock prunes
+// the original Squad assets in favor of its replacements.
+Squad/Parts/Resources/ISRU/
+Squad/Parts/Utility/stackCouplers/

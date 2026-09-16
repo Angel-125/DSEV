@@ -1,10 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using UnityEngine;
-using KSP.IO;
-using WBIResources;
 
 /*
 Source code copyright 2018, by Michael Billard (Angel-125)
@@ -21,7 +15,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 */
 namespace WildBlueIndustries
 {
-    public class ModuleFusionReactor : ModuleResourceConverter, IOpsView
+    public class ModuleFusionReactor : ModuleResourceConverter
     {
         [KSPField(isPersistant = true)]
         public float ecNeededToStart;
@@ -32,7 +26,7 @@ namespace WildBlueIndustries
         [KSPField(guiActive = true, guiName = "Temperature")]
         public string reactorStatus;
 
-        protected WBIAnimation lightAnim;
+        protected WBIModuleDSEVAnimated lightAnim;
         protected ModuleOverheatDisplay overheatDisplay;
 
         public override string GetInfo()
@@ -67,12 +61,11 @@ namespace WildBlueIndustries
 
             if (reactorIsOn == false)
             {
-                ecObtained = this.part.RequestResource("ElectricCharge", ecNeededToStart);
+                ecObtained = this.part.RequestResource("ElectricCharge", (double)ecNeededToStart);
                 if (ecObtained / ecNeededToStart < 0.999)
                 {
                     this.part.RequestResource("ElectricCharge", -ecObtained);
                     ScreenMessages.PostScreenMessage("Fully charge the reactor before starting.", 5.0f, ScreenMessageStyle.UPPER_CENTER);
-                    this.part.RequestResource("ElectricCharge", -ecObtained);
                     return;
                 }
 
@@ -104,7 +97,7 @@ namespace WildBlueIndustries
             base.OnStart(state);
 
             overheatDisplay = this.part.FindModuleImplementing<ModuleOverheatDisplay>();
-            lightAnim = this.part.FindModuleImplementing<WBIAnimation>();
+            lightAnim = this.part.FindModuleImplementing<WBIModuleDSEVAnimated>();
             if (lightAnim != null)
                 lightAnim.showGui(false);
 
@@ -143,50 +136,5 @@ namespace WildBlueIndustries
         }
 
 
-        public List<string> GetButtonLabels()
-        {
-            List<string> buttonLabels = new List<string>();
-            buttonLabels.Add("Fusion");
-            return buttonLabels;
-        }
-
-        #region IOpsView
-        public void DrawOpsWindow(string buttonLabel)
-        {
-            GUILayout.BeginVertical();
-            GUILayout.BeginScrollView(new Vector2(), new GUIStyle(GUI.skin.textArea), new GUILayoutOption[] { GUILayout.Height(480) });
-
-            GUILayout.Label("<color=white>Reactor Status: " + reactorStatus + "</color>");
-
-            //Overheat
-            if (overheatDisplay != null)
-            {
-                GUILayout.Label("<color=white>Core Temp: " + overheatDisplay.coreTempDisplay + "</color>");
-                GUILayout.Label("<color=white>Thermal Efficiency: " + overheatDisplay.heatDisplay + "</color>");
-            }
-
-            if (GUILayout.Button(Events["ToggleReactor"].guiName))
-                ToggleReactor();
-
-            GUILayout.EndScrollView();
-            GUILayout.EndVertical();
-        }
-
-        public void SetParentView(IParentView parentView)
-        {
-
-        }
-
-        public void SetContextGUIVisible(bool isVisible)
-        {
-//            Fields["reactorStatus"].guiActive = isVisible;
-//            Events["ToggleReactor"].guiActive = isVisible;
-        }
-
-        public string GetPartTitle()
-        {
-            return this.part.partInfo.title;
-        }
-        #endregion
     }
 }

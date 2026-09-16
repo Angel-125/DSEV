@@ -9,13 +9,7 @@ Any similarity to a real entity is purely coincidental.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using UnityEngine;
-using KSP.IO;
-using WBIResources;
 
 namespace WildBlueIndustries
 {
@@ -89,20 +83,20 @@ namespace WildBlueIndustries
         protected CentrifugeStates centrifugeState;
         protected float maxDegPerSec;
         protected float maxDegPerSecCounter;
-        protected ModuleAnimateGenericSFX animation;
-        protected WBIIVARotationHelper[] rotationHelpers;
+        protected ModuleAnimateGeneric animation;
 
         [KSPEvent(guiActive = true)]
         public void ToggleArms()
         {
-            if (animation != null)
-                animation.Toggle();
+            if (animation == null)
+                return;
+
+            animation.Toggle();
             centrifugeState = CentrifugeStates.MovingArms;
             rotationState = (int)centrifugeState;
             Events["ToggleArms"].guiName = animation.Events["Toggle"].guiName;
             Events["ToggleArms"].guiActive = false;
             Events["ToggleCentrifuge"].guiActive = false;
-            updateRotationHelpers(true);
         }
 
         [KSPEvent(guiActive = true, guiName = "Start Centrifuge")]
@@ -122,7 +116,6 @@ namespace WildBlueIndustries
                         Events["ToggleArms"].guiName = animation.Events["Toggle"].guiName;
                         Events["ToggleCentrifuge"].guiActive = false;
                         Events["ToggleCentrifuge"].guiName = stopCentrifugeName;
-                        updateRotationHelpers(true);
                         break;
                     }
                     centrifugeState = CentrifugeStates.SpinningUp;
@@ -206,7 +199,7 @@ namespace WildBlueIndustries
                 return;
 
             //Deploy/Stow animation
-            animation = this.part.FindModuleImplementing<ModuleAnimateGenericSFX>();
+            animation = this.part.FindModuleImplementing<ModuleAnimateGeneric>();
             if (animation != null)
             {
                 animation.Events["Toggle"].guiActive = false;
@@ -237,11 +230,6 @@ namespace WildBlueIndustries
             {
                 rotationAxisVec = new Vector3(0, 0, 1.0f);
             }
-
-            //Get rotation helpers
-            List<WBIIVARotationHelper> helpers = this.part.FindModulesImplementing<WBIIVARotationHelper>();
-            if (helpers.Count > 0)
-                rotationHelpers = helpers.ToArray();
 
             //Calculate max degrees per second
             maxDegPerSec = rotationsPerMinute * 6.0f;
@@ -275,17 +263,6 @@ namespace WildBlueIndustries
             float acceleration = armRadius * (angularVelocity * angularVelocity);
 
             gForce = acceleration / 9.81f;
-        }
-
-        protected void updateRotationHelpers(bool autoAlign)
-        {
-            if (rotationHelpers == null || rotationHelpers.Length == 0)
-                return;
-
-            for (int index = 0; index < rotationHelpers.Length; index++)
-            {
-                rotationHelpers[index].AlignIVA(autoAlign);
-            }
         }
 
         protected bool updateState()
@@ -333,7 +310,6 @@ namespace WildBlueIndustries
                         currentDegPerSec = 0.0f;
                         currentDegPerSecCounter = 0.0f;
                         Events["ToggleCentrifuge"].guiName = stopCentrifugeName;
-                        updateRotationHelpers(false);
                     }
                     else
                     {
@@ -346,7 +322,6 @@ namespace WildBlueIndustries
                     {
                         centrifugeState = CentrifugeStates.Stopped;
                         rotationState = (int)centrifugeState;
-                        updateRotationHelpers(false);
                     }
                     break;
 

@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using UnityEngine;
-using KSP.IO;
-using WBIResources;
 
 /*
 Source code copyright 2018, by Michael Billard (Angel-125)
@@ -28,7 +26,7 @@ namespace WildBlueIndustries
         Charged
     }
 
-    public class SupernovaController : ExtendedPartModule
+    public class SupernovaController : PartModule
     {
         const float kIdleTargetTemp = 300;
         const float kMinimumECToCharge = 1.0f;
@@ -51,7 +49,6 @@ namespace WildBlueIndustries
         protected MultiModeEngine multiModeEngine;
         protected ModuleEnginesFXWBI primaryEngine;
         protected ModuleEnginesFXWBI secondaryEngine;
-        protected FixedUpdateHelper fixedUpdateHelper;
 
         [KSPField(guiActive = true, guiName = "Reactor", isPersistant = true)]
         public string reactorStatus;
@@ -86,11 +83,14 @@ namespace WildBlueIndustries
         [KSPField]
         public float ecNeededToStart = 0f;
 
+        [KSPField]
         public string primaryEngineID;
+
+        [KSPField]
         public float ecChargePerSec = 0f;
-        public bool showDebugButton = true;
-        public float primaryEngineHeat = 0f;
-        public float secondaryEngineHeat = 0;
+
+        [KSPField]
+        public bool showDebugButtons = true;
         protected bool wasRunningPrimary;
 
         #region Events And Actions
@@ -177,40 +177,6 @@ namespace WildBlueIndustries
             return builder.ToString();
         }
 
-        protected override void getProtoNodeValues(ConfigNode protoNode)
-        {
-            base.getProtoNodeValues(protoNode);
-            string value;
-
-            value = protoNode.GetValue("fuelConsumption");
-            if (string.IsNullOrEmpty(value) == false)
-                fuelConsumption = float.Parse(value);
-
-            value = protoNode.GetValue("ecNeededToStart");
-            if (string.IsNullOrEmpty(value) == false)
-                ecNeededToStart = float.Parse(value);
-
-            value = protoNode.GetValue("ecChargePerSec");
-            if (string.IsNullOrEmpty(value) == false)
-                ecChargePerSec = float.Parse(value);
-
-            value = protoNode.GetValue("showDebugButtons");
-            if (string.IsNullOrEmpty(value) == false)
-                showDebugButton = bool.Parse(value);
-
-            value = protoNode.GetValue("primaryEngineHeat");
-            if (string.IsNullOrEmpty(value) == false)
-                primaryEngineHeat = float.Parse(value);
-
-            value = protoNode.GetValue("secondaryEngineHeat");
-            if (string.IsNullOrEmpty(value) == false)
-                secondaryEngineHeat = float.Parse(value);
-
-            primaryEngineID = protoNode.GetValue("primaryEngineID");
-
-            reactorFuel = protoNode.GetValue("reactorFuel");
-        }
-
         public override void OnStart(StartState state)
         {
             base.OnStart(state);
@@ -221,23 +187,15 @@ namespace WildBlueIndustries
             //Setup the engine
             SetEngineStateOnStart();
 
-            Events["DebugReset"].guiActive = showDebugButton;
-            Events["ChargeCapacitor"].guiActive = showDebugButton;
-
-            if (fixedUpdateHelper == null)
-            {
-                fixedUpdateHelper = this.part.gameObject.AddComponent<FixedUpdateHelper>();
-                fixedUpdateHelper.onFixedUpdateDelegate = OnUpdateFixed;
-            }
-            fixedUpdateHelper.enabled = true;
+            Events["DebugReset"].guiActive = showDebugButtons;
+            Events["ChargeCapacitor"].guiActive = showDebugButtons;
         }
 
         public override void OnUpdate()
         {
             base.OnUpdate();
 
-            //We don't have access to the Update or FixedUpdate or OnUpdate or OnFixedUpdate methods from
-            //the engine module. We need to lend a hand.
+            //Keep the secondary engine's state synchronized while that mode is selected.
             if (multiModeEngine.runningPrimary)
             {
                 if (!wasRunningPrimary)
@@ -280,6 +238,11 @@ namespace WildBlueIndustries
 
             //Consume a small amount of fusion pellets to represent the fusion reactor's operation in NTR mode.
             ConsumeFuel();
+        }
+
+        public void FixedUpdate()
+        {
+            OnUpdateFixed();
         }
 
 
@@ -337,7 +300,7 @@ namespace WildBlueIndustries
         {
             if (reactorState == EReactorStates.Charging)
             {
-                currentElectricCharge += this.part.RequestResource("ElectricCharge", ecChargePerSec * TimeWarp.fixedDeltaTime);
+                currentElectricCharge += this.part.RequestResource("ElectricCharge", (double)ecChargePerSec * TimeWarp.fixedDeltaTime);
 
                 //If we can't get the minimum EC required to charge the reactor, then shut off the reactor.
                 //This way, the ship won't be starved for power.
@@ -408,7 +371,7 @@ namespace WildBlueIndustries
             float fuelPerTimeTick = fuelConsumption * TimeWarp.fixedDeltaTime;
 
             //Adjust fuel consuption for idling
-            if (primaryEngine.thrustPercentage == 0f && secondaryEngine.thrustPercentage == 0f)
+            if (primaryEngine.currentThrottle <= 0f && secondaryEngine.currentThrottle <= 0f)
                 fuelPerTimeTick = fuelPerTimeTick / 10.0f;
 
             if (multiModeEngine.runningPrimary == true)
@@ -418,11 +381,12 @@ namespace WildBlueIndustries
                 if (fuelRequest >= 0.01f)
                 {
                     //Consume fusion pellets
-                    float fuelObtained = this.part.vessel.rootPart.RequestResource(reactorFuel, fuelRequest);
+                    double fuelObtained = this.part.vessel.rootPart.RequestResource(reactorFuel, (double)fuelRequest);
 
                     //If we haven't consumed enough pellets then the reactor cannot be sustained
                     //and the engine flames out.
-                    if (fuelObtained < fuelRequest)
+                    double fuelShortfall = fuelRequest - fuelObtained;
+                    if (fuelShortfall > this.part.resourceRequestRemainingThreshold)
                     {
                         ScreenMessages.PostScreenMessage(kOutOfFuel, 5.0f, ScreenMessageStyle.UPPER_CENTER);
                         primaryEngine.Events["Shutdown"].Invoke();

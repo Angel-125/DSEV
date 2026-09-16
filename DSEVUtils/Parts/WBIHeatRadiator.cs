@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using UnityEngine;
-using KSP.IO;
-using WBIResources;
 
 /*
 Source code copyrighgt 2015, by Michael Billard (Angel-125)
@@ -33,7 +30,7 @@ namespace WildBlueIndustries
         public float ratio;
     }
 
-    public class WBIHeatRadiator : ModuleDeployableRadiator, IOpsView
+    public class WBIHeatRadiator : ModuleDeployableRadiator
     {
         public static float soundEffectVolume = GameSettings.SHIP_VOLUME;
         private const float maxSoundDistance = 1.0f;
@@ -70,7 +67,6 @@ namespace WildBlueIndustries
         protected bool outOfElectricCharge = false;
         PartResourceDefinitionList definitions = PartResourceLibrary.Instance.resourceDefinitions;
         PartResourceDefinition electricChargeDef;
-        protected FixedUpdateHelper fixedUpdateHelper;
 
         #region Overrides and API
         [KSPAction("Toggle Cooling Cycle")]
@@ -82,40 +78,22 @@ namespace WildBlueIndustries
         [KSPAction("Open Cooling Cycle")]
         public void OpenModeAction(KSPActionParam param)
         {
-            coolingCycleMode = CoolingCycleModes.open;
-            Events["ToggleCoolingMode"].guiName = "Cooling Mode (open)";
+            setCoolingCycleMode(CoolingCycleModes.open);
         }
 
         [KSPAction("Closed Cooling Cycle")]
         public void ClosedModeAction(KSPActionParam param)
         {
-            coolingCycleMode = CoolingCycleModes.closed;
-            Events["ToggleCoolingMode"].guiName = "Cooling Mode (closed)";
+            setCoolingCycleMode(CoolingCycleModes.closed);
         }
 
         [KSPEvent(guiActive = true, guiName = "Cooling Mode", active = true, externalToEVAOnly = false, unfocusedRange = 3.0f, guiActiveUnfocused = true)]
         public void ToggleCoolingMode()
         {
             if (coolingCycleMode == CoolingCycleModes.closed)
-            {
-                coolingCycleMode = CoolingCycleModes.open;
-                Events["ToggleCoolingMode"].guiName = "Cooling Mode (open)";
-                showParticleEffects(true);
-                if (soundClip != null)
-                {
-                    soundClip.audio.volume = soundEffectVolume;
-                    soundClip.audio.Play();
-                }
-            }
-
+                setCoolingCycleMode(CoolingCycleModes.open);
             else
-            {
-                coolingCycleMode = CoolingCycleModes.closed;
-                Events["ToggleCoolingMode"].guiName = "Cooling Mode (closed)";
-                showParticleEffects(false);
-                if (soundClip != null)
-                    soundClip.audio.Stop();
-            }
+                setCoolingCycleMode(CoolingCycleModes.closed);
         }
 
         public override void OnStart(StartState state)
@@ -126,20 +104,25 @@ namespace WildBlueIndustries
             //Get the resource definition for electric charge.
             electricChargeDef = definitions["ElectricCharge"];
 
-            //Set cooling mode. For now, default is closed.
-            coolingCycleMode = CoolingCycleModes.closed;
-            Events["ToggleCoolingMode"].guiName = "Cooling Mode (closed)";
-
             //Dig into the proto part and find the coolant resource nodes.
             getCoolantNodes();
 
             //Load the sound effects
             LoadSoundFX();
 
-            //Create fixed update helper
-            fixedUpdateHelper = this.part.gameObject.AddComponent<FixedUpdateHelper>();
-            fixedUpdateHelper.onFixedUpdateDelegate = UpdateState;
-            fixedUpdateHelper.enabled = true;
+            //Restore the persisted cooling mode and its effects.
+            setCoolingCycleMode(coolingCycleMode);
+
+        }
+
+        public override void FixedUpdate()
+        {
+            base.FixedUpdate();
+
+            if (!HighLogic.LoadedSceneIsFlight)
+                return;
+
+            UpdateState();
         }
 
         public override string GetInfo()
@@ -199,6 +182,7 @@ namespace WildBlueIndustries
             if (!GameDatabase.Instance.ExistsAudioClip(soundFilePath))
                 return;
 
+            soundClip = new FXGroup("coolantDump");
             soundClip.audio = part.gameObject.AddComponent<AudioSource>();
             soundClip.audio.volume = soundEffectVolume;
             soundClip.audio.maxDistance = maxSoundDistance;
@@ -212,6 +196,27 @@ namespace WildBlueIndustries
             soundClip.audio.dopplerLevel = 0f;
 
             soundClip.audio.playOnAwake = false;
+        }
+
+        protected void setCoolingCycleMode(CoolingCycleModes mode)
+        {
+            coolingCycleMode = mode;
+            bool isOpen = coolingCycleMode == CoolingCycleModes.open;
+            Events["ToggleCoolingMode"].guiName = isOpen ? "Cooling Mode (open)" : "Cooling Mode (closed)";
+            showParticleEffects(isOpen);
+
+            if (soundClip == null || soundClip.audio == null)
+                return;
+
+            if (isOpen)
+            {
+                soundClip.audio.volume = soundEffectVolume;
+                soundClip.audio.Play();
+            }
+            else
+            {
+                soundClip.audio.Stop();
+            }
         }
 
         protected void showParticleEffects(bool isVisible)
@@ -233,12 +238,6 @@ namespace WildBlueIndustries
                     emitter.enabled = isVisible;
                 }
 
-                //Emitter is not on the list, hide it.
-                else
-                {
-                    emitter.emit = false;
-                    emitter.enabled = false;
-                }
             }
         }
 
@@ -276,10 +275,10 @@ namespace WildBlueIndustries
             coolantDumped = this.part.RequestResource(resourceDef.id, coolantToDump * coolant.ratio, coolant.flowMode);
             if (coolantDumped <= 0.001)
             {
-                if (soundClip != null)
+                if (soundClip != null && soundClip.audio != null)
                     soundClip.audio.Stop();
                 showParticleEffects(false);
-                ToggleCoolingMode();
+                setCoolingCycleMode(CoolingCycleModes.closed);
                 return;
             }
             thermalEnergyCoolant = this.part.temperature * this.part.resourceThermalMass * coolantDumped;
@@ -334,53 +333,5 @@ namespace WildBlueIndustries
         }
         #endregion
 
-        #region IOpsView
-        public List<string> GetButtonLabels()
-        {
-            List<string> labels = new List<string>();
-
-            labels.Add("Heat Radiator");
-
-            return labels;
-        }
-
-        public void DrawOpsWindow(string buttonLabel)
-        {
-            GUILayout.BeginVertical();
-            GUILayout.BeginScrollView(new Vector2(), new GUIStyle(GUI.skin.textArea), new GUILayoutOption[] { GUILayout.Height(480) });
-
-            GUILayout.Label("<color=white>Status: " + status + "</color>");
-
-            if (deployState == DeployState.RETRACTED)
-            {
-                if (GUILayout.Button(Events["Extend"].guiName))
-                    Extend();
-            }
-            else if (deployState ==  DeployState.EXTENDED)
-            {
-                if (GUILayout.Button(Events["Retract"].guiName))
-                    Retract();
-            }
-            
-            if (GUILayout.Button(Events["ToggleCoolingMode"].guiName))
-                ToggleCoolingMode();
-
-            GUILayout.EndScrollView();
-            GUILayout.EndVertical();
-        }
-
-        public void SetParentView(IParentView parentView)
-        {
-        }
-
-        public void SetContextGUIVisible(bool isVisible)
-        {
-        }
-
-        public string GetPartTitle()
-        {
-            return this.part.partInfo.title;
-        }
-        #endregion
     }
 }
